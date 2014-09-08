@@ -100,6 +100,9 @@
         <p class="images">A <span>digital-forward</span> creative agency making brands live up to their full potential. That’s it. And this is our website. It’s that simple.</p>
       </div>
       -->
+        <div class="element  clearfix size1-2 legals white">
+            <p>Copyright © Jordan Delamotte - <br />La reproduction, même partielle, de tout texte, image ou photo présents sur ce site est interdite sans accord préalable. Les logos, marques et marques déposées sont la propriété de leurs détenteurs.</p>
+        </div>
 
       <!-- un element texte avec ecriture en grand
       <div class="element  clearfix col2-3 white">
@@ -110,24 +113,38 @@
 
         <!-- debut du bloc accueil -->
         <div class="element  clearfix size3-2 accueil">
-            <div class="images"> <img src="images/saintpierre1-BD.jpg" alt="a propos" /> </div>
+            <div class="images"> <img src="images/saintpierre1-HD-r.jpg" alt="a propos" /> </div>
         </div>
+
+        <div class="element  clearfix size1-2 accueil">
+                <div class="images"> <img src="images/portrait1-r.jpg" alt="" /> </div>
+        </div>
+
+
+
         <a href="#filter=.apropos" style="text-decoration: none;">
             <div class="element  clearfix size1-2 accueil white">
-                  <p>
+                <p>
                 Passionné, Jordan Delamotte l’est en cuisine comme en toute chose.
                 Ambitieux et dévoué, Jordan a su gravir les échelons rapidement et imposer sa personnalité...</p>
             </div>
         </a>
+        <div class="element  clearfix col1-3 portfolio autre accueil">
+            <a href="images/image_truffe.jpg" data-title="Truffe  mélanosporum" data-fancybox-group="group2" class="popup">
+                <div class="images"> <img src="images/image_truffe.jpg" alt="Truffe  mélanosporum" class="slip" /> </div>
+            </a>
+        </div>
         <div class="element clearfix size2-1 accueil">
            <a href="#filter=.apropos">
-            <div class="images"> <img style="height:570px " src="images/JD-NSB.jpg" alt="a propos"/> </div>
+            <div class="images"> <img style="height:570px " src="images/JD-NSB-r.jpg" alt="a propos"/> </div>
            </a>
        </div>
 
+
+
         <!-- fin du bloc accueil -->
 
-      <div class="element  clearfix size1-3 photo menu white">
+      <div class="element  clearfix size2-1 photo menu white">
         <h3>Réalisations</h3>
         <div class="borderline"></div>
         <p>Chercher dans les photos:</p>
@@ -140,27 +157,10 @@
       </div>
 
 
-      <div class="element  clearfix col1-3 portfolio autre accueil">
-          <a href="images/image_truffe.jpg" data-title="Truffe  mélanosporum" data-fancybox-group="group2" class="popup">
-              <div class="images"> <img src="images/image_truffe.jpg" alt="Truffe  mélanosporum" class="slip" /> </div>
-          </a>
-      </div>
-      <div class="element  clearfix col1-3 portfolio poisson accueil">
-          <a href="images/photo1.jpg" data-title="Saint pierre, fèves, amandes & shiso rouge" data-fancybox-group="group2" class="popup">
-            <div class="images"> <img src="images/photo1.jpg" alt="Saint pierre..." class="slip" /> </div>
-          </a>
-      </div>
-
-
-
-      <div class="element  clearfix col1-3 accueil"> <a href="/index.html#filter=.about">
-        <div class="images"> <img src="images/logo-jd-black-on-white.jpg" alt="a propos" /> </div>
-        </a>
-      </div>
-      
 
 
     <!-- debut bloc a propos -->
+
       <div class="element  clearfix size3-2 white apropos">
         <h3 class="align-top">Jordan Delamotte</h3>
         <p>
@@ -198,9 +198,13 @@
     <!-- fin du bloc a propos -->
 
 
-      <!-- bloc contact contient les infosdu formulaire de contact -->
+      <!-- bloc contact  -->
 
-      <div class="element  clearfix size3-1 double white contact">
+        <div class="element clearfix size3-3 contact">
+            <div class="images"> <img src="images/nicoise1-BD.jpg" alt="la salade niçoise..."class="slip" /> </div>
+        </div>
+
+        <div class="element  clearfix size3-1 double white contact">
         <h3>Contactez-nous</h3>
         <div id="contact">
           <form method="post" action="contact.php" name="contactform" id="contactform" autocomplete="off">
@@ -223,12 +227,11 @@
         </div>
       </div>
 
-      <div class="element clearfix size3-3 contact">
-          <div class="images"> <img src="images/nicoise1-BD.jpg" alt="a propos" /> </div>
-      </div>
-
      <!-- fin du bloc contact -->
 
+        <div class="element clearfix white size1-2 presse contactpro remerciement blog">
+            <p> En cours de réalisation</p>
+        </div>
     </div>
   </div>
   <!-- end container -->
@@ -243,7 +246,20 @@
       <li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=326916999" onClick="return false">Visitez mon compte Linkedin</a></li>
 
     </ul>
-
+      <div id="nav-button-down"> <span class="nav-bar"></span> <span class="nav-bar"></span> <span class="nav-bar"></span> </div>
+      <div id="options-down" class="clearfix">
+          <!-- menu dans le cas ou tu voudrais ajouter ou supprimer des options
+          pour en ajouter un il suffit du dupliquer
+          <li><a href="#filter=.portfolio">Photos</a></li>
+          par exemple le champ #filter=.portfolio te permet de chercher dans les classes
+          -->
+          <ul class="option-set clearfix" data-option-key="filter">
+              <li><a href="#filter=.presse" class="selected">Presse</a>
+              <li><a href="#filter=.contactpro">Contact Pro</a></li>
+              <li><a href="#filter=.legals">Mentions légales</a></li>
+              <li><a href="#filter=.remerciement">Remerciements</a></li>
+          </ul>
+      </div>
 
     <p><span>© 2014, Jordan Delamotte</span></p>
 

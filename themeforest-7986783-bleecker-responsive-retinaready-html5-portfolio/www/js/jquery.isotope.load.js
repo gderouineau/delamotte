@@ -5,7 +5,7 @@ function eborLoadIsotope(){
 var $container = jQuery('#container'),
 isotopeOptions = {},
 defaultOptions = {
-   filter: '.home',
+   filter: '.accueil',
    sortBy: 'original-order',
    sortAscending: true,
    layoutMode: 'masonry'
@@ -22,7 +22,7 @@ masonry: { columnWidth: $container.width() / 12 }
  });
 });
  
-var $optionSets = jQuery('#options').find('.option-set'),
+var $optionSets = jQuery('#options,#options-down').find('.option-set'),
  isOptionLinkClicked = false;
 function changeSelectedLink( $elem ) {
 $elem.parents('.option-set').find('.selected').removeClass('selected');

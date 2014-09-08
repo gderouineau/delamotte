@@ -83,7 +83,7 @@ span.arrow {font:13px 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-seri
 /* =4. Headings
 --------------------------------------------------------------------------------------------------------*/
 h1#logo { position:relative; text-align:center; width:280px; padding:5px 0 15px 0; margin:0 auto; z-index:1; }
-h1#logo a { display:inline-block; background:url(../images/bg-logo-white-on-black.jpg) no-repeat; background-size:137px 160px; width:137px; height:160px; text-indent:-9999px; }
+h1#logo a { display:inline-block; background:url(../images/JD-BSN.jpg) no-repeat; background-size:137px 195px; width:137px; height:195px; text-indent:-9999px; }
 .hentry h1, h2, h3, h4, h5 { line-height:1.2; font-family: Georgia, "Times New Roman", Times, serif; font-size:36px; color:#303030; padding-top:26px; display:block; position:relative }
 h2 {font-size:16px; text-transform:uppercase; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight:600; color:#555; }
 h3 {font-size:24px; font-weight:400; padding-top:18px; }
@@ -103,6 +103,16 @@ h5 {font-size:16px; padding-top:22px; line-height:24px; font-family: 'Open Sans'
 #options li a:hover, #options li a.current, #options li a.selected { color:#fff;}
 .dead-link {cursor:default !important }
 /* End Main Nav
+/* =5. Main Nav
+--------------------------------------------------------------------------------------------------------*/
+#options-down { width:auto; /*height:100px;*/ z-index:300; text-align:center; white-space: nowrap;}
+#options-down ul { position:relative; padding:0; border:0; font-size: 0; display:inline-block }
+#options-down ul li {display:inline-block; height:100%; width:auto; }
+#options-down ul li a { color:#888; font-family: "Open Sans", Arial, Helvetica, sans-serif; display:inline-block; padding:5px 15px; text-decoration:none; text-transform:uppercase; height:100%; font-size:12px; line-height:19px; letter-spacing:2px; font-weight:400; margin:0 }
+#options-down li a:hover, #options li a.current, #options li a.selected { color:#fff;}
+.dead-link {cursor:default !important }
+/* End Main Nav
+
 --------------------------------------------------------------------------------------------------------*/
 
 
