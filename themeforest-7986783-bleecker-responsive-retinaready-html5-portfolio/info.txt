@@ -1,0 +1,1 @@
+// TODO : pense a ajouter les photos à Git le nom de la photo doit etre en rouge clique droit le fichier puis Git -> Add après commit et push
