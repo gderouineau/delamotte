@@ -15,51 +15,51 @@ $name = $_POST['name']; $email = $_POST['email']; $phone = $_POST['phone']; $com
 
 if(trim($name) == '') {
 
-	exit('<div class="error_message">You must enter your name.</div>');
+	exit('<div class="error_message">Vous devez entrer votre nom.</div>');
 
-} else if(trim($name) == 'Name *') {
+} else if(trim($name) == 'Nom *') {
 
-	exit('<div class="error_message">You must enter your name.</div>');
+	exit('<div class="error_message">Vous devez entrer votre nom.</div>');
 
 } else if(trim($email) == '') {
 
-	exit('<div class="error_message">Please enter a valid email address.</div>');
+	exit('<div class="error_message">Vous devez renseigner un email valide.</div>');
 
 } else if(!tommus_email_validate($email)) {
 
-	exit('<div class="error_message">You have entered an invalid e-mail address.</div>');
+	exit('<div class="error_message">Le mail renseigner n\'est pas valide</div>');
 
-} else if(trim($comments) == 'Comment *') {
+} else if(trim($comments) == 'Commentaire *') {
 
-	exit('<div class="error_message">Please enter your message.</div>');
+	exit('<div class="error_message">Merci d\'écrire un message.</div>');
 
 } else if(trim($comments) == '') {
 
-	exit('<div class="error_message">Please enter your message.</div>');
+	exit('<div class="error_message">Merci d\'écrire un message.</div>');
 	
 } else if( strpos($comments, 'href') !== false ) {
 
-	exit('<div class="error_message">Please leave links as plain text.</div>');
+	exit('<div class="error_message">Merci de ne pas taper de liens•</div>');
 	
 } else if( strpos($comments, '[url') !== false ) {
 
-	exit('<div class="error_message">Please leave links as plain text.</div>');
+	exit('<div class="error_message">Merci de ne pas taper de liens•</div>');
 
 } if(get_magic_quotes_gpc()) { $comments = stripslashes($comments); }
 
 
 
-$address = 'chef.jordandelamotte@gmail.com';
+$address = 'guillaume.derouineau@gmail.com';
 
 
 
-$e_subject = 'You\'ve been contacted by ' . $name . '.';
+$e_subject = 'Site || nouveau message de ' . $name . '.';
 
-$e_body = "You have been contacted by $name from your contact form, their additional message is as follows." . "\r\n" . "\r\n";
+$e_body = "Vous avez un message de $name envoyé depuis le formulaire de contact, le message est le suivant." . "\r\n" . "\r\n";
 
 $e_content = "\"$comments\"" . "\r\n" . "\r\n";
 
-$e_reply = "You can contact $name via email, $email (or by phone if supplied: $phone)";
+$e_reply = "Vous pouvez contacter $name par mail, via l'adresse $email (ou par téléphone au : $phone)";
 
 
 
@@ -76,7 +76,8 @@ $headers .= "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type: text/plain; charset=utf-8" . "\r\n";
 
 $headers .= "Content-Transfer-Encoding: quoted-printable" . "\r\n";
+ echo phpinfo();
 
 
-
-if(mail($address, $e_subject, $msg, $headers)) { echo "<fieldset><div id='success_page'><p>Thank you $name, your message has been submitted to us.</p></div></fieldset>"; }
+if(mail($address, $e_subject, $msg, $headers)) { echo "<fieldset><div id='success_page'><p>Merci $name, votre message a bien été envoyé.</p></div></fieldset>"; }
+else echo "no";
