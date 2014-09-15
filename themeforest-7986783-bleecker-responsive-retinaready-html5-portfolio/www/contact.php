@@ -49,7 +49,7 @@ if(trim($name) == '') {
 
 
 
-$address = 'guillaume.derouineau@gmail.com';
+$address = 'chefjordandelamotte@gmail.com';
 
 
 
@@ -76,8 +76,6 @@ $headers .= "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type: text/plain; charset=utf-8" . "\r\n";
 
 $headers .= "Content-Transfer-Encoding: quoted-printable" . "\r\n";
- echo phpinfo();
-
 
 if(mail($address, $e_subject, $msg, $headers)) { echo "<fieldset><div id='success_page'><p>Merci $name, votre message a bien été envoyé.</p></div></fieldset>"; }
 else echo "no";

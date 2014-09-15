@@ -127,23 +127,27 @@ header { position:relative; z-index:55; width:100%}
 
 /* =7. Column Grid
 --------------------------------------------------------------------------------------------------------*/
-.size1-1 { width: 280px; height: 280px; margin: 5px; position: relative; }
-.size2-1 { width: 280px; height: 570px; margin: 5px; position: relative; }
-.size3-1 { width: 280px; height: 860px; margin: 5px; position: relative; }
-.size4-1 { width: 280px; height: 1150px; margin: 5px; position: relative; }
-.size1-2 { width: 570px; height: 280px; margin: 5px; position: relative; }
-.size2-2 { width: 570px; height: 570px; margin: 5px; position: relative; }
-.size3-2 { width: 570px; height: 860px; margin: 5px; position: relative; }
-.size4-2 { width: 570px; height: 1150px; margin: 5px; position: relative; }
-.size1-3 { width: 860px; height: 280px; margin: 5px; position: relative; }
-.size2-3 { width: 860px; height: 570px; margin: 5px; position: relative; }
-.size3-3 { width: 860px; height: 860px; margin: 5px; position: relative; }
-.size4-3 { width: 860px; height: 1150px; margin: 5px; position: relative; }
-.size1-4 { width: 1150px; height: 280px; margin: 5px; position: relative; }
-.size2-4 { width: 1150px; height: 570px; margin: 5px; position: relative; }
-.size3-4 { width: 1150px; height: 860px; margin: 5px; position: relative; }
-.size4-4 { width: 1150px; height: 1150px; margin: 5px; position: relative; }
+.col1 { width: 280px;  margin: 5px; position: relative; }
+.col2 { width: 570px; margin: 5px; position: relative; }
+.col3 { width: 860px; margin: 5px; position: relative; }
+.col4 { width: 1150px; margin: 5px; position: relative; }
 
+.row1  { height: 280px; }
+.row2  { height: 570px; }
+.row3  { height: 860px; }
+.row4  { height: 1150px; }
+.row-auto { height: auto;}
+
+.min-display-1 {}
+.min-display-2 {}
+.min-display-3 {}
+
+
+.max-display-2 {}
+.max-display-3 {}
+.max-display-4 {}
+
+.photo-contact { width: 860px; height:860px; margin: 5px; position: relative; }
 .col3-3 { width:860px; height:570px; margin:5px; position:relative }
 
 .col1-3 { width:280px; height:280px; margin:5px; float:left; position:relative }
@@ -153,7 +157,6 @@ header { position:relative; z-index:55; width:100%}
 .col3-1.white {padding:20px 35px 50px 35px !important; }
 
 .col2-3 { width:570px; height:570px; margin:5px; float:left; position:relative }
-.col1-3.double { height:570px; }
 .col2-3.auto, .col1-3.auto, .col3-3.auto {height:auto; padding-bottom:35px; }
 .col1-3.auto {padding-bottom:30px; }
 .col2-3.auto.post {padding-bottom:0 }

@@ -30,13 +30,18 @@ blockquote { background:url(../images/bg-quote@2x.png) center 25px no-repeat; ba
 .fancybox-close {background: url(../images/bg-close@2x.png) center no-repeat; background-size:48px 48px;}
 .fancybox-prev span {background: url(../images/bg-prev@2x.png) center no-repeat; background-size:48px 48px;}
 .fancybox-next span {background: url(../images/bg-next@2x.png) center no-repeat; background-size:48px 48px;}
+
+.max-display-4 , .max-display-3 , .max-display-2{ display: none; }
 }
 
 
 @media only screen and (max-width: 1229px) {
 .container {max-width:870px; }
+.col4, .col3 { width: 860px; height: auto;}
+.photo-contact {width: 570px ; height: auto;}
+.min-display-3 { display:none; }
+.max-display-2 , .max-display-3 { display:none; }
 }
-
 @media only screen and (min-width: 768px) {
 #options {display:block !important }
 }
@@ -44,14 +49,20 @@ blockquote { background:url(../images/bg-quote@2x.png) center 25px no-repeat; ba
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 .container {max-width:580px; }
-.col3-3 { width:570px; height:auto;}
+.col3, .col4 { width: 570px; height: auto;}
+.photo-contact {width: 280px ; height: auto;}
+
+.min-display-3 , .min-display-2 { display: none; }
+.max-display-2 { display: none; }
 }
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
 .container {max-width:290px; }
-.col3-3, .col2-3 { width:280px; height:auto;}
-.col2-3.white, .col3-3.white {padding:20px 35px 50px !important; }
+.col4, .col3, .col2{ width:280px; height:auto;}
+.col4.white , .col3.white , .col2.white {padding:20px 35px 50px !important; }
+.min-display-1 , .min-display-2 , .min-display-3 { display: none; }
+
 h2 {font-size:24px; font-weight:400; padding-top:22px; font-family:Georgia, "Times New Roman", Times, serif; color:#303030; text-transform:none }
 p.big {line-height:21px; font-size:15px; padding:13px 0px 0 0px; font-style:italic; letter-spacing:0; color:#555 }
 #nav-button {display:block; padding:30px; width:100%; margin:0 auto; cursor:pointer; position:relative; -webkit-tap-highlight-color: rgba(0,0,0,0);}
