@@ -65,7 +65,7 @@ p { line-height:21px; padding:13px 0px 0 0px; font-style:italic; }
 p.small {font-size:12px; line-height:21px; font-style:normal; text-transform:uppercase; font-family:'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;}
 #preloader p.small {font-size:11px; display:block; text-transform:uppercase; font-style:normal; font-weight:700;  letter-spacing:1px; margin-top:3px; font-family: "Open Sans", Arial, Helvetica, sans-serif; -o-text-shadow:-1px -1px 0px rgba(0, 0, 0, 0.25); -moz-text-shadow:-1px -1px 0px rgba(0, 0, 0, 0.25); -webkit-text-shadow:-1px -1px 0px rgba(0, 0, 0, 0.25); text-shadow:1px 1px 0px rgba(0, 0, 0, 0.25);}
 p.big {font-size:50px; line-height:68px; color:#303030; letter-spacing:-3px; font-style:normal;  font-weight:400}
-blockquote { line-height:23px; padding:70px 10px 25px 10px; margin:25px 0px 12px 0px; border-bottom:1px solid #d3d3d3; border-top:1px solid #d3d3d3; color:#333; text-align:center; font-size:17px; font-style:italic; background:url(../images/bg-quote.png) center 25px no-repeat; background-size:30px 30px;}
+blockquote { line-height:23px; padding:70px 10px 25px 10px; margin:25px 0px 12px 0px; border-bottom:1px solid #d3d3d3; border-top:1px solid #d3d3d3; color:#333; text-align:center; font-size:17px; font-style:italic; background:url(../images/icons/bg-quote.png) center 25px no-repeat; background-size:30px 30px;}
 blockquote span {font-size:14px; display:block; margin-top:15px; color:#999}
 .uppercase {text-transform:uppercase }
 p.small.uppercase {font-size:11px; }
@@ -83,7 +83,7 @@ span.arrow {font:13px 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-seri
 /* =4. Headings
 --------------------------------------------------------------------------------------------------------*/
 h1#logo { position:relative; text-align:center; width:280px; padding:5px 0 15px 0; margin:0 auto; z-index:1; }
-h1#logo a { display:inline-block; background:url(../images/JD-BSN.jpg) no-repeat; background-size:137px 195px; width:137px; height:195px; text-indent:-9999px; }
+h1#logo a { display:inline-block; background:url(../images/photos/JD-BSN.jpg) no-repeat; background-size:137px 195px; width:137px; height:195px; text-indent:-9999px; }
 .hentry h1, h2, h3, h4, h5 { line-height:1.2; font-family: Georgia, "Times New Roman", Times, serif; font-size:36px; color:#303030; padding-top:26px; display:block; position:relative }
 h2 {font-size:16px; text-transform:uppercase; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight:600; color:#555; }
 h3 {font-size:24px; font-weight:400; padding-top:18px; }
@@ -191,23 +191,23 @@ p .break {height:13px; }
 --------------------------------------------------------------------------------------------------------*/
 .icons { display:inline-block; height:30px; width:30px; z-index:100; margin-top:20px; margin-bottom:10px; }
 /* Main Nav Icons */
-.trophy { background:url(../images/bg-trophy.png) center no-repeat; background-size:30px 30px; }
-.quote { background:url(../images/bg-quote.png) center no-repeat; background-size:30px 30px; }
-.like { background:url(../images/bg-like.png) center no-repeat; background-size:30px 30px; }
-.share { background:url(../images/bg-share.png) center no-repeat; background-size:30px 30px; }
-.stationery { background:url(../images/bg-stationery.png) center no-repeat; background-size:30px 30px; }
-.camera {background:url(../images/bg-camera.png) center no-repeat; background-size:30px 30px; }
-.instagram {background:url(../images/instagram.png) center no-repeat; background-size:30px 30px; }
-.close { background:url(../images/bg-close.png) center no-repeat; background-size:48px 48px; position:absolute; right:35px; top:35px; z-index:28; width:48px; height:48px; display:block }
+.trophy { background:url(../images/icons/bg-trophy.png) center no-repeat; background-size:30px 30px; }
+.quote { background:url(../images/icons/bg-quote.png) center no-repeat; background-size:30px 30px; }
+.like { background:url(../images/icons/bg-like.png) center no-repeat; background-size:30px 30px; }
+.share { background:url(../images/icons/bg-share.png) center no-repeat; background-size:30px 30px; }
+.stationery { background:url(../images/icons/bg-stationery.png) center no-repeat; background-size:30px 30px; }
+.camera {background:url(../images/icons/bg-camera.png) center no-repeat; background-size:30px 30px; }
+.instagram {background:url(../images/icons/instagram.png) center no-repeat; background-size:30px 30px; }
+.close { background:url(../images/icons/bg-close.png) center no-repeat; background-size:48px 48px; position:absolute; right:35px; top:35px; z-index:28; width:48px; height:48px; display:block }
 /* Social Icons */
-.linkedin {background:url(../images/bg-linkedin.png) center no-repeat; background-size:50px 50px; }
-.dribbble {background:url(../images/bg-dribbble.png) center no-repeat; background-size:50px 51px; }
-.googleplus {background:url(../images/bg-googleplus.png) center no-repeat; background-size:50px 50px; }
-.twitter {background:url(../images/bg-twitter.png) center no-repeat; background-size:50px 51px; } 
-.facebook {background:url(../images/bg-facebook.png) center no-repeat; background-size:50px 51px; }
-.behance {background:url(../images/bg-behance.png) center no-repeat; background-size:50px 50px; }
-.skype {background:url(../images/bg-skype.png) center no-repeat; background-size:50px 51px; }
-.vimeo {background:url(../images/bg-vimeo.png) center no-repeat; background-size:50px 50px; }
+.linkedin {background:url(../images/icons/bg-linkedin.png) center no-repeat; background-size:50px 50px; }
+.dribbble {background:url(../images/icons/bg-dribbble.png) center no-repeat; background-size:50px 51px; }
+.googleplus {background:url(../images/icons/bg-googleplus.png) center no-repeat; background-size:50px 50px; }
+.twitter {background:url(../images/icons/bg-twitter.png) center no-repeat; background-size:50px 51px; }
+.facebook {background:url(../images/icons/bg-facebook.png) center no-repeat; background-size:50px 51px; }
+.behance {background:url(../images/icons/bg-behance.png) center no-repeat; background-size:50px 50px; }
+.skype {background:url(../images/icons/bg-skype.png) center no-repeat; background-size:50px 51px; }
+.vimeo {background:url(../images/icons/bg-vimeo.png) center no-repeat; background-size:50px 50px; }
 /* End Icons
 --------------------------------------------------------------------------------------------------------*/
 
