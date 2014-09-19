@@ -42,6 +42,16 @@ function showContent(){
     // end remove all fields
     //------------------------------------------------------------------------------------------------------------------
 
+    // reset all fields
+    //------------------------------------------------------------------------------------------------------------------
+    document.getElementById('blogtitle').innerHTML = '';
+    document.getElementById('blogtitleinput').value = '';
+    document.getElementById('blogtext').innerHTML = '';
+    document.getElementById('blogtextinput').value = '';
+    $('#blogphoto').attr('src', '');
+
+    //------------------------------------------------------------------------------------------------------------------
+
     // check which checkbox is checked
     //------------------------------------------------------------------------------------------------------------------
     while(field_length--){
@@ -65,6 +75,15 @@ function showContent(){
     //------------------------------------------------------------------------------------------------------------------
 
 
+    // changing form action
+    //------------------------------------------------------------------------------------------------------------------
+
+    document.getElementById('adminform').action = 'blog_check.php';
+
+    // end changing form action
+    //------------------------------------------------------------------------------------------------------------------
+
+
 }
 // end function showContent
 //----------------------------------------------------------------------------------------------------------------------
@@ -73,8 +92,92 @@ function showContent(){
 //----------------------------------------------------------------------------------------------------------------------
 
 function blogChange(){
-    document.getElementById('blogtitle').innerHTML = document.getElementById('blogtitleinput').innerHTML;
+    // title
+    document.getElementById('blogtitle').innerHTML = document.getElementById('blogtitleinput').value;
+    // end title
+    document.getElementById('blogtext').innerHTML = document.getElementById('blogtextinput').value;
+    // date
+    var date = new Date()
+        , month = date.getMonth()
+        , day = date.getDate()
+        , french_month=get_month(month)
+    ;
+
+    var div = day + ' ' + french_month + ' ' + date.getFullYear() + ' ' + '&nbsp;&middot;&nbsp; par Jordan Delamotte';
+    document.getElementById('blogpostdate').innerHTML = div;
+
+
+    // end date
+
 }
 
 // end function showContent
 //----------------------------------------------------------------------------------------------------------------------
+
+
+// end function showContent
+//----------------------------------------------------------------------------------------------------------------------
+function readURL(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#blogphoto').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$('#blogphotoinput').change(function(){
+    readURL(this);
+});
+
+// end function showContent
+//----------------------------------------------------------------------------------------------------------------------
+
+
+
+function get_month(month){
+    month = month+1;
+    switch (month){
+        case 1 :
+            return "JANVIER";
+            break;
+        case 2 :
+            return 'FEVRIER';
+            break;
+        case 3 :
+            return 'MARS';
+            break;
+        case 4 :
+            return 'AVRIL';
+            break;
+        case 5 :
+            return 'MAI';
+            break;
+        case 6 :
+            return 'JUIN';
+            break;
+        case 7 :
+            return 'JUILLET';
+            break;
+        case 8 :
+            return  'AOUT';
+            break;
+        case 9 :
+            return 'SEPTEMBRE';
+            break;
+        case 10 :
+            return  'OCTOBRE';
+            break;
+        case 11 :
+            return 'NOVEMBRE';
+            break;
+        case 12 :
+            return 'DECEMBRE';
+            break;
+        default :
+            return null;
+
+    }
+}

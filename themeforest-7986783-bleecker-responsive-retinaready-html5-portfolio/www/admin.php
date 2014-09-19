@@ -10,7 +10,7 @@
 
 <!DOCTYPE html>
 
-    <head>
+<head xmlns="http://www.w3.org/1999/html">
 
     <!-- start stylesheets
     ------------------------------------------------------------------------------------------------------------------->
@@ -33,8 +33,14 @@
                 <form method="post" action="" name="adminform" id="adminform" autocomplete="off">
                     <fieldset>
                         <h2>Blog  <input class="field" type="checkbox" name="bloginput" value="blog" onchange="showContent();"/></h2>
-                        <h3 class="bloginput input">titre</h3>
-                        <textarea class="bloginput input" id="blogtitleinput" onkeypress="blogChange();"></textarea>
+                        <br>
+                        <h3 class="bloginput input">Photo</h3>
+                        <input class='bloginput input' type="file" id="blogphotoinput">
+                        <h3 class="bloginput input">Titre</h3>
+                        <textarea class="bloginput input" id="blogtitleinput" onkeyup="blogChange();"></textarea>
+                        <h3 class="bloginput input">Texte</h3>
+                        <textarea class="bloginput input" id="blogtextinput" onkeyup="blogChange();"></textarea>
+                        <input type="submit" class="submit input bloginput" id="submit" value="Envoyer"  />
                     </fieldset>
                 </form>
                 <!-- end form
@@ -50,26 +56,18 @@
                 ------------------------------------------------------------------------------------------------------->
                 <div id="previsual">
 
-                    <div class="element  clearfix col2-3 post post4 auto center">
-                        <div class="clearfix col2-3 auto">
-                            <div class="images"><a href="#filter=.blog">
-                                    <div class="close"></div>
-                                </a><img src="images/blog04.jpg" alt="Blog Post" /> </div>
+                    <div class="element  clearfix col2-3 post auto center input bloginput">
+                        <div class="clearfix col2-3 auto post">
+                            <div class="images">
+                                <img id='blogphoto' src="" alt="" />
+                            </div>
                         </div>
                         <article class="clearfix col2-3 white white-bottom auto">
                             <h3 id="blogtitle"></h3>
                             <div class="borderline"></div>
-                            <p class="small">Feb 24, 2014 &nbsp;&middot;&nbsp; by Admin</p>
-                            <p> Maecenas est lorem, imperdiet sed adipiscing et, fringilla eget justo. Etiam accumsan, elit ac tempus tincidunt, neque diam egestas nibh, a laoreet libero ante sed magna. Sed dictum, dui sed ultricies sollicitudin. </p>
-                            <h4>Services</h4>
-                            <ul class="unordered-list column-count2">
-                                <li>Photography: Vestibulum erat wisi, condimentum sed, ornare sit amet, wisi. </li>
-                                <li>Webdesign: Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.</li>
-                                <li>Illustration: <a href="#">This is a link</a> in turpis pulvinar facilisis. Ut felis.</li>
-                                <li>Logo: Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.</li>
-                            </ul>
-                            <div class="break"></div>
-                            <a href="#" class="icons margin like"></a> <a href="#" class="icons margin share"></a> </article>
+                            <p class="small" id="blogpostdate"></p>
+                            <div id="blogtext">
+                            </div>
                     </div>
                 </div>
                 <!-- end previsualisation
@@ -87,7 +85,7 @@
 
     <!-- start javascipt script loading
     ------------------------------------------------------------------------------------------------------------------->
-
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/form.js" type="text/javascript"></script>
     <!-- end javascipt script loading
     ------------------------------------------------------------------------------------------------------------------->
