@@ -32,6 +32,7 @@
 .aligncenter { margin:auto; display:block; }
 .alignnone { clear:both; font-size:0; line-height:0; margin:0; padding:0; border:0; height:0; width:0; }
 .centered { text-align:center; }
+.center { margin-right: auto; margin-left: auto;}
 /* End Clearfix
 --------------------------------------------------------------------------------------------------------*/
 

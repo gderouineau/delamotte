@@ -5,31 +5,31 @@
 only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
-.trophy { background:url(../images/bg-trophy@2x.png) center no-repeat; background-size:30px 30px; }
-.quote { background:url(../images/bg-quote@2x.png) center no-repeat; background-size:30px 30px; }
-.like { background:url(../images/bg-like@2x.png) center no-repeat; background-size:30px 30px; }
-.share { background:url(../images/bg-share@2x.png) center no-repeat; background-size:30px 30px; }
-.stationery { background:url(../images/bg-stationery@2x.png) center no-repeat; background-size:30px 30px; }
-.camera {background:url(../images/bg-camera@2x.png) center no-repeat; background-size:30px 30px; }
-.close { background:url(../images/bg-close@2x.png) center no-repeat; background-size:48px 48px; }
+.trophy { background:url(../images/icons/bg-trophy@2x.png) center no-repeat; background-size:30px 30px; }
+.quote { background:url(../images/icons/bg-quote@2x.png) center no-repeat; background-size:30px 30px; }
+.like { background:url(../images/icons/bg-like@2x.png) center no-repeat; background-size:30px 30px; }
+.share { background:url(../images/icons/bg-share@2x.png) center no-repeat; background-size:30px 30px; }
+.stationery { background:url(../images/icons/bg-stationery@2x.png) center no-repeat; background-size:30px 30px; }
+.camera {background:url(../images/icons/bg-camera@2x.png) center no-repeat; background-size:30px 30px; }
+.close { background:url(../images/icons/bg-close@2x.png) center no-repeat; background-size:48px 48px; }
 /* Social Icons */
-.linkedin {background:url(../images/bg-linkedin@2x.png) center no-repeat; background-size:50px 50px; }
-.dribbble {background:url(../images/bg-dribbble@2x.png) center no-repeat; background-size:50px 51px; }
-.googleplus {background:url(../images/bg-googleplus@2x.png) center no-repeat; background-size:50px 50px; }
-.twitter {background:url(../images/bg-twitter@2x.png) center no-repeat; background-size:50px 51px; } 
-.facebook {background:url(../images/bg-facebook@2x.png) center no-repeat; background-size:50px 51px; }
-.behance {background:url(../images/bg-behance@2x.png) center no-repeat; background-size:50px 50px; }
-.skype {background:url(../images/bg-skype@2x.png) center no-repeat; background-size:50px 51px; }
-.vimeo {background:url(../images/bg-vimeo@2x.png) center no-repeat; background-size:50px 50px; }
+.linkedin {background:url(../images/icons/bg-linkedin@2x.png) center no-repeat; background-size:50px 50px; }
+.dribbble {background:url(../images/icons/bg-dribbble@2x.png) center no-repeat; background-size:50px 51px; }
+.googleplus {background:url(../images/icons/bg-googleplus@2x.png) center no-repeat; background-size:50px 50px; }
+.twitter {background:url(../images/icons/bg-twitter@2x.png) center no-repeat; background-size:50px 51px; }
+.facebook {background:url(../images/icons/bg-facebook@2x.png) center no-repeat; background-size:50px 51px; }
+.behance {background:url(../images/icons/bg-behance@2x.png) center no-repeat; background-size:50px 50px; }
+.skype {background:url(../images/icons/bg-skype@2x.png) center no-repeat; background-size:50px 51px; }
+.vimeo {background:url(../images/icons/bg-vimeo@2x.png) center no-repeat; background-size:50px 50px; }
 
-blockquote { background:url(../images/bg-quote@2x.png) center 25px no-repeat; background-size:30px 30px;}
+blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repeat; background-size:30px 30px;}
 
-.flex-direction-nav .flex-next {background:url(../images/bg-next@2x.png) center no-repeat; background-size:48px 48px; }
-.flex-direction-nav .flex-prev {background:url(../images/bg-prev@2x.png) center no-repeat; background-size:48px 48px; }
+.flex-direction-nav .flex-next {background:url(../images/icons/bg-next@2x.png) center no-repeat; background-size:48px 48px; }
+.flex-direction-nav .flex-prev {background:url(../images/icons/bg-prev@2x.png) center no-repeat; background-size:48px 48px; }
 
-.fancybox-close {background: url(../images/bg-close@2x.png) center no-repeat; background-size:48px 48px;}
-.fancybox-prev span {background: url(../images/bg-prev@2x.png) center no-repeat; background-size:48px 48px;}
-.fancybox-next span {background: url(../images/bg-next@2x.png) center no-repeat; background-size:48px 48px;}
+.fancybox-close {background: url(../images/icons/bg-close@2x.png) center no-repeat; background-size:48px 48px;}
+.fancybox-prev span {background: url(../images/icons/bg-prev@2x.png) center no-repeat; background-size:48px 48px;}
+.fancybox-next span {background: url(../images/icons/bg-next@2x.png) center no-repeat; background-size:48px 48px;}
 
 .max-display-4 , .max-display-3 , .max-display-2{ display: none; }
 }
