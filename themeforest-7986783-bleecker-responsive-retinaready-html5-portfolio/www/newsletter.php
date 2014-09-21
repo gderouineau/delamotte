@@ -19,10 +19,13 @@ if(isset($_POST['email'])){
     $query = 'SELECT * FROM newsletter WHERE email=\''.$email.'\'';
     $result = $db->query($query);
     $data = $result->fetch();
-
-    if(count($data) == 0){
-        $insert = $db->query('INSERT INTO newsletter VALUES (null,\''.$email.'\')');
+    $query='INSERT INTO newsletter VALUES (null,\''.$email.'\')';
+    if(count($data) == 1){
+        $insert = $db->query($query);
         echo 'success';
+    }
+    elseif(count($data) != 1){
+        echo 'existing';
     }
     else{
         echo 'failed';
