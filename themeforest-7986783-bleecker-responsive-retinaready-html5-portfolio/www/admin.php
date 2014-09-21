@@ -6,6 +6,14 @@
  * Time: 09:55
  */
 
+
+
+if(isset($_POST['email']) && isset($_POST['mdp'])){
+
+    if(($_POST['email'] == 'chef.jordandelamotte@gmail.com') && ($_POST['mdp'] == 'kotek44972')){
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -93,3 +101,33 @@
     </body>
 
 </html>
+
+<?php
+    }
+    else{
+        ?>
+        <form method="POST" action="admin.php">
+            <p>
+                <h4>Connexion</h4>
+                email: <input type="text" id="newsletter_email" name="email" value ="" />
+                mdp: <input type="password" name="mdp" value=""/>
+                <input type="submit" value="envoyer">
+            </p>
+        </form>
+        <?php
+    }
+
+}
+else{
+    ?>
+    <form method="POST" action="admin.php">
+        <p>
+        <h4>Connexion</h4>
+        email: <input type="text" id="newsletter_email" name="email" value ="" />
+        mdp: <input type="password" name="mdp" value=""/>
+        <input type="submit" value="envoyer">
+        </p>
+    </form>
+<?php
+}
+?>
