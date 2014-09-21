@@ -9,9 +9,17 @@
 
 if(isset($_POST['email'])){
     $email = $_POST['email'];
-    $db = new PDO('mysql:host=jordandefmbdd.mysql.db;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
-    $result = $db->query('SELECT * FROM newsletter WHERE email = \''.$email.'\'');
+    try{
+        $db = new PDO('mysql:host=mysql51-136.perso;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
+    }
+    catch (PDOException $e) {
+        echo "Erreur !: " . $e->getMessage() . "<br/>";
+        die();
+    }
+    $query = 'SELECT * FROM newsletter WHERE email=\''.$email.'\'';
+    $result = $db->query($query);
     $data = $result->fetch();
+
     if(count($data) == 0){
         $insert = $db->query('INSERT INTO newsletter VALUES (null,\''.$email.'\')');
         echo 'success';
@@ -20,4 +28,8 @@ if(isset($_POST['email'])){
         echo 'failed';
     }
 
+
+
 }
+
+?>

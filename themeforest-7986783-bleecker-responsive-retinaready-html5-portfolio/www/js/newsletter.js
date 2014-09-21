@@ -7,25 +7,25 @@ $(document).ready(function(){
 
         $.post(
             'newsletter.php',
-                {
-                    login : $("#newsletter_email").val()
+            {
+                email : $('#newsletter_email').val()
+            },
 
-                },
 
             function(data){
                 var newsletter = $("#newsletter").html();
-                var temp = newsletter;
-                if(data == 'success'){
-                    newsletter.html("<p>Nous avons pris votre demande en compte. Vous recevrez désormais les newsletters</p>");
+                if(data == 'success'){alert(1);
+                    $('#newsletter').html("<p>Nous avons pris votre demande en compte. Vous recevrez désormais les newsletters</p>");
                     setTimeout(function() {
-                        newsletter.html(temp);
+                        $('#newsletter').html(newsletter);
                     }, 5000);
 
                 }
-                else{
-                    $("#newsletter").html("<p>un problème est survenu.</p>");
+                else{alert(2);
+
+                    $('#newsletter').html("<p>Une erreur est survenue. Merci de nous excuser, nous tentons de régler le problème au plus vite.</p>");
                     setTimeout(function() {
-                        newsletter.html(temp);
+                        $('#newsletter').html(newsletter);
                     }, 5000);
                 }
 
@@ -36,3 +36,4 @@ $(document).ready(function(){
     });
 
 });
+
