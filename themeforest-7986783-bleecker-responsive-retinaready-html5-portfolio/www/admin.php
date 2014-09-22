@@ -65,7 +65,7 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
                 <div id="previsual">
 
                     <div class="element  clearfix col2-3 post auto center input bloginput">
-                        <div class="clearfix col2-3 auto post">
+                        <div class="clearfix col2 row3 auto no-padding">
                             <div class="images">
                                 <img id='blogphoto' src="" alt="" />
                             </div>
