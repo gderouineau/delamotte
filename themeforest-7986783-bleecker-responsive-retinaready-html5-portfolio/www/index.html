@@ -50,11 +50,11 @@
             par exemple le champ #filter=.portfolio te permet de chercher dans les classes
             -->
             <ul class="option-set clearfix" data-option-key="filter">
-                <li><a href="#filter=.accueil" class="selected">Accueil</a>
+                <li><a href="#filter=.bienvenue" class="selected">Bienvenue</a>
                 <li><a href="#filter=.portrait">Portrait</a></li>
+                <li><a href="#filter=.actualité">Actualités</a></li>
                 <li><a href="#filter=.photo">Photos</a></li>
-                <li><a href="#filter=.blog">Blog</a></li>
-                <li><a href="#filter=.contact">Contact</a></li>
+                <li><a href="#filter=.recette">Recettes</a></li>
             </ul>
         </div>
         <!-- end main nav -->
@@ -65,11 +65,6 @@
 <div class="container">
 <div id="container" class="clearfix">
 
-<!--
-a partir de la tu as tes blocs c'est défini par la class element
-ça va de gauche à droite et de bas en haut
-
--->
 
 <!-- important lorsque tu passes sur une photo et que sur le texte qui s'affiche tu ais un titre et un sous titre tu fais
 titre <span>sous-titre</span>
@@ -116,47 +111,46 @@ titre <span>sous-titre</span>
 
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<!-- debut du bloc accueil -->
+<!-- debut du bloc bienvenue -->
 
-<div class="element  clearfix col2 row3 accueil">
+<div class="element  clearfix col2 row3 bienvenue">
     <div class="images"> <img src="images/photos/saintpierre1-HD-r.jpg" alt="Saint Pierre, fèves, amandes et shiso rouge..." class="slip" /> </div>
 </div>
-<div class="element  clearfix col2 row1 accueil">
+<div class="element  clearfix col2 row1 bienvenue">
     <div class="images"> <img src="images/photos/portrait1-r.jpg" alt="" /> </div>
 </div>
 <a href="#filter=.portrait" style="text-decoration: none;">
-    <div class="element  clearfix col2 row1 accueil white">
-        <p>
-            Passionné, Jordan Delamotte l’est en cuisine comme en toute chose.
-            Ambitieux et dévoué, Jordan a su gravir les échelons rapidement et imposer sa personnalité...</p>
+    <div class="element  clearfix col2 row1 bienvenue white">
+        <p><br/><br/><br/>
+            Bienvenue sur le Site Officiel de Jordan Delamotte, <br/> Chef de cuisine passionné...</p>
     </div>
 </a>
-<div class="element  clearfix col1 row1 accueil">
-    <a href="images/photos/image_truffe.jpg" data-title="Une truffe  mélanosporum" data-fancybox-group="group2" class="popup">
+<div class="element  clearfix col1 row1 bienvenue">
+    <a href="images/photos/image_truffe.jpg" data-title="Une truffe  mélanosporum" data-fancybox-group="plat" class="popup">
         <div class="images"> <img src="images/photos/image_truffe.jpg" alt="Une truffe  mélanosporum" class="slip" /> </div>
     </a>
 </div>
-<div class="element clearfix col1 row2 accueil">
+<div class="element clearfix col1 row2 bienvenue">
     <a href="#filter=.portrait">
         <div class="images"> <img style="height:570px " src="images/photos/JD-NSB-r.jpg" alt="Qui <br /><br />est <br /><br />Jordan <br />Delamotte <br /><br />?" class="slip"/> </div>
     </a>
 </div>
-<div class="element  clearfix col1 row1 accueil">
-    <a href="images/photos/nicoise2-BD.jpg" data-title="La salade niçoise de Jordan Delamotte" data-fancybox-group="group2" class="popup">
+<div class="element  clearfix col1 row1 bienvenue">
+    <a href="images/photos/nicoise2-BD.jpg" data-title="La salade niçoise de Jordan Delamotte" data-fancybox-group="plat" class="popup">
         <div class="images"> <img src="images/photos/nicoise2-BD.jpg" alt="La salade niçoise..." class="slip" /> </div>
     </a>
 </div>
-<div class="element  clearfix col1 row1 accueil">
-    <a href="images/photos/tartareboeuf3.jpg" data-title="Tartare de boeuf du Limousin, déclinaison de tomates anciennes" data-fancybox-group="group2" class="popup">
+<div class="element  clearfix col1 row1 bienvenue">
+    <a href="images/photos/tartareboeuf3.jpg" data-title="Tartare de boeuf du Limousin, déclinaison de tomates anciennes" data-fancybox-group="plat" class="popup">
         <div class="images"> <img src="images/photos/tartareboeuf3.jpg" alt="Le tartare de boeuf..." class="slip"/> </div>
     </a>
 </div>
-<div class="element  clearfix col1 row1 accueil">
-    <a href="images/photos/finger_manguevanille1-1.jpg" data-title="Finger de mangue épicée, crème légère à la vanille de Madagascar,biscuit à la fleur de sel de Guérande" data-fancybox-group="group2" class="popup">
+<div class="element  clearfix col1 row1 bienvenue">
+    <a href="images/photos/finger_manguevanille1-1.jpg" data-title="Finger de mangue épicée, crème légère à la vanille de Madagascar,biscuit à la fleur de sel de Guérande" data-fancybox-group="plat" class="popup">
         <div class="images"> <img src="images/photos/finger_manguevanille1-1.jpg" alt="Le finger de mangue épicé..." class="slip"/> </div>
     </a>
 </div>
-<!-- fin du bloc accueil -->
+<!-- fin du bloc bienvenue -->
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -176,12 +170,12 @@ titre <span>sous-titre</span>
     </div>-->
 
 <div class="element  clearfix col1 row1 photo">
-    <a href="images/photos/nicoise2-BD.jpg" data-title="La salade niçoise de Jordan Delamotte" data-fancybox-group="group2" class="popup">
+    <a href="images/photos/nicoise2-BD.jpg" data-title="La salade niçoise de Jordan Delamotte" data-fancybox-group="plat" class="popup">
         <div class="images"> <img src="images/photos/nicoise2-BD.jpg" alt="La salade niçoise..." class="slip" /> </div>
     </a>
 </div>
 <div class="element  clearfix col1 row1 photo">
-    <a href="images/photos/saintpierre2-HD.jpg" data-title="Filet de Saint Pierre, fèves, amandes et shiso rouge" data-fancybox-group="group2" class="popup">
+    <a href="images/photos/saintpierre2-HD.jpg" data-title="Filet de Saint Pierre, fèves, amandes et shiso rouge" data-fancybox-group="plat" class="popup">
         <div class="images"> <img src="images/photos/saintpierre2-HD.jpg" alt="Le Saint Pierre..." class="slip"/> </div>
     </a>
 </div>
@@ -189,17 +183,17 @@ titre <span>sous-titre</span>
     <div class="images"> <img src="images/photos/portrait1-r.jpg" alt="" /> </div>
 </div>
 <div class="element  clearfix col1 row1 photo">
-    <a href="images/photos/tartareboeuf3.jpg" data-title="Tartare de boeuf du Limousin, déclinaison de tomates anciennes" data-fancybox-group="group2" class="popup">
+    <a href="images/photos/tartareboeuf3.jpg" data-title="Tartare de boeuf du Limousin, déclinaison de tomates anciennes" data-fancybox-group="plat" class="popup">
         <div class="images"> <img src="images/photos/tartareboeuf3.jpg" alt="Le tartare de boeuf..." class="slip"/> </div>
     </a>
 </div>
 <div class="element  clearfix col1 row1 photo">
-    <a href="images/photos/image_truffe.jpg" data-title="Une truffe  mélanosporum" data-fancybox-group="group2" class="popup">
+    <a href="images/photos/image_truffe.jpg" data-title="Une truffe  mélanosporum" data-fancybox-group="plat" class="popup">
         <div class="images"> <img src="images/photos/image_truffe.jpg" alt="Une truffe  mélanosporum..." class="slip" /> </div>
     </a>
 </div>
 <div class="element  clearfix col1 row1 photo">
-    <a href="images/photos/finger_manguevanille1-1.jpg" data-title="Finger de mangue épicée, crème légère à la vanille de Madagascar,biscuit à la fleur de sel de Guérande" data-fancybox-group="group2" class="popup">
+    <a href="images/photos/finger_manguevanille1-1.jpg" data-title="Finger de mangue épicée, crème légère à la vanille de Madagascar,biscuit à la fleur de sel de Guérande" data-fancybox-group="plat" class="popup">
         <div class="images"> <img src="images/photos/finger_manguevanille1-1.jpg" alt="Le finger de mangue épicé..." class="slip"/> </div>
     </a>
 </div>
@@ -212,7 +206,7 @@ titre <span>sous-titre</span>
     <div class="images"> <img src="images/photos/portrait-1-BW.jpg" alt="" /> </div>
 </div>
 <div class="element  clearfix col1 row1 photo">
-    <a href="images/photos/daurade1-3.jpg" data-title="Daurade royale sauvage, guacamol au lait de coco, cristophine et choux bok choy" data-fancybox-group="group2" class="popup">
+    <a href="images/photos/daurade1-3.jpg" data-title="Daurade royale sauvage, guacamol au lait de coco, cristophine et choux bok choy" data-fancybox-group="plat" class="popup">
         <div class="images"> <img src="images/photos/daurade1-3.jpg" alt="La daurade royale..." class="slip" /> </div>
     </a>
 </div>
@@ -252,10 +246,10 @@ titre <span>sous-titre</span>
 </div>
 
 <div class="element clearfix col2 row2 portrait">
-    <div class="images"> <img src="images/photos/portrait-1-BW.jpg" alt="a propos" /> </div>
+    <div class="images"> <img src="images/photos/portrait-1-BW.jpg" alt="portrait" /> </div>
 </div>
 <div class="element clearfix col2 row1 portrait">
-    <div class="images"> <img src="images/photos/nicoise3.jpg" alt="à propos" /> </div>
+    <div class="images"> <img src="images/photos/nicoise3.jpg" alt="portrait" /> </div>
 </div>
 
 
@@ -299,7 +293,7 @@ titre <span>sous-titre</span>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <!-- bloc réalisation -->
-<div class="element clearfix white col4 row1 presse contactpro blog">
+<div class="element clearfix white col4 row1 actualité recette">
     <p> En cours de réalisation</p>
 </div>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -309,11 +303,11 @@ titre <span>sous-titre</span>
 <!-- bloc remerciement -->
 <div class="element clearfix white col2 row1 remerciement">
     <p> Un grand merci... <br /><br />
-        à Charlotte Rocher, pour son texte <br />
+        à Charlotte Rocher, pour son portrait <br />
         à Alban Couturier, pour ses photos <br />
         à Sébastien Bessac, pour ses photos <br />
         à Guillaume Derouineau, pour sa participation <br />
-        à Sara Edward, pour son soutien
+        à Sara Edward, pour son amour et son soutien
     </p>
 </div>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -321,7 +315,7 @@ titre <span>sous-titre</span>
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <!-- bloc newsletter -->
-<div class="element clearfix white col1 row1 accueil" id="newsletter">
+<div class="element clearfix white col1 row1 bienvenue contact" id="newsletter">
     <h4>Abonnez-vous à la newsletter.</h4>
     <form>
         <p>
@@ -335,13 +329,22 @@ titre <span>sous-titre</span>
 
 
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<!--  bloc actualité -->
+<!--  bloc presse -->
 
 <div id="news" style="display: none;">
-
+</div>
+<div class="element  clearfix col2 row3 presse">
+    <a href="images/photos/pressesofoodmag.png" data-title="Un nouveau Chef dans le triangle d'or de Paris..." data-fancybox-group="presse" class="popup">
+        <div class="images"> <img src="images/photos/pressesofoodmag.png" alt="SoFoodMag.com" class="" /> </div>
+    </a>
+</div>
+<div class="element  clearfix col2 row3 presse">
+    <a href="images/photos/pressegala.PNG" data-title="Le + : Le buffet gastronomique et innovant du chef Jordan Delamotte" data-fancybox-group="presse" class="popup">
+        <div class="images"> <img src="images/photos/pressegala.PNG" alt="Gala" class="" /> </div>
+    </a>
 </div>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<!-- fin du bloc actualité -->
+<!-- fin du bloc presse -->
 
 
 </div>
@@ -357,10 +360,7 @@ titre <span>sous-titre</span>
             <!--<li class="instagram"><a href="http://instagram.com/jordandelamotte" target="_blank">Visitez mon compte Instagram</a></li>-->
             <li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=326916999" target="_blank">Visitez mon compte Linkedin</a></li>
 
-        </ul>
-        <div id="nav-button-down">
-            <span class="nav-bar"></span> <span class="nav-bar"></span> <span class="nav-bar"></span>
-        </div>
+
         <div id="options-down" class="clearfix">
             <!-- menu dans le cas ou tu voudrais ajouter ou supprimer des options
             pour en ajouter un il suffit du dupliquer
@@ -369,9 +369,9 @@ titre <span>sous-titre</span>
             -->
             <ul class="option-set clearfix" data-option-key="filter">
                 <li><a href="#filter=.presse" class="selected">Presse</a>
-                <li><a href="#filter=.contactpro">Contact Pro</a></li>
                 <li><a href="#filter=.legals">Mentions légales</a></li>
                 <li><a href="#filter=.remerciement">Remerciements</a></li>
+                <li><a href="#filter=.contact">Contact</a></li>
             </ul>
         </div>
 
