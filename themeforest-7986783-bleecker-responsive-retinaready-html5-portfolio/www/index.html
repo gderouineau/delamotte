@@ -49,7 +49,7 @@
             <li><a href="#filter=.portfolio">Photos</a></li>
             par exemple le champ #filter=.portfolio te permet de chercher dans les classes
             -->
-            <ul class="option-set clearfix" data-option-key="filter">
+            <ul class="option-set clearfix" id="option-list-up" data-option-key="filter">
                 <li><a href="#filter=.bienvenue" class="selected">Bienvenue</a>
                 <li><a href="#filter=.portrait">Portrait</a></li>
                 <li><a href="#filter=.actualité">Actualités</a></li>
@@ -359,16 +359,14 @@ titre <span>sous-titre</span>
             <li class="facebook"><a href="https://www.facebook.com/Chef.JordanDelamotte" target="_blank">Visitez ma page Facebook</a></li>
             <!--<li class="instagram"><a href="http://instagram.com/jordandelamotte" target="_blank">Visitez mon compte Instagram</a></li>-->
             <li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=326916999" target="_blank">Visitez mon compte Linkedin</a></li>
+        </ul>
+        <div id="nav-button-down">
 
-
+        </div>
         <div id="options-down" class="clearfix">
-            <!-- menu dans le cas ou tu voudrais ajouter ou supprimer des options
-            pour en ajouter un il suffit du dupliquer
-            <li><a href="#filter=.portfolio">Photos</a></li>
-            par exemple le champ #filter=.portfolio te permet de chercher dans les classes
-            -->
-            <ul class="option-set clearfix" data-option-key="filter">
-                <li><a href="#filter=.presse" class="selected">Presse</a>
+
+            <ul class="option-set clearfix" id="option-list-down" data-option-key="filter">
+                <li><a href="#filter=.presse">Presse</a>
                 <li><a href="#filter=.legals">Mentions légales</a></li>
                 <li><a href="#filter=.remerciement">Remerciements</a></li>
                 <li><a href="#filter=.contact">Contact</a></li>
