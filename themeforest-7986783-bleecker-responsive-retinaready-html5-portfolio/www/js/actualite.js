@@ -3,12 +3,8 @@
  */
 $(document).ready(function(){
 
-    $.post(
+    $.get(
         'actualite.php',
-        {
-            news : 'all'
-        },
-
 
         function(data){
             for(var key in data){
