@@ -95,6 +95,7 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
     ------------------------------------------------------------------------------------------------------------------->
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/form.js" type="text/javascript"></script>
+    <script src="js/check_news.js" type="text/javascript"></script>
     <!-- end javascipt script loading
     ------------------------------------------------------------------------------------------------------------------->
 
