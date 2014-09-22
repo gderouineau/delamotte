@@ -43,12 +43,12 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
                         <h2>Blog  <input class="field" type="checkbox" name="bloginput" value="blog" onchange="showContent();"/></h2>
                         <br>
                         <h3 class="bloginput input">Photo</h3>
-                        <input class='bloginput input' type="file" id="blogphotoinput">
+                        <input class='bloginput input' type="file" id="blogphotoinput" name="blogphotoinput" >
                         <h3 class="bloginput input">Titre</h3>
-                        <textarea class="bloginput input" id="blogtitleinput" onkeyup="blogChange();"></textarea>
+                        <textarea class="bloginput input" id="blogtitleinput" name="blogtitleinput" onkeyup="blogChange();"></textarea>
                         <h3 class="bloginput input">Texte</h3>
-                        <textarea class="bloginput input" id="blogtextinput" onkeyup="blogChange();"></textarea>
-                        <input type="submit" class="submit input bloginput" id="submit" value="Envoyer"  />
+                        <textarea class="bloginput input" id="blogtextinput" name="blogtextinput" onkeyup="blogChange();"></textarea>
+                        <p class="submit input bloginput" id="submit_blog" >Envoyer</p>
                     </fieldset>
                 </form>
                 <!-- end form
@@ -65,7 +65,7 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
                 <div id="previsual">
 
                     <div class="element  clearfix col2-3 post auto center input bloginput">
-                        <div class="clearfix col2 row3 auto no-padding">
+                        <div class="clearfix col2-3 auto no-padding">
                             <div class="images">
                                 <img id='blogphoto' src="" alt="" />
                             </div>

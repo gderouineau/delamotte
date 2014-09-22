@@ -1,81 +1,61 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: GD
- * Date: 19/09/2014
- * Time: 13:25
- */
+
+$data = array();
+
+$photo = "";
+$title = $_POST['title'];
+$text  = "";
+$date  = date("Y-m-d H:i:s");
+$place = 0;
+$rand = rand(1,99999);
+if(isset($_GET['files']))
+{
+    $error = false;
+    $files = array();
+
+    $uploaddir = 'images/photos/';
+    foreach($_FILES as $file)
+    {
+        if(move_uploaded_file($file['tmp_name'], $uploaddir .'blog'.basename($file['name'])))
+        {
+            $files[] = $uploaddir .$file['name'];
+            $photo = $uploaddir .$file['name'];
+        }
+        else
+        {
+            $error = true;
+        }
+    }
+    $data = ($error) ? array('error' => 'There was an error uploading your files') : array('files' => $files);
+
+}
+else
+{
+
+    $data = array('success' => 'file uploade', 'formData' => $_POST);
+
+
+}
 
 if(isset($_POST['title']) && isset($_POST['text'])){
-
-    $photo = "";
-    if(isset($_FILES["FileInput"]) && $_FILES["FileInput"]["error"]== UPLOAD_ERR_OK){
-        $UploadDirectory    = '/images/photos/';
-        if (!isset($_SERVER['HTTP_X_REQUESTED_WITH'])){
-            die();
-        }
-
-
-        //Is file size is less than allowed size.
-        if ($_FILES["FileInput"]["size"] > 5242880) {
-            die("File size is too big!");
-        }
-        switch(strtolower($_FILES['FileInput']['type']))
-        {
-            //allowed file types
-            case 'image/png':
-            case 'image/gif':
-            case 'image/jpeg':
-            case 'image/pjpeg':
-            case 'text/plain':
-            case 'text/html': //html file
-            case 'application/x-zip-compressed':
-            case 'application/pdf':
-            case 'application/msword':
-            case 'application/vnd.ms-excel':
-            case 'video/mp4':
-                break;
-            default:
-                die('Unsupported File!'); //output error
-        }
-        $File_Name          = strtolower($_FILES['FileInput']['name']);
-        $File_Ext           = substr($File_Name, strrpos($File_Name, '.'));
-        $Random_Number      = rand(0, 9999999999);
-        $NewFileName        = $Random_Number.$File_Ext;
-        if(move_uploaded_file($_FILES['FileInput']['tmp_name'], $UploadDirectory.$NewFileName ))
-        {
-            // do other stuff
-            $photo = $UploadDirectory.$NewFileName;
-        }else{
-            die('error uploading File!');
-        }
-
-
-    }
-    $date = $_POST['date'];
     $title = $_POST['title'];
     $text = $_POST['text'];
+    $photo = 'images/photos/'.'blog'.$_POST['photoname'];
+    $db = new PDO('mysql:host=mysql51-136.perso;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
+    $query =
+        'INSERT INTO actualite VALUES (
+        null,
+        '.$place.',
+        \''.addslashes($title).'\',
+        \''.addslashes($text).'\',
+        \''.addslashes($date).'\',
+        \''.addslashes($photo).'\'
+        )';
 
-    try{
-        $db = new PDO('mysql:host=mysql51-136.perso;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
-    }
-    catch (PDOException $e) {
-        echo "Erreur !: " . $e->getMessage() . "<br/>";
-        die();
-    }
-    $query='INSERT INTO newsletter
-            VALUES (
-            null,
-            0,
-            \''.$title.'\',
-            \''.$text.'\',
-            \''.$date.'\',
-            \''.$photo.'\'
-            )';
-    $insert = $db->query($query);
-    echo 'success';
+    $result = $db->query($query);
+    $data = array('success' => $query, 'formData' => $_POST);
 
 }
-else{
-    echo 'missing data';
-}
+echo json_encode($data);
+
+?>
