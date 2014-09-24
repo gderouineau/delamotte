@@ -105,7 +105,7 @@ var $container = $('#container'),
           isotopeOptions = {},
           // defaults, used if not explicitly set in hash
           defaultOptions = {
-            filter: '.home',
+            filter: '.bienvenue',
             sortBy: 'original-order',
             sortAscending: true,
             layoutMode: 'masonry'
