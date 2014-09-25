@@ -8,10 +8,8 @@ $(document).ready(function(){
 
         function(data){
 
-            console.log(data);
             data = JSON.parse(data);
             for(var key in data){
-                console.log(data);
                 var   id = data[key]['id']
                     , place = data[key]['place']
                     , title = data[key]['title']
@@ -22,12 +20,11 @@ $(document).ready(function(){
                     , day = date.getDate()
                     , french_month=get_month(month)
                     , max_resume_length =  Math.min(100, text.length)
+                    , full = ""
+                    , resume = ""
                 ;
-                console.log(text);
-                console.log(title);
-                console.log(photo);
                 /*
-                var resume =
+                resume =
                     '<div class="element  clearfix col1 row1 actualité white teaser'+id+'">' +
                         '<a href="#filter=.actualité%3Anot(.teaser'+id+'),+.post'+id+'" class="full"></a>'+
                         '<h3>'+title+'</h3>'+
@@ -37,16 +34,17 @@ $(document).ready(function(){
                     '</div>'
                     ;
                 */
-                var resume =
-                    '<div class="fancybox element  clearfix col1 row1 actualité white teaser'+id+'">' +
-                        '<a href="#actu_'+id+'" class="full"></a>'+
+                resume =
+                    '<div class="fancybox element  clearfix col1 row1 actualité white ">' +
+                        '<a href="actu_fancybox.php?id='+id+'" id="fancy_actu_'+id+'" class="full fancy_actu"></a>'+
                         '<h3>'+title+'</h3>'+
                         '<div class="borderline"></div>'+
                         '<p class="small">Feb 24, 2014</p>'+
                         '<p>'+text.substr(0,max_resume_length)+'...</p>'+
                     '</div>'
                     ;
-                var full =
+                /*
+                full =
                     '<div class="element  clearfix col2-3 post post'+id+' auto center" id="actu_'+id+'">'+
                         '<div class="clearfix col2-3 auto no-padding">'+
                             '<div class="images">' +
@@ -66,6 +64,7 @@ $(document).ready(function(){
                         '</article>'+
                     '</div>'
                 ;
+                */
                 console.log(resume);
                 var actu_div = $('#news');
                 actu_div.after(full);
@@ -76,8 +75,42 @@ $(document).ready(function(){
 
     );
 
+
+    $('.fancy_actu').fancybox({
+        type : 'iframe',
+        autoScale: true,
+        width: 570
+    });
+
+
+
+
 });
 
+$(document).ready(function(){
+    var $_GET = {};
+
+    document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+        function decode(s) {
+            return decodeURIComponent(s.split("+").join(" "));
+        }
+
+        $_GET[decode(arguments[1])] = decode(arguments[2]);
+    });
+    if($_GET['actu_id']){
+        var check_exist_actu = setInterval(function() {
+            if ($('#fancy_actu_'+$_GET['actu_id']).length) {
+                $("#fancy_actu_"+$_GET['actu_id']).fancybox({
+                    type : 'iframe',
+                    autoScale: true,
+                    width: 570
+                }).trigger('click');
+                clearInterval(check_exist_actu);
+            }
+        }, 100);
+
+    }
+});
 
 function get_month(month){
     month = month+1;
