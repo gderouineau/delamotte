@@ -65,7 +65,6 @@ $(document).ready(function(){
                     '</div>'
                 ;
                 */
-                console.log(resume);
                 var actu_div = $('#news');
                 actu_div.after(full);
                 actu_div.after(resume);
