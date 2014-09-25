@@ -26,6 +26,7 @@ $(document).ready(function(){
                 console.log(text);
                 console.log(title);
                 console.log(photo);
+                /*
                 var resume =
                     '<div class="element  clearfix col1 row1 actualité white teaser'+id+'">' +
                         '<a href="#filter=.actualité%3Anot(.teaser'+id+'),+.post'+id+'" class="full"></a>'+
@@ -35,8 +36,18 @@ $(document).ready(function(){
                         '<p>'+text.substr(0,max_resume_length)+'...</p>'+
                     '</div>'
                     ;
+                */
+                var resume =
+                    '<div class="fancybox element  clearfix col1 row1 actualité white teaser'+id+'">' +
+                        '<a href="#actu_'+id+'" class="full"></a>'+
+                        '<h3>'+title+'</h3>'+
+                        '<div class="borderline"></div>'+
+                        '<p class="small">Feb 24, 2014</p>'+
+                        '<p>'+text.substr(0,max_resume_length)+'...</p>'+
+                    '</div>'
+                    ;
                 var full =
-                    '<div class="element  clearfix col2-3 post post'+id+' auto center">'+
+                    '<div class="element  clearfix col2-3 post post'+id+' auto center" id="actu_'+id+'">'+
                         '<div class="clearfix col2-3 auto no-padding">'+
                             '<div class="images">' +
                                 '<a href="#filter=.actualité">'+
