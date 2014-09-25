@@ -57,11 +57,9 @@ if(isset($_GET['id'])){
         <div class="element  clearfix auto center">
             <div class="clearfix col2-3 auto no-padding">
                 <div class="images">
-                    <!--
-                    <a href="#filter=.actualité">
+                    <a href="javascript:parent.jQuery.fancybox.close();">
                         <div class="close"></div>
                     </a>
-                    -->
                     <img src="<?php echo $photo;?>" alt="<?php echo $title;?>" />
                 </div>
             </div>

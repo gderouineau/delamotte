@@ -79,7 +79,14 @@ $(document).ready(function(){
     $('.fancy_actu').fancybox({
         type : 'iframe',
         autoScale: true,
-        width: 570
+        width: 570,
+        helpers : {
+            overlay : {
+                css : {
+                    'background' : 'rgba(105, 105, 105, 0.5)'
+                }
+            }
+        }
     });
 
 
@@ -103,7 +110,14 @@ $(document).ready(function(){
                 $("#fancy_actu_"+$_GET['actu_id']).fancybox({
                     type : 'iframe',
                     autoScale: true,
-                    width: 570
+                    width: 570,
+                    helpers : {
+                        overlay : {
+                            css : {
+                                'background' : 'rgba(105, 105, 105, 0.5)'
+                            }
+                        }
+                    }
                 }).trigger('click');
                 clearInterval(check_exist_actu);
             }
