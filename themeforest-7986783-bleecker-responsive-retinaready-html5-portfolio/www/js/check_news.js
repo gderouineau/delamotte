@@ -84,11 +84,7 @@ $(function()
         {
             formData = formData + '&filenames[]=' + value;
         });
-
-
-
-        console.log(formData);
-
+        var previous_content = $('#container').html();
         $.ajax({
             url: 'blog_check.php',
             type: 'POST',
@@ -99,17 +95,29 @@ $(function()
             {
                 if(typeof data.error === 'undefined')
                 {
+                    $('#container').html("<p>Votre demande a bien été prise en compte. </p>");
+                    setTimeout(function() {
+                        $('#container').html(previous_content);
+                    }, 5000);
                     // Success so call function to process the form
                     console.log('SUCCESS: ' + data.success);
+
                 }
                 else
                 {
+                    $('#container').html("<p>Une erreur est survenue merci de contacter l\'administrateur du site." +
+                        "Votre demande sera prise en compte le plus rapidement possible.</p>");
+                    setTimeout(function() {
+                        $('#container').html(previous_content);
+                    }, 5000);
                     // Handle errors here
                     console.log('ERRORS: ' + data.error);
                 }
             },
             error: function(jqXHR, textStatus, errorThrown)
             {
+                $('#container').html("<p>Une erreur est survenue merci de contacter l\'administrateur du site." +
+                    "Votre demande sera prise en compte le plus rapidement possible.</p>");
                 // Handle errors here
                 console.log('ERRORS: ' + textStatus);
             },
