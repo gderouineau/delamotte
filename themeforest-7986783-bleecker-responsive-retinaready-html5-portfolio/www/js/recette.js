@@ -37,7 +37,7 @@ $(document).ready(function(){
                  */
                 resume =
                     '<div class="fancybox element  clearfix col1 row1 recette " >' +
-                        '<a href="recette_fancybox.php?id='+id+'" id="fancy_recette_'+id+'" class="full fancy_recette">'+
+                        '<a href="/recette_fancybox.php?id='+id+'" id="fancy_recette_'+id+'" class="full fancy_recette">'+
                             '<div class="images"> <img src="'+photo+'" alt="'+title+'" class="slip" id="slip_'+id+'"/> </div>'+
                         '</a>'+
                     '</div>'
