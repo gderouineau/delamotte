@@ -40,7 +40,9 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
                 ------------------------------------------------------------------------------------------------------->
                 <form method="post" action="" name="adminform" id="adminform" autocomplete="off">
                     <fieldset>
-                        <h2>Blog  <input class="field" type="checkbox" name="bloginput" value="blog" onchange="showContent();"/></h2>
+                        <h2>Actualité  <input class="field" type="checkbox" name="bloginput" value="blog" onchange="showContent();"/></h2>
+                        <br>
+                        <h2>Recette  <input class="field" type="checkbox" name="recetteinput" value="recette" onchange="showContent();"/></h2>
                         <br>
                         <h3 class="bloginput input">Photo</h3>
                         <input class='bloginput input' type="file" id="blogphotoinput" name="blogphotoinput" >
