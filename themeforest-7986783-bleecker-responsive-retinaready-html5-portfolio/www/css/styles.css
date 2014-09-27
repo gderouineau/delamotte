@@ -110,7 +110,7 @@ h5 {font-size:16px; padding-top:22px; line-height:24px; font-family: 'Open Sans'
 #options-down ul { position:relative; padding:0; border:0; font-size: 0; display:inline-block }
 #options-down ul li {display:inline-block; height:100%; width:auto; }
 #options-down ul li a { color:#888; font-family: "Open Sans", Arial, Helvetica, sans-serif; display:inline-block; padding:5px 15px; text-decoration:none; text-transform:uppercase; height:100%; font-size:12px; line-height:19px; letter-spacing:2px; font-weight:400; margin:0 }
-#options-down li a:hover, #options li a.current, #options li a.selected { color:#fff;}
+#options-down li a:hover, #options-down li a.current, #options-down li a.selected { color:#fff;}
 .dead-link {cursor:default !important }
 /* End Main Nav
 
