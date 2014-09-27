@@ -50,6 +50,7 @@ if(isset($_GET['id'])){
     $photo = $data['photo'];
     $title = $data['title'];
     $text = $data['text'];
+    $ingredient = json_decode($data['ingredient']);
     $day ="";
     $french_month ="";
     $year="";
@@ -67,6 +68,21 @@ if(isset($_GET['id'])){
             <h3><?php echo $title ?></h3>
             <div class="borderline"></div>
             <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par Jordan Delamotte</p>
+            <h4>Ingredients</h4>
+            <ul class="unordered-list column-count2">
+            <?php
+                foreach($ingredient as $ingredient_name){
+                    ?>
+                    <li>
+                        <?php
+                        echo $ingredient_name;
+                        ?>
+                    </li>
+                    <?php
+                }
+            ?>
+            </ul>
+            <h4>Préparation</h4>
             <?php echo $text ?>
             <div class="break"></div>
             <a href="#" class="icons margin like"></a>
