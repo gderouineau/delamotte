@@ -5,7 +5,7 @@ jQuery(window).load(function($){
         var $container = jQuery('#container'),
             isotopeOptions = {},
             defaultOptions = {
-                filter: '.home',
+                filter: '.bienvenue',
                 sortBy: 'original-order',
                 sortAscending: true,
                 layoutMode: 'masonry'
@@ -22,8 +22,15 @@ jQuery(window).load(function($){
             });
         });
 
+
+
         var $optionSets = jQuery('#options,#options-down').find('.option-set'),
             isOptionLinkClicked = false;
+
+        var hash =window.location.hash;
+        $optionSets.find('a[href="'+hash+'"]').addClass('selected');
+
+
         function changeSelectedLink( $elem ) {
 
             //$elem.parents('.option-set').find('.selected').removeClass('selected');
@@ -64,6 +71,8 @@ jQuery(window).load(function($){
             isOptionLinkClicked = false;
             hashChanged = true;
         }).trigger('hashchange');
+        var hash =window.location.hash;
+        $optionSets.find('a[href="'+hash+'"]').addClass('selected');
     }
     /**
      * CALL ISOTOPE DEPENDING ON FLEXSLIDER Existance

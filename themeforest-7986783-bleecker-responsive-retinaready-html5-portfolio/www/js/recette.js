@@ -20,7 +20,6 @@ $(document).ready(function(){
                     , month = date.getMonth()
                     , day = date.getDate()
                     , french_month=get_month(month)
-                    , max_resume_length =  Math.min(100, text.length)
                     , full = ""
                     , resume = ""
                     ;
