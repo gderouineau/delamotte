@@ -9,6 +9,7 @@ $(document).ready(function(){
         function(data){
 
             data = JSON.parse(data);
+            var actu_div = $('#news');
             for(var key in data){
                 var   id = data[key]['id']
                     , place = data[key]['place']
@@ -65,10 +66,11 @@ $(document).ready(function(){
                     '</div>'
                 ;
                 */
-                var actu_div = $('#news');
                 actu_div.after(full);
                 actu_div.after(resume);
+                $('#container').isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });
             }
+
         }
 
 
@@ -118,6 +120,7 @@ $(document).ready(function(){
                         }
                     }
                 }).trigger('click');
+
                 clearInterval(check_exist_actu);
             }
         }, 100);
