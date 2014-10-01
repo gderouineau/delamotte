@@ -3,7 +3,7 @@
 $data = array();
 
 $photo = "";
-$title = $_POST['title'];
+$title = "";
 $text  = "";
 $date  = date("Y-m-d H:i:s");
 $place = 0;
@@ -16,7 +16,7 @@ if(isset($_GET['files']))
     $uploaddir = 'images/photos/';
     foreach($_FILES as $file)
     {
-        if(move_uploaded_file($file['tmp_name'], $uploaddir .'blog_'.basename($file['name'])))
+        if(move_uploaded_file($file['tmp_name'], $uploaddir .'recette_'.basename($file['name'])))
         {
             $files[] = $uploaddir .$file['name'];
             $photo = $uploaddir .$file['name'];
@@ -32,7 +32,7 @@ if(isset($_GET['files']))
 else
 {
 
-    $data = array('success' => 'file uploade', 'formData' => $_POST);
+    $data = array('success' => 'file uploaded', 'formData' => $_POST);
 
 
 }
@@ -40,16 +40,20 @@ else
 if(isset($_POST['title']) && isset($_POST['text'])){
     $title = $_POST['title'];
     $text = $_POST['text'];
+    $nbPers = $_POST['nbpers'];
+    $Ingredients = $_POST['ingredients'];
     $photo = 'images/photos/'.'blog_'.$_POST['photoname'];
     $db = new PDO('mysql:host=mysql51-136.perso;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
     $query =
-        'INSERT INTO actualite VALUES (
+        'INSERT INTO recette VALUES (
         null,
         '.$place.',
         \''.addslashes($title).'\',
         \''.addslashes($text).'\',
-        \''.addslashes($date).'\',
-        \''.addslashes($photo).'\'
+        \''.addslashes($nbPers).'\',
+        \''.addslashes($Ingredients).'\',
+        \''.addslashes($photo).'\',
+        \''.addslashes($date).'\'
         )';
 
     $result = $db->query($query);

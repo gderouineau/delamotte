@@ -50,7 +50,7 @@ if(isset($_GET['id'])){
         $photo = $data['photo'];
         $title = $data['title'];
         $text = $data['text'];
-        $date = $data['date'];
+        $date = strtotime($data['date']);
         $day = date('j',$date);
         $french_month = french_month($date);
         $year= date('Y' , $date);

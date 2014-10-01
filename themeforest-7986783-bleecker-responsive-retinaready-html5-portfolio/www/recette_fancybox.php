@@ -52,7 +52,7 @@ if(isset($_GET['id'])){
     $text = $data['text'];
     $ingredient = json_decode($data['ingredient']);
     $nb_personnes = $data['nb_personnes'];
-    $date = $data['date'];
+    $date = strtotime($data['date']);
     $day = date('j',$date);
     $french_month = french_month($date);
     $year= date('Y' , $date);

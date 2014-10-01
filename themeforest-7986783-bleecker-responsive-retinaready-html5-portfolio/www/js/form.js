@@ -50,13 +50,22 @@ function showContent(){
     document.getElementById('blogtextinput').value = '';
     $('#blogphoto').attr('src', '');
 
+    document.getElementById('recettetitle').innerHTML = '';
+    document.getElementById('recettetitleinput').value = '';
+    document.getElementById('recettetext').innerHTML = '';
+    document.getElementById('recettetextinput').value = '';
+    document.getElementById('recettenbpersinput').innerHTML = '';
+    document.getElementById('recettenbpersinput').value = '';
+    $('#div_ingredients').html("");
+    $('#recettephoto').attr('src', '');
+
     //------------------------------------------------------------------------------------------------------------------
 
     // check which checkbox is checked
     //------------------------------------------------------------------------------------------------------------------
     while(field_length--){
         if(field[field_length].checked == true){
-            check = field[field_length].name;
+            check = field[field_length].id;
         }
     }
     // end checking boxes
@@ -77,8 +86,11 @@ function showContent(){
 
     // changing form action
     //------------------------------------------------------------------------------------------------------------------
-
+    if(check == 'bloginput'){
     document.getElementById('adminform').action = 'blog_check.php';
+    }else{
+    document.getElementById('adminform').action = 'recette_check.php';
+    }
 
     // end changing form action
     //------------------------------------------------------------------------------------------------------------------
@@ -113,23 +125,54 @@ function blogChange(){
 
 // end function showContent
 //----------------------------------------------------------------------------------------------------------------------
+// function recetteChange
+//----------------------------------------------------------------------------------------------------------------------
+
+function recetteChange(){
+    // title
+    document.getElementById('recettetitle').innerHTML = document.getElementById('recettetitleinput').value;
+    // text
+    document.getElementById('recettetext').innerHTML = document.getElementById('recettetextinput').value;
+    // nombre de personnes
+    document.getElementById('recettetext').innerHTML = document.getElementById('recettetextinput').value;
+    // date
+    var date = new Date()
+        , month = date.getMonth()
+        , day = date.getDate()
+        , french_month=get_month(month)
+    ;
+
+    var div = day + ' ' + french_month + ' ' + date.getFullYear() + ' ' + '&nbsp;&middot;&nbsp; par Jordan Delamotte';
+    document.getElementById('recettepostdate').innerHTML = div;
+
+
+    // end date
+
+}
+
+// end function showContent
+//----------------------------------------------------------------------------------------------------------------------
 
 
 // end function showContent
 //----------------------------------------------------------------------------------------------------------------------
-function readURL(input) {
+function readURL(input, id) {
 
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function (e) {
-            $('#blogphoto').attr('src', e.target.result);
+            $(id).attr('src', e.target.result);
         }
 
         reader.readAsDataURL(input.files[0]);
     }
 }
 $('#blogphotoinput').change(function(){
-    readURL(this);
+    readURL(this, '#blogphoto');
+});
+
+$('#recettephotoinput').change(function(){
+    readURL(this, '#recettephoto');
 });
 
 // end function showContent
@@ -180,4 +223,10 @@ function get_month(month){
             return null;
 
     }
+}
+
+function addIngredient(){
+    var div = $('#div_ingredients');
+    var content = '<input class="recetteinput input" type="text"  name="recetteinginput" >';
+    div.append(content);
 }

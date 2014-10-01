@@ -40,10 +40,13 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
                 ------------------------------------------------------------------------------------------------------->
                 <form method="post" action="" name="adminform" id="adminform" autocomplete="off">
                     <fieldset>
-                        <h2>Actualité  <input class="field" type="checkbox" name="bloginput" value="blog" onchange="showContent();"/></h2>
+                        <h2>Actualit&eacute;  <input class="field" type="radio" id="bloginput" name="bothinput" value="blog" onchange="showContent();"/></h2>
                         <br>
-                        <h2>Recette  <input class="field" type="checkbox" name="recetteinput" value="recette" onchange="showContent();"/></h2>
+                        <h2>Recette  <input class="field" type="radio" id="recetteinput" name="bothinput" value="recette" onchange="showContent();"/></h2>
                         <br>
+
+                        <!-- blog form
+                        ----------------------------------------------------------------------------------------------->
                         <h3 class="bloginput input">Photo</h3>
                         <input class='bloginput input' type="file" id="blogphotoinput" name="blogphotoinput" >
                         <h3 class="bloginput input">Titre</h3>
@@ -51,6 +54,27 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
                         <h3 class="bloginput input">Texte</h3>
                         <textarea class="bloginput input" id="blogtextinput" name="blogtextinput" onkeyup="blogChange();"></textarea>
                         <p class="submit input bloginput" id="submit_blog" >Envoyer</p>
+                        <!-- end blog form
+                        ----------------------------------------------------------------------------------------------->
+
+                        <!-- recette form
+                        ----------------------------------------------------------------------------------------------->
+                        <h3 class="recetteinput input">Photo</h3>
+                        <input class='recetteinput input' type="file" id="recettephotoinput" name="recettephotoinput" >
+                        <h3 class="recetteinput input">Nombre de personnes</h3>
+                        <input class='recetteinput input' type="number" id="recettenbpersinput" name="recettenbpersinput" >
+                        <h3 class="recetteinput input">Ingr&eacute;dients</h3>
+                        <div  class='recetteinput input' id="div_ingredients" onclick="recetteChange();" onkeyup="recetteChange();">
+                        </div>
+                        <p class="recetteinput input" onclick='addIngredient()'>Ajouter un ingr&eacute;dient</p>
+                        <h3 class="recetteinput input">Titre</h3>
+                        <textarea class="recetteinput input" id="recettetitleinput" name="recettetitleinput" onkeyup="recetteChange();"></textarea>
+                        <h3 class="recetteinput input">Texte</h3>
+                        <textarea class="recetteinput input" id="recettetextinput" name="recettetextinput" onkeyup="recetteChange();"></textarea>
+                        <p class="submit input recetteinput" id="submit_recette" >Envoyer</p>
+                        <!-- end recette form
+                        ----------------------------------------------------------------------------------------------->
+
                     </fieldset>
                 </form>
                 <!-- end form
@@ -65,7 +89,8 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
                 <!-- start previsualisation
                 ------------------------------------------------------------------------------------------------------->
                 <div id="previsual">
-
+                    <!-- start blog previsualisation
+                    --------------------------------------------------------------------------------------------------->
                     <div class="element  clearfix col2-3 post auto center input bloginput">
                         <div class="clearfix col2-3 auto no-padding">
                             <div class="images">
@@ -79,6 +104,26 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
                             <div id="blogtext">
                             </div>
                     </div>
+                    <!-- end blog previsualisation
+                    --------------------------------------------------------------------------------------------------->
+
+                    <!-- start recette previsualisation
+                    --------------------------------------------------------------------------------------------------->
+                    <div class="element  clearfix col2-3 post auto center input recetteinput">
+                        <div class="clearfix col2-3 auto no-padding">
+                            <div class="images">
+                                <img id='recettephoto' src="" alt="" />
+                            </div>
+                        </div>
+                        <article class="clearfix col2-3 white white-bottom auto">
+                            <h3 id="recettetitle"></h3>
+                            <div class="borderline"></div>
+                            <p class="small" id="recettepostdate"></p>
+                            <div id="recettetext">
+                            </div>
+                    </div>
+                    <!-- end recette previsualisation
+                    --------------------------------------------------------------------------------------------------->
                 </div>
                 <!-- end previsualisation
                 ------------------------------------------------------------------------------------------------------->
