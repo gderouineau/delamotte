@@ -20,6 +20,7 @@ $(document).ready(function(){
                     , month = date.getMonth()
                     , day = date.getDate()
                     , french_month=get_month(month)
+                    , year = date.getFullYear()
                     , max_resume_length =  Math.min(100, text.length)
                     , full = ""
                     , resume = ""
@@ -40,7 +41,7 @@ $(document).ready(function(){
                         '<a href="actu_fancybox.php?id='+id+'" id="fancy_actu_'+id+'" class="full fancy_actu"></a>'+
                         '<h3>'+title+'</h3>'+
                         '<div class="borderline"></div>'+
-                        '<p class="small">Feb 24, 2014</p>'+
+                        '<p class="small">'+day+' '+french_month+' '+year+'</p>'+
                         '<p>'+text.substr(0,max_resume_length)+'...</p>'+
                     '</div>'
                     ;

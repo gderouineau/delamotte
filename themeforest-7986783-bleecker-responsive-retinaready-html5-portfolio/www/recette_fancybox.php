@@ -52,9 +52,10 @@ if(isset($_GET['id'])){
     $text = $data['text'];
     $ingredient = json_decode($data['ingredient']);
     $nb_personnes = $data['nb_personnes'];
-    $day ="";
-    $french_month ="";
-    $year="";
+    $date = $data['date'];
+    $day = date('j',$date);
+    $french_month = french_month($date);
+    $year= date('Y' , $date);
     ?>
     <div class="element  clearfix auto center">
         <div class="clearfix col2-3 auto no-padding">
@@ -95,5 +96,49 @@ if(isset($_GET['id'])){
     </html>
 
 <?php
+}
+
+function french_month($time){
+    $time = date('n', $time);
+    switch ($time) {
+        case 1:
+            return 'Janvier';
+            break;
+        case 2:
+            return 'Février';
+            break;
+        case 3:
+            return 'Mars';
+            break;
+        case 4:
+            return 'Avril';
+            break;
+        case 5:
+            return 'Mai';
+            break;
+        case 6:
+            return 'Juin';
+            break;
+        case 7:
+            return 'Juillet';
+            break;
+        case 8:
+            return 'Août';
+            break;
+        case 9:
+            return 'Septembre';
+            break;
+        case 10:
+            return 'Octobre';
+            break;
+        case 11:
+            return 'Novembre';
+            break;
+        case 12:
+            return 'Décembre';
+            break;
+
+    }
+
 }
 
