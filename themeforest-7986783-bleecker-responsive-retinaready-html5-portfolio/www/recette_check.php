@@ -42,7 +42,7 @@ if(isset($_POST['title']) && isset($_POST['text'])){
     $text = $_POST['text'];
     $nbPers = $_POST['nbpers'];
     $Ingredients = $_POST['ingredients'];
-    $photo = 'images/photos/'.'blog_'.$_POST['photoname'];
+    $photo = 'images/photos/'.'recette_'.$_POST['photoname'];
     $db = new PDO('mysql:host=mysql51-136.perso;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
     $query =
         'INSERT INTO recette VALUES (
@@ -50,8 +50,8 @@ if(isset($_POST['title']) && isset($_POST['text'])){
         '.$place.',
         \''.addslashes($title).'\',
         \''.addslashes($text).'\',
-        \''.addslashes($nbPers).'\',
         \''.addslashes($Ingredients).'\',
+        \''.addslashes($nbPers).'\',
         \''.addslashes($photo).'\',
         \''.addslashes($date).'\'
         )';

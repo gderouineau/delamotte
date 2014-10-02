@@ -16,6 +16,7 @@ $(function()
     // Catch the form submit and upload the files
     function uploadFiles(event)
     {
+        alert('test 2');
         event.stopPropagation(); // Stop stuff happening
         event.preventDefault(); // Totally stop stuff happening
 

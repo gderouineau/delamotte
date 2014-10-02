@@ -44,7 +44,8 @@ $(document).ready(function(){
 
                 recette_div.after(full);
                 recette_div.after(resume);
-                $('#slip_'+id).sliphover();
+                //$('#container').sliphover();
+                //$('#slip_'+id).sliphover();
                 $('#container').isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });
 
             }
