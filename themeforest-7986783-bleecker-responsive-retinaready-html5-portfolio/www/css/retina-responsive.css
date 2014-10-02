@@ -37,7 +37,7 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 
 @media only screen and (max-width: 1229px) {
 .container {max-width:870px; }
-.col4, .col3 { width: 860px; height: auto;}
+.col4, .col3, .fullon3 { width: 860px; height: auto;}
 .photo-contact {width: 570px ; height: auto;}
 .min-display-3 { display:none; }
 .max-display-2 , .max-display-3 { display:none; }
