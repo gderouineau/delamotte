@@ -49,7 +49,7 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 .container {max-width:580px; }
-.col3, .col4 { width: 570px; height: auto;}
+.col3, .col4, .fullon3 { width: 570px; height: auto;}
 .photo-contact {width: 280px ; height: auto;}
 
 .min-display-3 , .min-display-2 { display: none; }
