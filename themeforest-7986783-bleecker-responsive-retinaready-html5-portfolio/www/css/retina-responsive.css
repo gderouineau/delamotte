@@ -41,6 +41,7 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 .photo-contact {width: 570px ; height: auto;}
 .min-display-3 { display:none; }
 .max-display-2 , .max-display-3 { display:none; }
+.oneon3 {width: 280px; height: 280px;}
 }
 @media only screen and (min-width: 768px) {
 #options {display:block !important }
@@ -49,7 +50,7 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 .container {max-width:580px; }
-.col3, .col4, .fullon3 { width: 570px; height: auto;}
+.col3, .col4, .fullon3, .col2 { width: 570px; height: auto;}
 .photo-contact {width: 280px ; height: auto;}
 
 .min-display-3 , .min-display-2 { display: none; }
@@ -59,7 +60,7 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
 .container {max-width:290px; }
-.col4, .col3, .col2{ width:280px; height:auto;}
+.col4, .col3, .col2, .col1{ width:280px; height:auto;}
 .col4.white , .col3.white , .col2.white {padding:20px 35px 50px !important; }
 .min-display-1 , .min-display-2 , .min-display-3 { display: none; }
 
