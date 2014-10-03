@@ -36,6 +36,8 @@ if(isset($_GET['id'])){
         <link href="css/actualite.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="screen">
         <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="screen" />
         <!--[if gt IE 8]><!--><link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" /><!--<![endif]-->
         <!--[if !IE]> <link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" /> <![endif]-->
         <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
@@ -45,6 +47,16 @@ if(isset($_GET['id'])){
 
     </head>
     <body style="background-color: white;">
+    <!-- facebook share button plugin -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=288520161298626&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- end of the facebook plugin -->
     <?php
 
         $photo = $data['photo'];
@@ -71,11 +83,25 @@ if(isset($_GET['id'])){
         <?php echo $text ?>
                 <div class="break"></div>
                 <a href="#" class="icons margin like"></a>
-                <a href="#" class="icons margin share"></a>
+                <a href="#" class="icons margin share" id="share-button" data-toggle="popover" ></a>
             </article>
         </div>
-
+        <!--
+        <div class="fb-share-button" data-href="http://jordan-delamotte.com/?actu_id=47#filter=.actualite"></div>
+        -->
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $('#share-button').popover({
+            placement: 'auto right',
+            title: 'Share',
+            content : '<div class="fb-share-button" data-href="http://jordan-delamotte.com/?actu_id=47#filter=.actualite"></div>',
+            html: true
+        });
+    </script>
     </body>
+
+
     </html>
 
 <?php
