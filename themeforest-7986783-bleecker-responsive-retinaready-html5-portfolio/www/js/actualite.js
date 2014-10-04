@@ -14,7 +14,7 @@ $(document).ready(function(){
                 var   id = data[key]['id']
                     , place = data[key]['place']
                     , title = data[key]['title']
-                    , text = data[key]['text']
+                    , text = data[key]['text'].replace(/<(?:.|\n)*?>/gm, '')
                     , date = new Date(data[key]['date'])
                     , photo = data[key]['photo']
                     , month = date.getMonth()
