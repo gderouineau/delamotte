@@ -83,7 +83,7 @@ if(isset($_GET['id'])){
         <?php echo $text ?>
                 <div class="break"></div>
                 <a href="#" class="icons margin like"></a>
-                <a href="#" class="icons margin share" id="share-button" data-toggle="popover" ></a>
+                <a href="#" class="icons margin share" rel="popover" id="share-button" data-toggle="popover" ></a>
             </article>
         </div>
         <!--
@@ -97,8 +97,11 @@ if(isset($_GET['id'])){
             title: 'Share',
             content : '<div class="fb-share-button" data-href="http://jordan-delamotte.com/?actu_id=47#filter=.actualite"></div>',
             html: true
+        }).click(function(e) {
+            e.preventDefault();
         });
     </script>
+
     </body>
 
 
