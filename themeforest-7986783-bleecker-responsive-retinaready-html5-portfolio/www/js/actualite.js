@@ -15,7 +15,7 @@ $(document).ready(function(){
                     , place = data[key]['place']
                     , title = data[key]['title']
                     , text = data[key]['text'].replace(/<(?:.|\n)*?>/gm, '')
-                    , date = new Date(data[key]['date'])
+                    , date = new Date(data[key]['date'].replace(' ','T'))
                     , photo = data[key]['photo']
                     , month = date.getMonth()
                     , day = date.getDate()
