@@ -27,8 +27,7 @@ jQuery(window).load(function($){
         var $optionSets = jQuery('#options,#options-down').find('.option-set'),
             isOptionLinkClicked = false;
 
-        var hash =window.location.hash;
-        $optionSets.find('a[href="'+hash+'"]').addClass('selected');
+
 
 
         function changeSelectedLink( $elem ) {
@@ -65,6 +64,7 @@ jQuery(window).load(function($){
                     hrefObj[ key ] = options[ key ];
                     hrefValue = jQuery.param( hrefObj );
                     $selectedLink = $optionSets.find('a[href="#' + hrefValue + '"]');
+
                     changeSelectedLink( $selectedLink );
                 }
             }
@@ -73,6 +73,10 @@ jQuery(window).load(function($){
         }).trigger('hashchange');
         var hash =window.location.hash;
         $optionSets.find('a[href="'+hash+'"]').addClass('selected');
+        if(hash.length == 0){
+
+            $optionSets.find('a[href="#filter=.bienvenue"]').addClass('selected');
+        }
     }
     /**
      * CALL ISOTOPE DEPENDING ON FLEXSLIDER Existance
