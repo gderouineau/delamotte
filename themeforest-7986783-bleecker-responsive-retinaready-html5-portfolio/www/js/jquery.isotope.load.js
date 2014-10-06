@@ -92,8 +92,10 @@ jQuery(window).load(function($){
         eborLoadIsotope();
     }
 // jQuery('form').submit(function(){
+    /*
     setTimeout(function(){
         $('#container').isotope('reLayout');
     }, 1000);
+    */
 // });
 });
