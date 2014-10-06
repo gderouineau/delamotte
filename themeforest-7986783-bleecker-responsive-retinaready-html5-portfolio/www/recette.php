@@ -9,7 +9,7 @@
 
 
 $db = new PDO('mysql:host=mysql51-136.perso;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
-$query = 'SELECT * FROM recette';
+$query = 'SELECT * FROM recette  ORDER BY id ASC';
 $result = $db->query($query);
 $data = $result->fetchAll(PDO::FETCH_OBJ);
 echo json_encode($data);
