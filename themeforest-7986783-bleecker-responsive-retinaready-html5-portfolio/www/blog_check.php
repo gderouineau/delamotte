@@ -53,7 +53,7 @@ if(isset($_POST['title']) && isset($_POST['text'])){
         )';
 
     $result = $db->query($query);
-    $data = array('success' => $query, 'formData' => $_POST);
+    $data = array('success' => $text, 'formData' => $_POST);
 
 }
 echo json_encode($data);
