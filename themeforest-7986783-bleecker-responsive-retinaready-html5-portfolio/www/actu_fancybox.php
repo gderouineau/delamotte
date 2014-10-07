@@ -53,12 +53,12 @@ if(isset($_GET['id'])){
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=288520161298626&version=v2.0";
+            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
     <!-- end of the facebook plugin -->
     <?php
-
+        $id = $data['id'];
         $photo = $data['photo'];
         $title = $data['title'];
         $text = $data['text'];
@@ -82,8 +82,11 @@ if(isset($_GET['id'])){
                     <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par Jordan Delamotte</p>
         <?php echo $text ?>
                 <div class="break"></div>
-                <a href="#" class="icons margin like"></a>
-                <a href="#" class="icons margin share" rel="popover" id="share-button" data-toggle="popover" ></a>
+                <!--<a href="#" class="icons margin like"></a>-->
+                <!--<a href="#" class="icons margin share" rel="popover" id="share-button" data-toggle="popover" ></a>-->
+                <div class="fb-share-button" id="fb-button" data-layout="button" data-href="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite"></div>
+                <br><br>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id; ?>#filter=.actualite" data-text="<?php echo $title; ?>" data-count="none">Tweet</a>
             </article>
         </div>
         <!--
@@ -91,11 +94,14 @@ if(isset($_GET['id'])){
         -->
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <script type="text/javascript">
+        var fb = $('#fb-button');
+        $(fb).style.display = 'block';
         $('#share-button').popover({
             placement: 'auto right',
             title: 'Share',
-            content : '<div class="fb-share-button" data-href="http://jordan-delamotte.com/?actu_id=47#filter=.actualite"></div>',
+            content : fb,
             html: true
         }).click(function(e) {
             e.preventDefault();
@@ -153,4 +159,6 @@ function french_month($time){
     }
 
 }
+
+
 

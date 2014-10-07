@@ -38,8 +38,8 @@ else
 }
 
 if(isset($_POST['title']) && isset($_POST['text'])){
-    $title = $_POST['title'];
-    $text = $_POST['text'];
+    $title = htmlspecialchars($_POST['title']);
+    $text = htmlspecialchars($_POST['text']);
     $nbPers = $_POST['nbpers'];
     $Ingredients = $_POST['ingredients'];
     $photo = 'images/photos/'.'recette_'.$_POST['photoname'];
@@ -57,7 +57,7 @@ if(isset($_POST['title']) && isset($_POST['text'])){
         )';
 
     $result = $db->query($query);
-    $data = array('success' => $query, 'formData' => $_POST);
+    $data = array('success' => $text, 'formData' => $_POST);
 
 }
 echo json_encode($data);

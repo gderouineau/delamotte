@@ -3,7 +3,7 @@
 $data = array();
 
 $photo = "";
-$title = $_POST['title'];
+$title = "";
 $text  = "";
 $date  = date("Y-m-d H:i:s");
 $place = 0;
@@ -32,7 +32,7 @@ if(isset($_GET['files']))
 else
 {
 
-    $data = array('success' => 'file uploade', 'formData' => $_POST);
+    $data = array('success' => 'file uploaded', 'formData' => $_POST);
 
 
 }
@@ -46,8 +46,8 @@ if(isset($_POST['title']) && isset($_POST['text'])){
         'INSERT INTO actualite VALUES (
         null,
         '.$place.',
-        \''.addslashes($title).'\',
-        \''.addslashes($text).'\',
+        \''.addslashes(urldecode($title)).'\',
+        \''.addslashes(urldecode($text)).'\',
         \''.addslashes($date).'\',
         \''.addslashes($photo).'\'
         )';

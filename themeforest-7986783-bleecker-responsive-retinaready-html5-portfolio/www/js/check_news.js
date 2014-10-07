@@ -75,15 +75,15 @@ $(function()
         }
         // Serialize the form data
         var formData = $form.serialize();
-        formData='title='+$('#blogtitleinput').val()+'&'+formData;
-        formData='text='+$('#blogtextinput').val()+'&'+formData;
+        formData='title='+encodeURIComponent($('#blogtitleinput').val())+'&'+formData;
+        formData='text='+encodeURIComponent($('#blogtextinput').val())+'&'+formData;
         var rand = Math.floor((Math.random() * 10) + 1);
         formData='photoname='+filename+'&'+formData;
         // You should sterilise the file names
         $.each(data.files, function(key, value)
         {
             formData = formData + '&filenames[]=' + value;
-        });
+        });console.log(formData);
         var previous_content = $('#adminform').html();
         $.ajax({
             url: 'blog_check.php',
@@ -100,7 +100,10 @@ $(function()
                         $('#adminform').html(previous_content);
                     }, 5000);
                     // Success so call function to process the form
-                    console.log('SUCCESS: ' + data.success);
+                    for(var key in data.formData){
+                        console.log(key +" : " + data.formData[key]);
+                    }
+
 
                 }
                 else
@@ -128,3 +131,16 @@ $(function()
         });
     }
 });
+
+
+function escapeHtml(text) {
+    var map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+    };
+
+    return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+}
