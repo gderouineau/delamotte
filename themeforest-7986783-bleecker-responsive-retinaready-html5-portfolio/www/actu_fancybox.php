@@ -58,13 +58,14 @@ if(isset($_GET['id'])){
 
         <!-- facebook open graph data -->
         <!-- Open Graph url property -->
+        <!--
         <meta property="og:url" content="http://www.jordan-delamotte.com?actu_id=<?php echo $id; ?>#filter=.actualite" />
-
+-->
         <!-- Open Graph title property -->
-        <meta property="og:title" content="Jordan Delamotte - <?php echo $title; ?>" />
+        <meta property="og:title" content="Jordan Delamotte - <?php echo strip_tags($title); ?>" />
 
         <!-- Open Graph description property -->
-        <meta property="og:description" content="<?php echo substr($text, 0 , min(100,strlen($text) ) ) ; ?>" />
+        <meta property="og:description" content="<?php echo substr(strip_tags($text), 0 , min(100,strlen(strip_tags($text)) ) ) ; ?>" />
 
         <!-- Open Graph image property -->
         <meta property="og:image" content="http://www.jordan-delamotte.com/<?php echo $photo ; ?>" />
@@ -75,6 +76,8 @@ if(isset($_GET['id'])){
 
         <!-- Open Graph site_name property -->
         <meta property="og:site_name" content="Site officiel de Jordan Delamotte" />
+
+        <link rel="opengraph" href="http://www.jordan-delamotte.com?actu_id=<?php echo $id; ?>#filter=.actualite"/>
         <!-- end og -->
 
     </head>
