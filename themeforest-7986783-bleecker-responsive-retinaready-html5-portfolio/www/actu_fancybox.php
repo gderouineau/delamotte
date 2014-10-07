@@ -15,7 +15,15 @@ if(isset($_GET['id'])){
     $query = 'SELECT * FROM actualite WHERE id='.$id;
     $result = $db->query($query);
     $data = $result->fetch();
-?>
+
+    $photo = $data['photo'];
+    $title = $data['title'];
+    $text = $data['text'];
+    $date = strtotime($data['date']);
+    $day = date('j',$date);
+    $french_month = french_month($date);
+    $year= date('Y' , $date);
+    ?>
 
     <!DOCTYPE html>
     <!--[if gt IE 6]> <html class="no-js ie oldie" lang="en"> <![endif]-->
@@ -45,6 +53,27 @@ if(isset($_GET['id'])){
         <link href='http://fonts.googleapis.com/css?family=Lora:400italic,400,700italic' rel='stylesheet' type='text/css' />
         <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon"/>
 
+        <!-- facebook open graph data -->
+        <!-- Open Graph url property -->
+        <meta property="og:url" content="http://www.jordan-delamotte.com?actu_id=<?php echo $id; ?>#filter=.actualite" />
+
+        <!-- Open Graph title property -->
+        <meta property="og:title" content="Jordan Delamotte - <?php echo $title; ?>" />
+
+        <!-- Open Graph description property -->
+        <meta property="og:description" content="<?php echo substr($text, 0 , min(100,strlen($text) ) ) ; ?>" />
+
+        <!-- Open Graph image property -->
+        <meta property="og:image" content="http://www.jordan-delamotte.com/<?php echo $photo ; ?>" />
+        <meta property="og:image:type" content="image/jpeg" />
+
+        <!-- Open Graph type property -->
+        <meta property="og:type" content="blog" />
+
+        <!-- Open Graph site_name property -->
+        <meta property="og:site_name" content="Site officiel de Jordan Delamotte" />
+        <!-- end og -->
+
     </head>
     <body style="background-color: white;">
     <!-- facebook share button plugin -->
@@ -57,16 +86,7 @@ if(isset($_GET['id'])){
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
     <!-- end of the facebook plugin -->
-    <?php
-        $id = $data['id'];
-        $photo = $data['photo'];
-        $title = $data['title'];
-        $text = $data['text'];
-        $date = strtotime($data['date']);
-        $day = date('j',$date);
-        $french_month = french_month($date);
-        $year= date('Y' , $date);
-    ?>
+
         <div class="element  clearfix auto center">
             <div class="clearfix col2-3 auto no-padding">
                 <div class="images">
@@ -95,7 +115,7 @@ if(isset($_GET['id'])){
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    <script type="text/javascript">
+   <!-- <script type="text/javascript">
         var fb = $('#fb-button');
         $(fb).style.display = 'block';
         $('#share-button').popover({
@@ -107,7 +127,7 @@ if(isset($_GET['id'])){
             e.preventDefault();
         });
     </script>
-
+-->
     </body>
 
 

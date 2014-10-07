@@ -142,6 +142,7 @@ $(document).ready(function(){
                     }
                 }).trigger('click');
 
+
                 clearInterval(check_exist_actu);
             }
         }, 100);

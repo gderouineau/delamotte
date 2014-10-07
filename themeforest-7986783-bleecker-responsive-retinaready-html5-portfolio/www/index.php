@@ -1,3 +1,19 @@
+<?php
+    if(isset($_GET['actu_id'])){
+        $id = $_GET['actu_id'];
+
+        $db = new PDO('mysql:host=mysql51-136.perso;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
+        $query = 'SELECT * FROM actualite WHERE id='.$id;
+        $result = $db->query($query);
+        $data = $result->fetch();
+
+        $photo = $data['photo'];
+        $title = $data['title'];
+        $text = $data['text'];
+
+    }
+?>
+
 <!DOCTYPE html>
 <!--[if gt IE 6]> <html class="no-js ie oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
@@ -25,6 +41,30 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic,700,600,800' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Lora:400italic,400,700italic' rel='stylesheet' type='text/css' />
     <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon"/>
+
+    <?php
+        if(isset($_GET['actu_id'])){ ?>
+    <!-- facebook open graph data -->
+    <!-- Open Graph url property -->
+    <meta property="og:url" content="http://www.jordan-delamotte.com?actu_id=<?php echo $id; ?>#filter=.actualite" />
+
+    <!-- Open Graph title property -->
+    <meta property="og:title" content="Jordan Delamotte - <?php echo $title; ?>" />
+
+    <!-- Open Graph description property -->
+    <meta property="og:description" content="<?php echo substr($text, 0 , min(100,strlen($text) ) ) ; ?>" />
+
+    <!-- Open Graph image property -->
+    <meta property="og:image" content="http://www.jordan-delamotte.com/<?php echo $photo ; ?>" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <!-- Open Graph type property -->
+    <meta property="og:type" content="blog" />
+
+    <!-- Open Graph site_name property -->
+    <meta property="og:site_name" content="Site officiel de Jordan Delamotte" />
+    <!-- end og -->
+    <?php } ?>
 
 </head>
 <body>
@@ -369,6 +409,10 @@
 
             <div id="news" style="display: none;">
             </div>
+            <?php if(isset($_GET['actu_id'])){?>
+
+            <img style="display:none;" src="<?php echo $photo ?>">
+            <?php } ?>
             <div id="recettes" style="display: none;">
             </div>
 
@@ -434,6 +478,8 @@
     ga('send', 'pageview');
 
 </script>
+
+
 </body>
 
 <!-- Google Tag Manager -->
