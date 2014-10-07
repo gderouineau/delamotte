@@ -33,6 +33,9 @@ if(isset($_GET['id'])){
     <!--[if gt IE 8]><!--> <html class="no-js"  dir="ltr" lang="fr"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache, must-revalidate">
         <!-- Set the viewport width to device width for mobile -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="author" content="ppandp & guillaume derouineau">

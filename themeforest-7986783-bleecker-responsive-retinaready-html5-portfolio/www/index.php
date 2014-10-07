@@ -31,6 +31,9 @@
     <meta name="msvalidate.01" content="08410D872342AF06D88C7F32A1D1E595" />
     <title>Jordan Delamotte - Site Officiel</title>
     <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen" />
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate">
     <link href="css/contact.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="screen">
