@@ -404,7 +404,7 @@
             </div>
             <div class="element  clearfix col2 row3 fullon3 presse">
                 <a href="images/photos/pressegala-big.PNG" data-title="Le + : Le buffet gastronomique et innovant du chef Jordan Delamotte" data-fancybox-group="presse" class="popup">
-                    <div class="images"> <img src="images/photos/pressegala-big.PNG" alt="Gala" class="" /> </div>
+                    <div class="images"> <img src="images/photos/pressegala-small.png" alt="Gala" class="" /> </div>
                 </a>
             </div>
             <div class="element  clearfix col2 row3 fullon3 presse">
