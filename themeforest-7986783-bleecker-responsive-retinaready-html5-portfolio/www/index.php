@@ -447,6 +447,8 @@
         </div>
 
         <p><span>© 2014, Jordan Delamotte</span></p>
+        <br/>
+        <p><span>Design by <A HREF="guillaume.derouineau@gmail.com" style="color:#332;">Guillaume Derouineau</A></span></p>
 
     </div>
 </footer>
