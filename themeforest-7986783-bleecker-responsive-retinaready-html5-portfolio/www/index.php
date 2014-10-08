@@ -407,6 +407,11 @@
                     <div class="images"> <img src="images/photos/pressegala-big.PNG" alt="Gala" class="" /> </div>
                 </a>
             </div>
+            <div class="element  clearfix col2 row3 fullon3 presse">
+                <a href="images/photos/gasto_modernite_big.jpg" data-title="Gastronomie et Modernité au menu de l'hôtel de Sers" data-fancybox-group="presse" class="popup">
+                    <div class="images"> <img src="images/photos/gasto_modernite_big.jpg" alt="Gala" class="" /> </div>
+                </a>
+            </div>
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- fin du bloc presse -->
 
