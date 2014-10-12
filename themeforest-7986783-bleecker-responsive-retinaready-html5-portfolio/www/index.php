@@ -425,14 +425,22 @@
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- bloc remerciement -->
-            <div class="element clearfix white col4 row1 remerciement">
-                <p> Un grand Merci... <br /><br />
-                    à Charlotte Rocher, pour son portrait <br />
-                    à Alban Couturier et Sébastien Bessac, <br />
-                    pour leurs photos <br />
-                    à Guillaume Derouineau, pour sa participation <br />
-                    à Sara Edward, pour son Amour et son soutien
-                </p>
+            <div class="element clearfix white col1 row1 remerciement" data-text="Merci" >
+                <h3>Je remercie...</h3>
+            </div>
+
+            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="Pour ses textes" >
+                <h3>Charlotte Rocher</h3>
+            </div>
+
+            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="Pour ce site" >
+                <h3>Guillaume Derouineau</h3>
+            </div>
+            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="Pour son Amour et son soutien" >
+                <h3>Sara Edward</h3>
+            </div>
+            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="Pour leurs photos" >
+                <h3>Alban Couturier <br /> et <br /> Sébastien Bessac</h3>
             </div>
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- fin du bloc remerciement -->
