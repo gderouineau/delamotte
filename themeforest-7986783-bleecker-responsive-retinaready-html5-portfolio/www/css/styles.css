@@ -198,7 +198,7 @@ p .break {height:13px; }
 .share { background:url(../images/icons/bg-share.png) center no-repeat; background-size:30px 30px; }
 .stationery { background:url(../images/icons/bg-stationery.png) center no-repeat; background-size:30px 30px; }
 .camera {background:url(../images/icons/bg-camera.png) center no-repeat; background-size:30px 30px; }
-.instagram {background:url(../images/icons/instagram.png) center no-repeat; background-size:30px 30px; }
+.instagram {background:url(../images/icons/bg-instagram.png) center no-repeat; background-size:30px 30px; }
 .close { background:url(../images/icons/bg-close.png) center no-repeat; background-size:48px 48px; position:absolute; right:35px; top:35px; z-index:28; width:48px; height:48px; display:block }
 /* Social Icons */
 .linkedin {background:url(../images/icons/bg-linkedin.png) center no-repeat; background-size:50px 50px; }
@@ -221,7 +221,7 @@ img{box-shadow: #000 0 0 0}
 .sliphoveritemTitle { font-size:24px; font-weight:400; letter-spacing:0px; -o-text-shadow:-1px -1px 0px rgba(0, 0, 0, 0.25); -moz-text-shadow:-1px -1px 0px rgba(0, 0, 0, 0.25); -webkit-text-shadow:-1px -1px 0px rgba(0, 0, 0, 0.25); text-shadow:1px 1px 0px rgba(0, 0, 0, 0.25); font-family:Georgia, "Times New Roman", Times, serif;  }
 .sliphoveritemTitle span {font-size:11px; display:block; text-transform:uppercase; font-style:normal; font-weight:700; letter-spacing:1px; margin-top:3px; font-family: "Open Sans", Arial, Helvetica, sans-serif; }
 
-a.sliphover-container {font-size:24px;}
+div.sliphover-container {font-size:24px;}
 /* End Image Hover
 --------------------------------------------------------------------------------------------------------*/
 
