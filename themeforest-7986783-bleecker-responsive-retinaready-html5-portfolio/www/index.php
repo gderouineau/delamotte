@@ -12,6 +12,19 @@
         $text = $data['text'];
 
     }
+    if(isset($_GET['recette_id'])){
+        $id = $_GET['recette_id'];
+
+        $db = new PDO('mysql:host=mysql51-136.perso;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
+        $query = 'SELECT * FROM recette WHERE id='.$id;
+        $result = $db->query($query);
+        $data = $result->fetch();
+
+        $photo = $data['photo'];
+        $title = $data['title'];
+        $text = $data['text'];
+
+    }
 ?>
 
 <!DOCTYPE html>
@@ -56,6 +69,29 @@
 
     <!-- Open Graph description property -->
     <meta property="og:description" content="<?php echo substr($text, 0 , min(100,strlen($text) ) ) ; ?>" />
+
+    <!-- Open Graph image property -->
+    <meta property="og:image" content="http://www.jordan-delamotte.com/<?php echo $photo ; ?>" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <!-- Open Graph type property -->
+    <meta property="og:type" content="blog" />
+
+    <!-- Open Graph site_name property -->
+    <meta property="og:site_name" content="Site officiel de Jordan Delamotte" />
+    <!-- end og -->
+    <?php } ?>
+    <?php
+        if(isset($_GET['recette_id'])){ ?>
+    <!-- facebook open graph data -->
+    <!-- Open Graph url property -->
+    <meta property="og:url" content="http://www.jordan-delamotte.com?recette_id=<?php echo $id; ?>#filter=.recette" />
+
+    <!-- Open Graph title property -->
+    <meta property="og:title" content="Jordan Delamotte - Recette" />
+
+    <!-- Open Graph description property -->
+    <meta property="og:description" content="<?php echo strip_tags($title); ?>" />
 
     <!-- Open Graph image property -->
     <meta property="og:image" content="http://www.jordan-delamotte.com/<?php echo $photo ; ?>" />
@@ -423,7 +459,10 @@
             <?php } ?>
             <div id="recettes" style="display: none;">
             </div>
+            <?php if(isset($_GET['recette_id'])){?>
 
+            <img style="display:none;" src="<?php echo $photo ?>">
+            <?php } ?>
 
         </div>
     </div>

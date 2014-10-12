@@ -56,7 +56,7 @@
 --------------------------------------------------------------------------------------------------------*/
 html {overflow: -moz-scrollbars-vertical; overflow-y: scroll; -webkit-font-smoothing: antialiased; height:100% }
 body { font: 15px Georgia, "Times New Roman", Times, serif; color:#555; background:#000; height:100%  }
-strong { font-weight:600; }
+/*strong { font-weight:600; }*/
 em {font-size:17px; }
 a, a > * {-webkit-transition: all 0.2s ease 0s; -moz-transition: all 0.2s ease 0s; -o-transition: all 0.2s ease 0s; transition: all 0.2s ease 0s; }
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; }

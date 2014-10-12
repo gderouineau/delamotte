@@ -38,8 +38,8 @@ else
 }
 
 if(isset($_POST['title']) && isset($_POST['text'])){
-    $title = htmlspecialchars($_POST['title']);
-    $text = htmlspecialchars($_POST['text']);
+    $title = $_POST['title'];
+    $text = $_POST['text'];
     $nbPers = $_POST['nbpers'];
     $Ingredients = $_POST['ingredients'];
     $photo = 'images/photos/'.'recette_'.$_POST['photoname'];
@@ -48,8 +48,8 @@ if(isset($_POST['title']) && isset($_POST['text'])){
         'INSERT INTO recette VALUES (
         null,
         '.$place.',
-        \''.addslashes($title).'\',
-        \''.addslashes($text).'\',
+        \''.addslashes(urldecode($title)).'\',
+        \''.addslashes(urldecode($text)).'\',
         \''.addslashes($Ingredients).'\',
         \''.addslashes($nbPers).'\',
         \''.addslashes($photo).'\',

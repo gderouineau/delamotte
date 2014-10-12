@@ -43,12 +43,10 @@ if(isset($_GET['id'])){
         <meta name="Description" content="Le Site Officiel du chef de cuisine, Jordan Delamotte " />
         <meta name="keywords" content="chef, chef paris, jordan delamotte, chef jordan delamotte, restaurant de Sers, hotel de Sers, cuisine"/>
         <title>Jordan Delamotte - Site Officiel</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="css/actualite.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="screen">
         <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="screen" />
         <!--[if gt IE 8]><!--><link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" /><!--<![endif]-->
         <!--[if !IE]> <link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" /> <![endif]-->
         <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
@@ -106,13 +104,13 @@ if(isset($_GET['id'])){
                 <h3><?php echo $title ?></h3>
                 <div class="borderline"></div>
                     <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par Jordan Delamotte</p>
-        <?php echo $text ?>
+                <p><?php echo $text ?></p>
                 <div class="break"></div>
                 <!--<a href="#" class="icons margin like"></a>-->
                 <!--<a href="#" class="icons margin share" rel="popover" id="share-button" data-toggle="popover" ></a>-->
                 <div class="fb-share-button" id="fb-button" data-layout="button" data-href="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite"></div>
                 <br><br>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id; ?>#filter=.actualite" data-text="<?php echo $title; ?>" data-count="none">Tweet</a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id; ?>#filter=.actualite" data-text="<?php echo strip_tags($title); ?>" data-count="none">Tweet</a>
             </article>
         </div>
         <!--
