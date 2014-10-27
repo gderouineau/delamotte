@@ -133,8 +133,8 @@ function recetteChange(){
     document.getElementById('recettetitle').innerHTML = document.getElementById('recettetitleinput').value;
     // text
     document.getElementById('recettetext').innerHTML = document.getElementById('recettetextinput').value;
-    // nombre de personnes
-    document.getElementById('recettetext').innerHTML = document.getElementById('recettetextinput').value;
+    // nombre de personnesIngrédients
+    document.getElementById('recetteNbPers').innerHTML = "pour "+document.getElementById('recettenbpersinput').value + " personnes";
     // date
     var date = new Date()
         , month = date.getMonth()
@@ -145,7 +145,14 @@ function recetteChange(){
     var div = day + ' ' + french_month + ' ' + date.getFullYear() + ' ' + '&nbsp;&middot;&nbsp; par Jordan Delamotte';
     document.getElementById('recettepostdate').innerHTML = div;
 
-
+    var ING = document.getElementsByName('recetteinginput');
+    var ul = $('#recetteIng');
+    ul.html('')
+    for(var i = 0 ; i < ING.length; i++){
+        var div = '<li>'+ ING[i].value+'</li>' ;
+        ul.append(div);
+        console.log(ING[i].value);
+    }
     // end date
 
 }

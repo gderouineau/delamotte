@@ -56,7 +56,7 @@
 --------------------------------------------------------------------------------------------------------*/
 html {overflow: -moz-scrollbars-vertical; overflow-y: scroll; -webkit-font-smoothing: antialiased; height:100% }
 body { font: 15px Georgia, "Times New Roman", Times, serif; color:#555; background:#000; height:100%  }
-strong { font-weight:600; }
+/*strong { font-weight:600; }*/
 em {font-size:17px; }
 a, a > * {-webkit-transition: all 0.2s ease 0s; -moz-transition: all 0.2s ease 0s; -o-transition: all 0.2s ease 0s; transition: all 0.2s ease 0s; }
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; }
@@ -201,7 +201,7 @@ p .break {height:13px; }
 .share { background:url(../images/icons/bg-share.png) center no-repeat; background-size:30px 30px; }
 .stationery { background:url(../images/icons/bg-stationery.png) center no-repeat; background-size:30px 30px; }
 .camera {background:url(../images/icons/bg-camera.png) center no-repeat; background-size:30px 30px; }
-.instagram {background:url(../images/icons/instagram.png) center no-repeat; background-size:30px 30px; }
+.instagram {background:url(../images/icons/bg-instagram.png) center no-repeat; background-size:30px 30px; }
 .close { background:url(../images/icons/bg-close.png) center no-repeat; background-size:48px 48px; position:absolute; right:35px; top:35px; z-index:28; width:48px; height:48px; display:block }
 /* Social Icons */
 .linkedin {background:url(../images/icons/bg-linkedin.png) center no-repeat; background-size:50px 50px; }
@@ -223,6 +223,8 @@ p .break {height:13px; }
 img{box-shadow: #000 0 0 0}
 .sliphoveritemTitle { font-size:24px; font-weight:400; letter-spacing:0px; -o-text-shadow:-1px -1px 0px rgba(0, 0, 0, 0.25); -moz-text-shadow:-1px -1px 0px rgba(0, 0, 0, 0.25); -webkit-text-shadow:-1px -1px 0px rgba(0, 0, 0, 0.25); text-shadow:1px 1px 0px rgba(0, 0, 0, 0.25); font-family:Georgia, "Times New Roman", Times, serif;  }
 .sliphoveritemTitle span {font-size:11px; display:block; text-transform:uppercase; font-style:normal; font-weight:700; letter-spacing:1px; margin-top:3px; font-family: "Open Sans", Arial, Helvetica, sans-serif; }
+
+div.sliphover-container {font-size:24px;}
 /* End Image Hover
 --------------------------------------------------------------------------------------------------------*/
 
@@ -276,3 +278,6 @@ ul.social a {text-indent:-9000px; text-decoration:none; height:52px; width:52px;
 /* End Isotope
 --------------------------------------------------------------------------------------------------------*/
 
+
+h3.slipdiv{
+    verticalAlign:"middle"}

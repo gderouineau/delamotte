@@ -58,12 +58,11 @@ $(document).ready(function(){
                 resume =
                     '<div class="fancybox element  clearfix col1 row1 recette " >' +
                         '<a href="/recette_fancybox.php?id='+id+'" id="fancy_recette_'+id+'" class="full fancy_recette">'+
-                            '<div class="images"> <img src="'+photo+'" alt="'+title+'" class="slip" id="slip_'+id+'"/> </div>'+
+                            '<div class="images"> <img src="'+photo+'" alt="<a href=\'/recette_fancybox.php?id='+id+'\' class=\'full fancy_recette\'></a>'+title+'" class="slip" id="slip_'+id+'"/> </div>'+
                         '</a>'+
                     '</div>'
                 ;
 
-                recette_div.after(full);
                 recette_div.after(resume);
                 //$('#container').sliphover();
                 //$('#slip_'+id).sliphover();

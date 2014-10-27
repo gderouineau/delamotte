@@ -16,7 +16,6 @@ $(function()
     // Catch the form submit and upload the files
     function uploadFiles(event)
     {
-        alert('test 2');
         event.stopPropagation(); // Stop stuff happening
         event.preventDefault(); // Totally stop stuff happening
 
@@ -87,8 +86,8 @@ $(function()
             }
         }
         var ingredients = JSON.stringify(array_of_ingredients);
-        formData='title='+$('#recettetitleinput').val()+'&'+formData;
-        formData='text='+$('#recettetextinput').val()+'&'+formData;
+        formData='title='+encodeURIComponent($('#recettetitleinput').val())+'&'+formData;
+        formData='text='+encodeURIComponent($('#recettetextinput').val())+'&'+formData;
         formData='nbpers='+$('#recettenbpersinput').val()+'&'+formData;
         formData='ingredients='+ingredients+'&'+formData;
         formData='photoname='+filename+'&'+formData;

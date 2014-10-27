@@ -12,6 +12,19 @@
         $text = $data['text'];
 
     }
+    if(isset($_GET['recette_id'])){
+        $id = $_GET['recette_id'];
+
+        $db = new PDO('mysql:host=mysql51-136.perso;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
+        $query = 'SELECT * FROM recette WHERE id='.$id;
+        $result = $db->query($query);
+        $data = $result->fetch();
+
+        $photo = $data['photo'];
+        $title = $data['title'];
+        $text = $data['text'];
+
+    }
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +39,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="ppandp & guillaume derouineau">
     <!-- description du site ce qui apparaitra dans google -->
-    <meta name="Description" content="Le Site Officiel du chef de cuisine, Jordan Delamotte " />
+    <meta name="Description" content="Bienvenue sur le Site Officel de Jordan Delamotte, Chef de cuisine passionné..." />
     <meta name="keywords" content="chef, chef paris, jordan delamotte, chef jordan delamotte, restaurant de Sers, hotel de Sers, cuisine"/>
     <meta name="msvalidate.01" content="08410D872342AF06D88C7F32A1D1E595" />
     <title>Jordan Delamotte - Site Officiel</title>
@@ -52,13 +65,59 @@
     <meta property="og:url" content="http://www.jordan-delamotte.com?actu_id=<?php echo $id; ?>#filter=.actualite" />
 
     <!-- Open Graph title property -->
-    <meta property="og:title" content="Jordan Delamotte - <?php echo $title; ?>" />
+    <meta property="og:title" content="Jordan Delamotte - <?php echo strip_tags($title); ?>" />
 
     <!-- Open Graph description property -->
-    <meta property="og:description" content="<?php echo substr($text, 0 , min(100,strlen($text) ) ) ; ?>" />
+    <meta property="og:description" content="<?php echo substr(strip_tags($text), 0 , min(100,strlen(strip_tags($text)) ) ) ; ?>" />
 
     <!-- Open Graph image property -->
     <meta property="og:image" content="http://www.jordan-delamotte.com/<?php echo $photo ; ?>" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <!-- Open Graph type property -->
+    <meta property="og:type" content="blog" />
+
+    <!-- Open Graph site_name property -->
+    <meta property="og:site_name" content="Site officiel de Jordan Delamotte" />
+    <!-- end og -->
+    <?php } ?>
+    <?php
+       if(isset($_GET['recette_id'])){ ?>
+    <!-- facebook open graph data -->
+    <!-- Open Graph url property -->
+    <meta property="og:url" content="http://www.jordan-delamotte.com?recette_id=<?php echo $id; ?>#filter=.recette" />
+
+    <!-- Open Graph title property -->
+    <meta property="og:title" content="Jordan Delamotte - Recette" />
+
+    <!-- Open Graph description property -->
+    <meta property="og:description" content="<?php echo strip_tags($title); ?>" />
+
+    <!-- Open Graph image property -->
+    <meta property="og:image" content="http://www.jordan-delamotte.com/<?php echo $photo ; ?>" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <!-- Open Graph type property -->
+    <meta property="og:type" content="blog" />
+
+    <!-- Open Graph site_name property -->
+    <meta property="og:site_name" content="Site officiel de Jordan Delamotte" />
+    <!-- end og -->
+    <?php } ?>
+    <?php
+       if(!isset($_GET['recette_id']) && !isset($_GET['actu_id'])){ ?>
+    <!-- facebook open graph data -->
+    <!-- Open Graph url property -->
+    <meta property="og:url" content="http://www.jordan-delamotte.com" />
+
+    <!-- Open Graph title property -->
+    <meta property="og:title" content="Jordan Delamotte - Site Officel" />
+
+    <!-- Open Graph description property -->
+    <meta property="og:description" content="Bienvenue sur le Site Officel de Jordan Delamotte, Chef de cuisine passionné..." />
+
+    <!-- Open Graph image property -->
+    <meta property="og:image" content="http://www.jordan-delamotte.com/images/photos/www.JD.com-ConvertImage%20copie.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
 
     <!-- Open Graph type property -->
@@ -183,9 +242,10 @@
                 </p>
             </div>
             <div class="element  clearfix col1 row1 bienvenue">
-                <a href="images/photos/image_truffe.jpg" data-title="Une truffe  mélanosporum" data-fancybox-group="plat" class="popup">
+                <a href="images/photos/image_truffe-big.jpg" data-title="Une truffe  mélanosporum" data-fancybox-group="plat" class="popup">
                     <div class="images"> <img src="images/photos/image_truffe-small.jpg" alt="Une truffe  mélanosporum" class="slip" /> </div>
                 </a>
+
             </div>
             <div class="element clearfix col1 row2 bienvenue">
                 <a href="#filter=.portrait">
@@ -297,7 +357,7 @@
                     <br />
                     <br />
                     <br />
-                    Né à Roubaix, diplômé à Nantes, d’origine belge et polonaise, sa cuisine est le reflet de sa personnalité : curieuse, innovante, variée et généreuse. S’il met un point d’honneur à incarner la gastronomie à la française, il croit que pour ce faire, le mélange des cultures et des influences est un atout. Ayant travaillé tour à tour en Irlande, en Suisse ou encore en Martinique, il aime cultiver son inspiration qui lui provient à la fois de son expérience et de ses voyages. Toujours conscient des exigences de la clientèle, il met un point d’honneur à choisir les meilleurs ingrédients produits en France et biologiques. Chef pointilleux et rigoureux, il dirige les équipes avec un professionnalisme très prometteur pour un jeune chef de 28 ans.
+                    Né à Roubaix, diplômé à Nantes, d’origine belge et polonaise, sa cuisine est le reflet de sa personnalité : curieuse, innovante, variée et généreuse. S’il met un point d’honneur à incarner la gastronomie à la française, il croit que pour ce faire, le mélange des cultures et des influences est un atout. Ayant travaillé tour à tour en Irlande, en Suisse ou encore en Martinique, il aime cultiver son inspiration qui lui provient à la fois de son expérience et de ses voyages. Toujours conscient des exigences de la clientèle, il considère essentiel de choisir les meilleurs ingrédients produits en France et biologiques. Chef pointilleux et rigoureux, il dirige les équipes avec un professionnalisme très prometteur pour un jeune chef de 28 ans.
 
                     <br />
                     <br />
@@ -365,14 +425,22 @@
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- bloc remerciement -->
-            <div class="element clearfix white col4 row1 remerciement">
-                <p> Un grand Merci... <br /><br />
-                    à Charlotte Rocher, pour son portrait <br />
-                    à Alban Couturier et Sébastien Bessac, <br />
-                    pour leurs photos <br />
-                    à Guillaume Derouineau, pour sa participation <br />
-                    à Sara Edward, pour son Amour et son soutien
-                </p>
+            <div class="element clearfix white col1 row1 remerciement" data-text="Merci" >
+                <h3>Je remercie...</h3>
+            </div>
+
+            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="Pour ses textes" >
+                <h3>Charlotte Rocher</h3>
+            </div>
+
+            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="Pour ce site" >
+                <h3>Guillaume Derouineau</h3>
+            </div>
+            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="Pour son Amour et son soutien" >
+                <h3>Sara Edward</h3>
+            </div>
+            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="Pour leurs photos" >
+                <h3>Alban Couturier <br /> et <br /> Sébastien Bessac</h3>
             </div>
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- fin du bloc remerciement -->
@@ -395,23 +463,23 @@
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!--  bloc presse -->
 
-
-
             <div class="element  clearfix col2 row3 fullon3 presse">
-                <a href="http://www.sofoodmag.fr/jordan-delamotte.html" target="_blank">
-                    <div class="images"> <img src="images/photos/pressesofoodmag-big.png" alt="SoFoodMag.com" class="" /> </div>
+                <a href="images/photos/gasto_modernite_big.jpg" data-title="Gastronomie et Modernité au menu de l'hôtel de Sers" data-fancybox-group="presse" class="popup">
+                    <div class="images"> <img src="images/photos/gasto_modernite_big.jpg" alt="Apollo Magazine" class="slip" /> </div>
                 </a>
             </div>
             <div class="element  clearfix col2 row3 fullon3 presse">
                 <a href="images/photos/pressegala-big.PNG" data-title="Le + : Le buffet gastronomique et innovant du chef Jordan Delamotte" data-fancybox-group="presse" class="popup">
-                    <div class="images"> <img src="images/photos/pressegala-small.png" alt="Gala" class="" /> </div>
+                    <div class="images"> <img src="images/photos/pressegala-small.png" alt="Gala" class="slip" /> </div>
                 </a>
             </div>
             <div class="element  clearfix col2 row3 fullon3 presse">
-                <a href="images/photos/gasto_modernite_big.jpg" data-title="Gastronomie et Modernité au menu de l'hôtel de Sers" data-fancybox-group="presse" class="popup">
-                    <div class="images"> <img src="images/photos/gasto_modernite_big.jpg" alt="Gala" class="" /> </div>
+                <a href="http://www.sofoodmag.fr/jordan-delamotte.html" target="_blank">
+                    <div class="images"> <img src="images/photos/pressesofoodmag-big.png" alt="SoFoodMag.com" class="slip" /> </div>
                 </a>
             </div>
+
+
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- fin du bloc presse -->
 
@@ -423,7 +491,14 @@
             <?php } ?>
             <div id="recettes" style="display: none;">
             </div>
+            <?php if(isset($_GET['recette_id'])){?>
 
+            <img style="display:none;" src="<?php echo $photo ?>">
+            <?php } ?>
+            <?php if(!isset($_GET['actu_id']) && !isset($_GET['recette_id'])){?>
+
+            <img style="display:none;" src="images/photos/www.JD.com-ConvertImage%20copie.jpg">
+            <?php } ?>
 
         </div>
     </div>

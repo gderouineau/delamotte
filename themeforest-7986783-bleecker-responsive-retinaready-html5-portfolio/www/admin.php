@@ -117,9 +117,14 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
                         </div>
                         <article class="clearfix col2-3 white white-bottom auto">
                             <h3 id="recettetitle"></h3>
-                            <div class="borderline"></div>
                             <p class="small" id="recettepostdate"></p>
-                            <div id="recettetext">
+                            <div class="borderline"></div>
+                            <h4>Ingr&eacute;dients</h4>
+                            <p class="small" id="recetteNbPers"></p>
+                            <ul class="unordered-list column-count2" id="recetteIng">
+                            </ul>
+                            <h4>Pr&eacute;paration</h4>
+                            <p><div id="recettetext"></p>
                             </div>
                     </div>
                     <!-- end recette previsualisation

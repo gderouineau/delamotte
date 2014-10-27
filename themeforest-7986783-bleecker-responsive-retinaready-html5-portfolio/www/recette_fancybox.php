@@ -16,6 +16,18 @@ if(isset($_GET['id'])){
     $result = $db->query($query);
     $data = $result->fetch();
     ?>
+        <?php
+
+        $photo = $data['photo'];
+        $title = $data['title'];
+        $text = $data['text'];
+        $ingredient = json_decode($data['ingredient']);
+        $nb_personnes = $data['nb_personnes'];
+        $date = strtotime($data['date']);
+        $day = date('j',$date);
+        $french_month = french_month($date);
+        $year= date('Y' , $date);
+        ?>
 
     <!DOCTYPE html>
     <!--[if gt IE 6]> <html class="no-js ie oldie" lang="en"> <![endif]-->
@@ -27,7 +39,7 @@ if(isset($_GET['id'])){
         <meta charset="utf-8">
         <!-- Set the viewport width to device width for mobile -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="author" content="ppandp & guillaume derouineau">
+        <meta name="author" content="Guillaume Derouineau">
         <!-- description du site ce qui apparaitra dans google -->
         <meta name="Description" content="Le Site Officiel du chef de cuisine, Jordan Delamotte " />
         <meta name="keywords" content="chef, chef paris, jordan delamotte, chef jordan delamotte, restaurant de Sers, hotel de Sers, cuisine"/>
@@ -43,20 +55,42 @@ if(isset($_GET['id'])){
         <link href='http://fonts.googleapis.com/css?family=Lora:400italic,400,700italic' rel='stylesheet' type='text/css' />
         <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon"/>
 
+
+<!-- facebook open graph data -->
+        <!-- Open Graph url property -->
+        <meta property="og:url" content="http://www.jordan-delamotte.com/index.php?recette_id=<?php echo $id; ?>#filter=.recette" />
+
+        <!-- Open Graph title property -->
+        <meta property="og:title" content="Jordan Delamotte - Recette" />
+
+        <!-- Open Graph description property -->
+        <meta property="og:description" content="<?php echo strip_tags($title); ?>" />
+
+        <!-- Open Graph image property -->
+        <meta property="og:image" content="http://www.jordan-delamotte.com/<?php echo $photo ; ?>" />
+        <meta property="og:image:type" content="image/jpeg" />
+
+        <!-- Open Graph type property -->
+        <meta property="og:type" content="blog" />
+
+        <!-- Open Graph site_name property -->
+        <meta property="og:site_name" content="Site officiel de Jordan Delamotte" />
+
+        <link rel="opengraph" href="http://www.jordan-delamotte.com/index.php?recette_id=<?php echo $id; ?>#filter=.recette"/>
+        <!-- end og -->
     </head>
     <body style="background-color: white;">
-    <?php
+    <!-- facebook share button plugin -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- end of the facebook plugin -->
 
-    $photo = $data['photo'];
-    $title = $data['title'];
-    $text = $data['text'];
-    $ingredient = json_decode($data['ingredient']);
-    $nb_personnes = $data['nb_personnes'];
-    $date = strtotime($data['date']);
-    $day = date('j',$date);
-    $french_month = french_month($date);
-    $year= date('Y' , $date);
-    ?>
     <div class="element  clearfix auto center">
         <div class="clearfix col2-3 auto no-padding">
             <div class="images">
@@ -68,9 +102,10 @@ if(isset($_GET['id'])){
         </div>
         <article class="clearfix col2-3 white white-bottom auto">
             <h3><?php echo $title ?></h3>
-            <div class="borderline"></div>
             <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par Jordan Delamotte</p>
-            <h4>Ingredients pour <?php echo $nb_personnes ; ?> personnes</h4>
+            <div class="borderline"></div>
+            <h4>Ingredients</h4>
+            <p class="small">pour <?php echo $nb_personnes ; ?> personnes</p>
             <ul class="unordered-list column-count2">
             <?php
                 foreach($ingredient as $ingredient_name){
@@ -85,13 +120,32 @@ if(isset($_GET['id'])){
             ?>
             </ul>
             <h4>Préparation</h4>
-            <?php echo $text ?>
+            <p><?php echo $text ?></p>
             <div class="break"></div>
-            <a href="#" class="icons margin like"></a>
-            <a href="#" class="icons margin share"></a>
+            <!--<a href="#" class="icons margin like"></a>-->
+            <!--<a href="#" class="icons margin share"></a>-->
+            <div class="fb-share-button" id="fb-button" data-layout="button" data-href="http://jordan-delamotte.com/index.php?recette_id=<?php echo $id ;?>#filter=.recette"></div>
+            <br><br>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?recette_id=<?php echo $id; ?>#filter=.recette" data-text="<?php echo strip_tags($title); ?>" data-count="none">Tweet</a>
+
         </article>
     </div>
-
+ <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+   <!-- <script type="text/javascript">
+        var fb = $('#fb-button');
+        $(fb).style.display = 'block';
+        $('#share-button').popover({
+            placement: 'auto right',
+            title: 'Share',
+            content : fb,
+            html: true
+        }).click(function(e) {
+            e.preventDefault();
+        });
+    </script>
+-->
     </body>
     </html>
 
