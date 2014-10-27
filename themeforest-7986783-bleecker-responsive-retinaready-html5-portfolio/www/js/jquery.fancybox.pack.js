@@ -61,7 +61,7 @@ jQuery(document).ready(function() {
 	
 	// initiate fancybox for videos
 	jQuery(".video-popup").fancybox({
-				'width'				: '70%',
+				'width'				: 800,
 				'height'			: '80%',
 				'autoScale'			: false,
 	//			'transitionIn'		: 'elastic',

@@ -49,11 +49,13 @@ if(isset($_POST['title']) && isset($_POST['text'])){
         \''.addslashes(urldecode($title)).'\',
         \''.addslashes(urldecode($text)).'\',
         \''.addslashes($date).'\',
-        \''.addslashes($photo).'\'
+        \''.addslashes($photo).'\',
+        \''.addslashes(1).'\',
+        \''.addslashes("jordan delamotte").'\'
         )';
 
     $result = $db->query($query);
-    $data = array('success' => $text, 'formData' => $_POST);
+    $data = array('success' => $query, 'formData' => $_POST);
 
 }
 echo json_encode($data);
