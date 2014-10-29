@@ -65,6 +65,7 @@ if(isset($_GET['id'])){
         <meta name="keywords" content="chef, chef paris, jordan delamotte, chef jordan delamotte, restaurant de Sers, hotel de Sers, cuisine"/>
         <title>Jordan Delamotte - Site Officiel</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="css/actualite.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="screen">
         <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
@@ -142,12 +143,14 @@ if(isset($_GET['id'])){
 
                 for($i= 0 ; $i< count($data); $i++){
                 ?>
-                <div class="fancybox element  clearfix border" style="width: 46%; margin: 1%; <?php if($i%2==0){echo 'float:left;';} else {echo 'float:right;';} ?> ">
-                    <a class="actu_link full" href="actu_fancybox.php?id=<?php echo $data[$i]['id'] ; ?>"></a>
-                    <h4><?php echo $data[$i]['title']; ?></h4>
-                    <div class="borderline"></div>
-                    <p class="small"><?php echo date('j',strtotime($data[$i]['date'])).' '.french_month(strtotime($data[$i]['date'])).' '.date('Y' , strtotime($data[$i]['date'])).' <br /> &nbsp;&middot;&nbsp; <br />par '.$data[$i]['author_name']; ?></p>
-                </div>
+                <a class="actu_link " href="actu_fancybox.php?id=<?php echo $data[$i]['id'] ; ?>">
+                    <div class="fancybox element  clearfix border" style="width: 46%; margin: 1%; <?php if($i%2==0){echo 'float:left;';} else {echo 'float:right;';} ?> ">
+
+                        <h4><?php echo $data[$i]['title']; ?></h4>
+                        <div class="borderline"></div>
+                        <p class="small"><?php echo date('j',strtotime($data[$i]['date'])).' '.french_month(strtotime($data[$i]['date'])).' '.date('Y' , strtotime($data[$i]['date'])).' <br /> &nbsp;&middot;&nbsp; <br />par '.$data[$i]['author_name']; ?></p>
+                    </div>
+                </a>
                 <?php
                 }
                 ?>
