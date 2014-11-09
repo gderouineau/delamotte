@@ -6,14 +6,14 @@
  * Time: 09:55
  */
 
-
-
-if(isset($_POST['email']) && isset($_POST['mdp'])){
-
-    if(($_POST['email'] == 'chef.jordandelamotte@gmail.com') && ($_POST['mdp'] == 'kotek44972')){
-
-
-
+session_start();
+$user_name="";
+if(!isset($_SESSION['user'])){
+    header('location: connexion.html');
+}
+else{
+    $user_name = $_SESSION['user']['user_name'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
     ------------------------------------------------------------------------------------------------------------------->
 
 </head>
-    <body>
+    <body data-username="<?php echo $user_name; ?>">
         <!-- start content
         --------------------------------------------------------------------------------------------------------------->
         <div id="content">
@@ -124,8 +124,14 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
                             <ul class="unordered-list column-count2" id="recetteIng">
                             </ul>
                             <h4>Pr&eacute;paration</h4>
-                            <p><div id="recettetext"></p>
-                            </div>
+                            <p>
+                                <div id="recettetext">
+                                </div>
+                            </p>
+
+
+                        </article>
+
                     </div>
                     <!-- end recette previsualisation
                     --------------------------------------------------------------------------------------------------->
@@ -156,32 +162,3 @@ if(isset($_POST['email']) && isset($_POST['mdp'])){
 
 </html>
 
-<?php
-    }
-    else{
-        ?>
-        <form method="POST" action="admin.php">
-            <p>
-                <h4>Connexion</h4>
-                email: <input type="text" id="newsletter_email" name="email" value ="" />
-                mdp: <input type="password" name="mdp" value=""/>
-                <input type="submit" value="envoyer">
-            </p>
-        </form>
-        <?php
-    }
-
-}
-else{
-    ?>
-    <form method="POST" action="admin.php">
-        <p>
-        <h4>Connexion</h4>
-        email: <input type="text" id="newsletter_email" name="email" value ="" />
-        mdp: <input type="password" name="mdp" value=""/>
-        <input type="submit" value="envoyer">
-        </p>
-    </form>
-<?php
-}
-?>
