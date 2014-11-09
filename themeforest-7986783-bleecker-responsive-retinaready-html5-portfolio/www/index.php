@@ -227,9 +227,13 @@
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- debut du bloc bienvenue -->
 
-            <div class="element  clearfix col2 row3 bienvenue">
+            <!--div class="element  clearfix col2 row3 bienvenue">
                 <div class="images"> <img src="images/photos/saintpierre1-small.jpg" alt="Saint Pierre, fèves, amandes et shiso rouge..." class="slip" /> </div>
+            </div-->
+            <div class="element clearfix col2 row2 photo-bienvenue min-display-1 contact">
+                <div class="images"> <img src="images/plats/tarte%20fine%20artichaut%20BD%20(A.%20Couturier)/0097%20bis.jpg" alt="Tarte fine d'artichauts poivrades..." class="slip" /> </div>
             </div>
+
             <div class="element  clearfix col2 row1 bienvenue">
                 <div class="images"> <img src="images/photos/portrait1-small.jpg" alt="" /> </div>
             </div>
@@ -242,6 +246,21 @@
                 </p>
             </div>
             <div class="element  clearfix col1 row1 bienvenue">
+                <a href="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" data-title="La féra du lac Léman..." data-fancybox-group="plat" class="popup">
+                    <div class="images"> <img src="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" alt="Féra du lac Léman, caviar osciètre d'Italie, sauce Champagne et déclinaison de pomme de terre." class="slip" /> </div>
+                </a>
+
+            </div>
+            <div class="element clearfix white col1 row1 bienvenue" id="newsletter">
+                <h4>Abonnez-vous à la newsletter.</h4>
+                <form>
+                    <p>
+                        email: <input type="text" id="newsletter_email" value ="" />
+                    <p id="newsletter_submit">Envoyer</p>
+                    </p>
+                </form>
+            </div>
+            <!--div class="element  clearfix col1 row1 bienvenue">
                 <a href="images/photos/image_truffe-big.jpg" data-title="Une truffe  mélanosporum" data-fancybox-group="plat" class="popup">
                     <div class="images"> <img src="images/photos/image_truffe-small.jpg" alt="Une truffe  mélanosporum" class="slip" /> </div>
                 </a>
@@ -256,13 +275,17 @@
                 <a href="images/photos/nicoise2-big.jpg" data-title="La salade niçoise de Jordan Delamotte" data-fancybox-group="plat" class="popup">
                     <div class="images"> <img src="images/photos/nicoise2-small.jpg" alt="La salade niçoise..." class="slip" /> </div>
                 </a>
-            </div>
+            </div-->
             <div class="element  clearfix col1 row1 bienvenue">
                 <a href="images/photos/tartareboeuf3-big.jpg" data-title="Tartare de boeuf du Limousin, déclinaison de tomates anciennes" data-fancybox-group="plat" class="popup">
                     <div class="images"> <img src="images/photos/tartareboeuf3-small.jpg" alt="Le tartare de boeuf..." class="slip"/> </div>
                 </a>
             </div>
-
+            <div class="element  clearfix col1 row1 bienvenue">
+                <a href="images/photos/saintpierre2-big.jpg" data-title="Filet de Saint Pierre, fèves, amandes et shiso rouge" data-fancybox-group="plat" class="popup">
+                    <div class="images"> <img src="images/photos/saintpierre2-small.jpg" alt="Le Saint Pierre..." class="slip"/> </div>
+                </a>
+            </div>
             <!--
             <div class="element  clearfix col1 row1 bienvenue">
                 <a href="images/photos/finger_manguevanille1-1-big.jpg" data-title="Finger de mangue épicée, crème légère à la vanille de Madagascar,biscuit à la fleur de sel de Guérande" data-fancybox-group="plat" class="popup">
@@ -447,7 +470,7 @@
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- bloc newsletter -->
-            <div class="element clearfix white col1 row1 bienvenue contact" id="newsletter">
+            <div class="element clearfix white col1 row1 contact" id="newsletter">
                 <h4>Abonnez-vous à la newsletter.</h4>
                 <form>
                     <p>
