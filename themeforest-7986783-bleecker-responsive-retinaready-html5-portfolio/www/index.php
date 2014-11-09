@@ -1,4 +1,7 @@
 <?php
+
+//  TODO: écrire ici ce que tu veux
+// TODO: un autre TODO
     $title='';
     $text = '';
     $photo = '';
