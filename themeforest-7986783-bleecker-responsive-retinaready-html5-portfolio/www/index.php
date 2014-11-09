@@ -1,4 +1,18 @@
 <?php
+    $title='';
+    $text = '';
+    $photo = '';
+    $id='';
+    session_start();
+    $lang='fr';
+    if(isset($_GET['lang'])){
+        $_SESSION['lang']=$_GET['lang'];
+    }
+    if(isset($_SESSION['lang'])){
+        $lang=$_SESSION['lang'];
+    }
+
+
     if(isset($_GET['actu_id'])){
         $id = $_GET['actu_id'];
 
@@ -28,21 +42,33 @@
 ?>
 
 <!DOCTYPE html>
+    <?php if($lang=='en'){?>
 <!--[if gt IE 6]> <html class="no-js ie oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if IE 9]> <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"  dir="ltr" lang="en"> <!--<![endif]-->
+<?php } if($lang=='fr'){ ?>
+<!--[if gt IE 6]> <html class="no-js ie oldie" lang="fr"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="fr"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="fr"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9 oldie" lang="fr"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"  dir="ltr" lang="fr"> <!--<![endif]-->
+<?php }?>
 <head>
     <meta charset="utf-8">
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="ppandp & guillaume derouineau">
+    <meta name="author" content="guillaume derouineau">
     <!-- description du site ce qui apparaitra dans google -->
     <meta name="Description" content="Bienvenue sur le Site Officel de Jordan Delamotte, Chef de cuisine passionné..." />
     <meta name="keywords" content="chef, chef paris, jordan delamotte, chef jordan delamotte, restaurant de Sers, hotel de Sers, cuisine"/>
     <meta name="msvalidate.01" content="08410D872342AF06D88C7F32A1D1E595" />
+    <?php if($lang=='fr'){ ?>
     <title>Jordan Delamotte - Site Officiel</title>
+    <?php } if($lang=='en'){?>
+    <title>Jordan Delamotte - Offical Website</title>
+    <?php}?>
     <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen" />
     <meta http-equiv="expires" content="0">
     <meta http-equiv="pragma" content="no-cache">
@@ -163,6 +189,7 @@
             <li><a href="#filter=.portfolio">Photos</a></li>
             par exemple le champ #filter=.portfolio te permet de chercher dans les classes
             -->
+            <?php if($lang=='fr'){?>
             <ul class="option-set clearfix" id="option-list-up" data-option-key="filter">
                 <li><a href="#filter=.bienvenue" class="selected">Bienvenue</a>
                 <li><a href="#filter=.portrait">Portrait</a></li>
@@ -170,6 +197,15 @@
                 <li><a href="#filter=.photo">Photos</a></li>
                 <li><a href="#filter=.recette">Recettes</a></li>
             </ul>
+            <?php} if($lang=='en'){ ?>
+            <ul class="option-set clearfix" id="option-list-up" data-option-key="filter">
+                <li><a href="#filter=.bienvenue" class="selected">Welcome</a>
+                <li><a href="#filter=.portrait">Portrait</a></li>
+                <li><a href="#filter=.actualite">News</a></li>
+                <li><a href="#filter=.photo">Photos</a></li>
+                <li><a href="#filter=.recette">Recipes</a></li>
+            </ul>
+            <?php}?>
         </div>
         <!-- end main nav -->
     </div>
@@ -540,13 +576,21 @@
 
         </div>
         <div id="options-down" class="clearfix">
-
+            <?php if($lang=='fr'){?>
             <ul class="option-set clearfix" id="option-list-down" data-option-key="filter">
                 <li><a href="#filter=.presse">Presse</a>
                 <li><a href="#filter=.legals">Mentions légales</a></li>
                 <li><a href="#filter=.remerciement">Remerciements</a></li>
                 <li><a href="#filter=.contact">Contact</a></li>
             </ul>
+            <?php} if($lang=='en'){?>
+            <ul class="option-set clearfix" id="option-list-down" data-option-key="filter">
+                <li><a href="#filter=.presse">Press</a>
+                <li><a href="#filter=.legals">Imprint</a></li>
+                <li><a href="#filter=.remerciement">Thanks</a></li>
+                <li><a href="#filter=.contact">Contact</a></li>
+            </ul>
+            <?php } ?>
         </div>
 
         <p><span>© 2014, Jordan Delamotte</span></p>

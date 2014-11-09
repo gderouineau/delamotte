@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Un formulaire de connexion en AJAX</title>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Connexion à l\'interface administrateur</h1>
+        <form>
+            <p>
+                Email : <input type="text" id="username" />
+                Mot de passe : <input type="password" id="password" />
+                <input type="submit" id="submit" value="Se connecter" />
+            </p>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $("#submit").click(function(){
+
+                $.post(
+                    'connexion.php',
+                     {
+                        login : $("#username").val(),
+                        password : $("#password").val()
+                     },
+
+                    function(data){
+                        if(data == 'Success'){
+                            $('#content').html('Vous avez été connecté avec succès vous allez être dirigé vers l\'interface administrateur');
+                            setTimeout(5000, function(){
+                                        window.location.replace('http://jordan-delamotte.com/admin.php');
+                                    }
+                            );
+                        }
+                        else{
+                            $('#content').html('Un problème est survenu lors de votre connexion. Soit votre identifiant soit votre mot de passe est incorrect. ');
+                            setTimeout(5000, function(){
+                               window.location.replace('http://jordan-delamotte.com/connexion.html');
+                            });
+                        }
+                    },
+
+                    'text'
+                );
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
