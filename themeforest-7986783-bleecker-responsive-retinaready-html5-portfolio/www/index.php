@@ -277,8 +277,11 @@
             </div>
             <div class="element  clearfix col2 row1 oneon3 bienvenue white">
                 <p><br/><br/><br/>
+                    <?php if($lang=='fr'){ ?>
                     Bienvenue sur le Site Officiel de Jordan Delamotte, <br/> Chef de cuisine passionné...
-
+                    <?php } if($lang=='en'){ ?>
+                    Welcome on Jordan Delamotte official website, <br/> passionate Chef...
+                    <?php } ?>
                     <a href="/#filter=.portrait" class="full" style="text-decoration: none;">
                     </a>
                 </p>
@@ -509,11 +512,20 @@
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- bloc newsletter -->
             <div class="element clearfix white col1 row1 contact" id="newsletter">
+                <?php if($lang=="fr"){ ?>
                 <h4>Abonnez-vous à la newsletter.</h4>
+                <?php } if($lang=='en'){ ?>
+                <h4>Suscribe to the newsletter.</h4>
+                <?php } ?>
                 <form>
                     <p>
                         email: <input type="text" id="newsletter_email" value ="" />
-                        <p id="newsletter_submit">Envoyer</p>
+                        <?php if($lang=="fr"){ ?>
+                        <span id="newsletter_submit">Envoyer</span>
+                        <?php } if($lang=='en'){ ?>
+                        <span id="newsletter_submit">Send</span>
+                        <?php } ?>
+
                     </p>
                 </form>
             </div>
