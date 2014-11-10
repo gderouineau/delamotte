@@ -281,3 +281,21 @@ ul.social a {text-indent:-9000px; text-decoration:none; height:52px; width:52px;
 
 h3.slipdiv{
     verticalAlign:"middle"}
+
+#lang{
+    position:absolute;
+    top: 5px;
+    right: 0px;
+    color: #888;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin: 0;
+}

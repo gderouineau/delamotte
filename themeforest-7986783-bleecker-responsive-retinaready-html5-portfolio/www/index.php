@@ -183,6 +183,11 @@
 <header>
     <div class="container clearfix">
         <h1 id="logo"><a href="/">Jordan Delamotte</a></h1>
+        <?php if($lang=='fr'){ ?>
+            <a href="/?lang=en" id="lang">English</a>
+        <?php } if($lang=='en'){  ?>
+            <a href="/?lang=fr" id="lang">Français</a>
+        <?php } ?>
         <!-- start main nav -->
         <div id="nav-button"> <span class="nav-bar"></span> <span class="nav-bar"></span> <span class="nav-bar"></span> </div>
         <div id="options" class="clearfix">
@@ -193,19 +198,23 @@
             -->
             <?php if($lang=="fr"){?>
             <ul class="option-set clearfix" id="option-list-up" data-option-key="filter">
-                <li><a href="#filter=.bienvenue" class="selected">Bienvenue</a>
+              <!--  <li><a href="#filter=.bienvenue" class="selected">Bienvenue</a> -->
                 <li><a href="#filter=.portrait">Portrait</a></li>
                 <li><a href="#filter=.actualite">Actualités</a></li>
                 <li><a href="#filter=.photo">Photos</a></li>
                 <li><a href="#filter=.recette">Recettes</a></li>
+                <li><a href="#filter=.contact">Contact</a></li>
+
             </ul>
             <?php } if($lang=="en"){ ?>
             <ul class="option-set clearfix" id="option-list-up" data-option-key="filter">
-                <li><a href="#filter=.bienvenue" class="selected">Welcome</a>
+                <!-- <li><a href="#filter=.bienvenue" class="selected">Welcome</a> -->
                 <li><a href="#filter=.portrait">Portrait</a></li>
                 <li><a href="#filter=.actualite">News</a></li>
                 <li><a href="#filter=.photo">Photos</a></li>
                 <li><a href="#filter=.recette">Recipes</a></li>
+                <li><a href="#filter=.contact">Contact</a></li>
+
             </ul>
             <?php } ?>
         </div>
@@ -293,11 +302,20 @@
 
             </div>
             <div class="element clearfix white col1 row1 bienvenue" id="newsletter">
+                <?php if($lang=="fr"){ ?>
                 <h4>Abonnez-vous à la newsletter.</h4>
+                <?php } if($lang=="en"){ ?>
+                <h4>Suscribe to the newsletter.</h4>
+                <?php } ?>
                 <form>
                     <p>
                         email: <input type="text" id="newsletter_email" value ="" />
-                    <p id="newsletter_submit">Envoyer</p>
+                        <?php if($lang=="fr"){ ?>
+                        <span id="newsletter_submit">Envoyer</span>
+                        <?php } if($lang=="en"){ ?>
+                        <span id="newsletter_submit">Send</span>
+                        <?php } ?>
+
                     </p>
                 </form>
             </div>
@@ -514,7 +532,7 @@
             <div class="element clearfix white col1 row1 contact" id="newsletter">
                 <?php if($lang=="fr"){ ?>
                 <h4>Abonnez-vous à la newsletter.</h4>
-                <?php } if($lang=='en'){ ?>
+                <?php } if($lang=="en"){ ?>
                 <h4>Suscribe to the newsletter.</h4>
                 <?php } ?>
                 <form>
@@ -522,7 +540,7 @@
                         email: <input type="text" id="newsletter_email" value ="" />
                         <?php if($lang=="fr"){ ?>
                         <span id="newsletter_submit">Envoyer</span>
-                        <?php } if($lang=='en'){ ?>
+                        <?php } if($lang=="en"){ ?>
                         <span id="newsletter_submit">Send</span>
                         <?php } ?>
 
@@ -595,14 +613,12 @@
                 <li><a href="#filter=.presse">Presse</a>
                 <li><a href="#filter=.legals">Mentions légales</a></li>
                 <li><a href="#filter=.remerciement">Remerciements</a></li>
-                <li><a href="#filter=.contact">Contact</a></li>
             </ul>
             <?php } if($lang=='en'){ ?>
             <ul class="option-set clearfix" id="option-list-down" data-option-key="filter">
                 <li><a href="#filter=.presse">Press</a>
                 <li><a href="#filter=.legals">Imprint</a></li>
                 <li><a href="#filter=.remerciement">Thanks</a></li>
-                <li><a href="#filter=.contact">Contact</a></li>
             </ul>
             <?php } ?>
         </div>
