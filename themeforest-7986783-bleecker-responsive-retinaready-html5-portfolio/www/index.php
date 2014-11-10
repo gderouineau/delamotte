@@ -277,7 +277,7 @@
             <!--div class="element  clearfix col2 row3 bienvenue">
                 <div class="images"> <img src="images/photos/saintpierre1-small.jpg" alt="Saint Pierre, fèves, amandes et shiso rouge..." class="slip" /> </div>
             </div-->
-            <div class="element clearfix col2 row2 photo-bienvenue min-display-1 contact">
+            <div class="element clearfix col2 row2 photo bienvenue min-display-1">
                 <div class="images"> <img src="images/plats/tarte%20fine%20artichaut%20BD%20(A.%20Couturier)/0097%20bis.jpg" alt="Tarte fine d'artichauts poivrades..." class="slip" /> </div>
             </div>
 
