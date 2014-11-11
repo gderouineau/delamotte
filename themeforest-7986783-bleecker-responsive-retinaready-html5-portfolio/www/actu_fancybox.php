@@ -127,7 +127,7 @@ if(isset($_GET['id'])){
             <article class="clearfix col2-3 white white-bottom auto">
                 <h3><?php echo $title ?></h3>
                 <div class="borderline"></div>
-                <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par Jordan Delamotte</p>
+                <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par <?php echo $auteur; ?></p>
                 <?php echo $text ?>
                 <div class="break"></div>
                 <!--<a href="#" class="icons margin like"></a>-->

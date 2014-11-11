@@ -75,8 +75,11 @@ $(function()
         }
         // Serialize the form data
         var formData = $form.serialize();
+        var body = $('body');
         formData='title='+encodeURIComponent($('#blogtitleinput').val())+'&'+formData;
         formData='text='+encodeURIComponent($('#blogtextinput').val())+'&'+formData;
+        formData='author='+encodeURIComponent(body.data('username'))+'&'+formData;
+        formData='authorid='+encodeURIComponent(body.data('userid'))+'&'+formData;
         var rand = Math.floor((Math.random() * 10) + 1);
         formData='photoname='+filename+'&'+formData;
         // You should sterilise the file names

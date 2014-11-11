@@ -40,6 +40,8 @@ else
 if(isset($_POST['title']) && isset($_POST['text'])){
     $title = $_POST['title'];
     $text = $_POST['text'];
+    $author = $_POST['author'];
+    $author_id = $_POST['authorid'];
     $photo = 'images/photos/'.'blog_'.$_POST['photoname'];
     $db = new PDO('mysql:host=mysql51-136.perso;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
     $query =
@@ -50,8 +52,8 @@ if(isset($_POST['title']) && isset($_POST['text'])){
         \''.addslashes(urldecode($text)).'\',
         \''.addslashes($date).'\',
         \''.addslashes($photo).'\',
-        \''.addslashes(1).'\',
-        \''.addslashes("jordan delamotte").'\'
+        \''.addslashes($author_id).'\',
+        \''.addslashes($author).'\'
         )';
 
     $result = $db->query($query);

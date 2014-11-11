@@ -8,11 +8,13 @@
 
 session_start();
 $user_name="";
+$user_id = 0;
 if(!isset($_SESSION['user'])){
     header('location: connexion.html');
 }
 else{
-    $user_name = $_SESSION['user']['user_name'];
+    $user_name = $_SESSION['user']['username'];
+    $user_id = $_SESSION['user']['id'];
 }
 ?>
 
@@ -29,7 +31,7 @@ else{
     ------------------------------------------------------------------------------------------------------------------->
 
 </head>
-    <body data-username="<?php echo $user_name; ?>">
+    <body data-username="<?php echo $user_name; ?>" data-userid="<?php echo $user_id; ?>">
         <!-- start content
         --------------------------------------------------------------------------------------------------------------->
         <div id="content">
