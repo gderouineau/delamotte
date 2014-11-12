@@ -277,9 +277,7 @@
             <!--div class="element  clearfix col2 row3 bienvenue">
                 <div class="images"> <img src="images/photos/saintpierre1-small.jpg" alt="Saint Pierre, fèves, amandes et shiso rouge..." class="slip" /> </div>
             </div-->
-            <div class="element clearfix col2 row2 photo bienvenue min-display-1">
-                <div class="images"> <img src="images/plats/tarte%20fine%20artichaut%20BD%20(A.%20Couturier)/0097%20bis.jpg" alt="Tarte fine d'artichauts poivrades..." class="slip" /> </div>
-            </div>
+
 
             <div class="element  clearfix col2 row1 bienvenue">
                 <div class="images"> <img src="images/photos/portrait1-small.jpg" alt="" /> </div>
@@ -296,8 +294,8 @@
                 </p>
             </div>
             <div class="element  clearfix col1 row1 bienvenue">
-                <a href="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" data-title="La féra du lac Léman..." data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" alt="Féra du lac Léman, caviar osciètre d'Italie, sauce Champagne et déclinaison de pomme de terre." class="slip" /> </div>
+                <a href="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" data-title="La Féra du lac Léman, caviar osciètre d'Italie, pomme de terre et sauce champagne." data-fancybox-group="plat" class="popup">
+                    <div class="images"> <img src="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" alt="La Féra du lac Léman..." class="slip" /> </div>
                 </a>
 
             </div>
@@ -372,6 +370,9 @@
                   <a href="#filter=.photo,+.menu">Voir toutes <span class="arrow">→</span></a></p>
                 </div>-->
 
+            <div class="element clearfix col2 row2 photo min-display-1">
+                <div class="images"> <img src="images/plats/tarte%20fine%20artichaut%20BD%20(A.%20Couturier)/0097%20bis.jpg" alt="Tarte fine d'artichauts poivrades..." class="slip" /> </div>
+            </div>
             <div class="element  clearfix col1 row1 photo">
                 <a class="full popup" href="images/photos/nicoise2-big.jpg" data-title="La salade niçoise de Jordan Delamotte" data-fancybox-group="plat" >
                     <div class="images"> <img src="images/photos/nicoise2-small.jpg" alt='La salade niçoise...' class="slip" /> </div>
