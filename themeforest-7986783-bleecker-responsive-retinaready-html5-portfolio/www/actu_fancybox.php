@@ -135,6 +135,12 @@ if(isset($_GET['id'])){
                 <div class="fb-share-button" id="fb-button" data-layout="button" data-href="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite"></div>
                 <br><br>
                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id; ?>#filter=.actualite" data-text="<?php echo $title; ?>" data-count="none">Tweet</a>
+                <br /> <br />
+                <script src="//platform.linkedin.com/in.js" type="text/javascript">
+                    lang: fr_FR
+                </script>
+                <script type="IN/Share" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite" data-counter="right"></script>
+
                 <div class="break"></div>
                 <div class="borderline"></div>
                 <p class="small">Autres articles</p>

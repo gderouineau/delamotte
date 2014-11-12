@@ -6,5 +6,7 @@
  * Time: 10:37
  */
 
+session_start();
 session_destroy();
+$_SESSION = array();
 header('location: connexion.php');
