@@ -110,9 +110,10 @@ if(isset($_GET['id'])){
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=351556635018730&version=v2.0";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
+
     <!-- end of the facebook plugin -->
 
         <div class="element  clearfix auto center">
@@ -132,9 +133,10 @@ if(isset($_GET['id'])){
                 <div class="break"></div>
                 <!--<a href="#" class="icons margin like"></a>-->
                 <!--<a href="#" class="icons margin share" rel="popover" id="share-button" data-toggle="popover" ></a>-->
-                <div class="fb-share-button" id="fb-button" data-layout="button" data-href="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite"></div>
+                <div class="fb-share-button" id="fb-button" data-layout="box_count" data-href="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite"></div>
                 <br><br>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id; ?>#filter=.actualite" data-text="<?php echo $title; ?>" data-count="none">Tweet</a>
+
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id; ?>#filter=.actualite" data-text="<?php echo $title; ?>" data-count="horizontal">Tweet</a>
                 <br /> <br />
                 <script src="//platform.linkedin.com/in.js" type="text/javascript">
                     lang: fr_FR
