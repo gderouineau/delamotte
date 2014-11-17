@@ -10,7 +10,7 @@ session_start();
 $user_name="";
 $user_id = 0;
 if(!isset($_SESSION['user'])){
-    header('location: connexion.html');
+    header('location: connexion.php');
 }
 else{
     $user_name = $_SESSION['user']['username'];
