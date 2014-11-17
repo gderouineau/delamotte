@@ -383,8 +383,15 @@
                     <div class="images"> <img src="images/photos/saintpierre2-small.jpg" alt="Le Saint Pierre..." class="slip"/> </div>
                 </a>
             </div>
+            <!--
             <div class="element  clearfix col2 row1 photo">
                 <div class="images"> <img src="images/photos/portrait1-small.jpg" alt="" /> </div>
+            </div>
+            -->
+            <div class="element  clearfix col2 row2 photo">
+                <a href="/images/plats/Ravioles aux cèpes BD (A. Couturier)/0054.jpg" data-title="Ravioles aux cèpes" data-fancybox-group="plat" class="popup">
+                    <div class="images"> <img src="/images/plats/Ravioles aux cèpes BD (A. Couturier)/0054-2x2.jpg" alt="Les ravioles ..." class="slip"/> </div>
+                </a>
             </div>
             <div class="element  clearfix col1 row1 photo">
                 <a href="images/photos/tartareboeuf3-big.jpg" data-title="Tartare de boeuf du Limousin, déclinaison de tomates anciennes" data-fancybox-group="plat" class="popup">
@@ -396,16 +403,25 @@
                     <div class="images"> <img src="images/photos/image_truffe-small.jpg" alt="Une truffe  mélanosporum..." class="slip" /> </div>
                 </a>
             </div>
+
+            <div class="element  clearfix col2 row2 photo">
+                <a href="/images/plats/tarte foie gras BD (A. Couturier)/9983.jpg" data-title="La tarte au fois gras des Landes mi-cuit, chutney de cèpes, espuma de topinambour." data-fancybox-group="plat" class="popup">
+                    <div class="images"> <img src="/images/plats/tarte foie gras BD (A. Couturier)/9983-2x2.jpg" alt="Le fois gras des Landes..." class="slip" /> </div>
+                </a>
+            </div>
+
             <div class="element  clearfix col1 row1 photo">
                 <a href="images/photos/finger_manguevanille1-1-big.jpg" data-title="Finger de mangue épicée, crème légère à la vanille de Madagascar,biscuit à la fleur de sel de Guérande" data-fancybox-group="plat" class="popup">
                     <div class="images"> <img src="images/photos/finger_manguevanille1-1-small.jpg" alt="Le finger de mangue épicé..." class="slip"/> </div>
                 </a>
             </div>
+            <!--
             <div class="element clearfix col1 row2 photo">
                 <a href="/#filter=.portrait">
                     <div class="images"> <img  src="images/photos/JD-NSB-small.jpg" alt="Qui <br /><br />est <br /><br />Jordan <br />Delamotte <br /><br />?" class="slip"/> </div>
                 </a>
             </div>
+            -->
             <div class="element  clearfix col1 row1 photo">
                 <a href="images/photos/daurade1-3-big.jpg" data-title="Daurade royale sauvage, guacamol au lait de coco, cristophine et choux bok choy" data-fancybox-group="plat" class="popup">
                     <div class="images"> <img src="images/photos/daurade1-3-small.jpg" alt="La daurade royale..." class="slip" /> </div>
