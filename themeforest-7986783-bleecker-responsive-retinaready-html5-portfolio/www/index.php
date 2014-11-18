@@ -314,22 +314,25 @@
                 </form>
             </div>
 
-
+            <!--
             <div class="element clearfix col1 row2 bienvenue">
                 <a href="#filter=.portrait">
                     <div class="images"> <img src="images/photos/JD-NSB-small.jpg" alt="Qui <br /><br />est <br /><br />Jordan <br />Delamotte <br /><br />?" class="slip"/> </div>
                 </a>
             </div>
-            <div class="element  clearfix col1 row1 bienvenue">
-                <a href="images/photos/nicoise2-big.jpg" data-title="La salade niçoise de Jordan Delamotte" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="images/photos/nicoise2-small.jpg" alt="La salade niçoise..." class="slip" /> </div>
-                </a>
-            </div>
+            -->
             <div class="element  clearfix col1 row1 bienvenue">
                 <a href="/images/plats/lapin déclinaison BD (A. Couturier)/9996.jpg" data-title="Lapin en trois façons, le râble en tartare, le carré rôti et le rognon en cromesquis" data-fancybox-group="plat" class="popup">
                     <div class="images"> <img src="/images/plats/lapin déclinaison BD (A. Couturier)/9996-2x2.jpg" alt="Le lapin..." class="slip" /> </div>
                 </a>
             </div>
+            <!--
+            <div class="element  clearfix col1 row1 bienvenue">
+                <a href="images/photos/nicoise2-big.jpg" data-title="La salade niçoise de Jordan Delamotte" data-fancybox-group="plat" class="popup">
+                    <div class="images"> <img src="images/photos/nicoise2-small.jpg" alt="La salade niçoise..." class="slip" /> </div>
+                </a>
+            </div>
+            -->
             <div class="element  clearfix col1 row1 bienvenue">
                 <a href="images/photos/saintpierre2-big.jpg" data-title="Filet de Saint Pierre, fèves, amandes et shiso rouge" data-fancybox-group="plat" class="popup">
                     <div class="images"> <img src="images/photos/saintpierre2-small.jpg" alt="Le Saint Pierre..." class="slip"/> </div>
