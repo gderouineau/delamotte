@@ -416,8 +416,8 @@
                     <div class="images"> <img src="images/photos/daurade1-3-small.jpg" alt="La daurade royale..." class="slip" /> </div>
                 </a>
             </div>
-            <div class="element clearfix col2 row2 oneon3 photo">
-                <div class="images"> <img src="images/photos/portrait-1-BW-small.jpg" alt="" /> </div>
+            <div class="element clearfix col2 row2 photo">
+                <div class="images"> <img src="images/photos/nicoise1-big.jpg" alt="La salade niçoise..." class="slip" /> </div>
             </div>
             <div class="element  clearfix col1 row1 photo">
                 <a href="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" data-title="La Féra du lac Léman, caviar osciètre d'Italie, pomme de terre et sauce champagne." data-fancybox-group="plat" class="popup">
@@ -437,7 +437,9 @@
             <div class="element clearfix col1 row1 photo">
                 <div class="images"> <img src="/images/plats/Cabillaud, coquillages BD (A. Couturier)/_MG_0107.jpg" alt="Cabillaud, petits légumes et coquillages..." class="slip" /> </div>
             </div>
-
+            <div class="element clearfix col1 row1 photo">
+                <div class="images"> <img src="images/photos/portrait-1-BW-small.jpg" alt="" /> </div>
+            </div>
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!--fin du bloc photo -->
 
