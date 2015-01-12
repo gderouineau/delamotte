@@ -15,7 +15,10 @@ $html = str_replace("##id##",$id,$html);
 $to=$email;
 $subject = "Newsletter - jordan-delamotte.com";
 $message = $html;
-$headers = 'From: contact@jordan-delamotte.com' . "\r\n" .
+$headers =
+    'MIME-Version: 1.0' . "\r\n" .
+    'Content-type: text/html; charset=iso-8859-1' . "\r\n" .
+    'From: contact@jordan-delamotte.com' . "\r\n" .
     'Reply-To: contacct@jordan-delamotte.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
