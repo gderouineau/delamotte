@@ -157,7 +157,7 @@
     <?php } ?>
 
 </head>
-<body data-showphoto=1>
+<body data-showphoto="1" data-showphotomax="3">
 
 <!-- facebook share button plugin -->
 <div id="fb-root"></div>
@@ -439,8 +439,8 @@
 
             <!-- fin bloc 3 -->
             <!-- bloc afficher plus de photos -->
-            <div class="element clearfix col4 row1 photo" onclick="showMorePhotos();">
-                <p>afficher plus</p>
+            <div class="element clearfix col4 row1 photo" onclick="showMorePhotos();" style="text-align: right;">
+                <p style="text-align: right;">afficher plus</p>
             </div>
             <!-- fin bloc ajout de photos -->
 
