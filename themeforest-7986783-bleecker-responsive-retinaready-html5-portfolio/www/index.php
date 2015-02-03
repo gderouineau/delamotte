@@ -385,8 +385,8 @@
                 </a>
             </div>
             <div class="element  clearfix col1 row1 photo bloc-1">
-                <a href="images/photos/image_truffe-big.jpg" data-title="Une truffe  mélanosporum" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="images/photos/image_truffe-small.jpg" alt="Une truffe  mélanosporum..." class="slip" /> </div>
+                <a href="images/plats/Baba%20au%20rhum%20BD%20(A.%20Couturier)/_MG_0214.jpg" data-title="Le baba au rhum" data-fancybox-group="plat" class="popup">
+                    <div class="images"> <img src="images/plats/Baba%20au%20rhum%20BD%20(A.%20Couturier)/_MG_0214.jpg" alt="Le baba au rhum" class="slip" /> </div>
                 </a>
             </div>
             <!-- fin bloc 1 -->
