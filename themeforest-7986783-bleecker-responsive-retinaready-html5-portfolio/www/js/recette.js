@@ -10,7 +10,6 @@ $(document).ready(function(){
 
             data = JSON.parse(data);
             var recette_div = $('#recettes');
-            console.log(data.length);
             if(data.length == 0){
                 var none =
                     '<div class="element  clearfix col1 row1 recette white">'+

@@ -73,13 +73,8 @@ if(isset($_SESSION['user'])){
     <script type="text/javascript">
 
         $(document).ready(function(){
-            console.log('ready');
-            setTimeout(function(){console.log('ready + 1000ms')},1000);
             $("#submit").click(function(){
-                console.log('submit');
-                setTimeout(function(){
-                    console.log('submit + 1000');
-                }, 1000);
+
                 $.post(
                     'check_connexion.php',
                      {
@@ -89,21 +84,18 @@ if(isset($_SESSION['user'])){
 
                     function(data){
                         if(data == 'Success'){
-                            console.log('success');
+
                            //$('#content').html('Vous avez été connecté avec succès vous allez être dirigé vers l\'interface administrateur');
 
-                           setTimeout(function(){console.log('success + 5000');
+                           setTimeout(function(){
                            //
                                     }, 5000
                             );
                         }
                         else{
                             //$('#content').html('Un problème est survenu lors de votre connexion. Soit votre identifiant soit votre mot de passe est incorrect. ');
-                            console.log('failed');
-                            setTimeout( function(){console.log('failed + 5000')
-                               //window.location ='http://jordan-delamotte.com/connexion.html' ;
-                                    }, 5000
-                            );
+
+
                         }
                     },
 

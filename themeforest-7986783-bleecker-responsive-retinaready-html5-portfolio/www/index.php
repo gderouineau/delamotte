@@ -157,7 +157,7 @@
     <?php } ?>
 
 </head>
-<body data-showphoto="1" data-showphotomax="3">
+<body data-showphoto="1" data-showphotomax="3" data-actuid="0" data-actucurrent="0">
 
 <!-- facebook share button plugin -->
 <div id="fb-root"></div>
@@ -439,9 +439,7 @@
 
             <!-- fin bloc 3 -->
             <!-- bloc afficher plus de photos -->
-            <div class="element clearfix col4 row1 photo" onclick="showMorePhotos();" style="text-align: right;">
-                <p style="text-align: right;">afficher plus</p>
-            </div>
+
             <!-- fin bloc ajout de photos -->
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -605,21 +603,21 @@
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!--  bloc presse -->
 
-            <div class="element  clearfix col3 row2 fullon3 presse">
-                <a href="images/photos/presse_maison_francaise.jpg" data-title="Des plats carrément épatants" data-fancybox-group="presse" class="popup">
-                    <div class="images"> <img src="images/photos/presse_maison_francaise.jpg" alt="Maison Française Magazine" class="slip" /> </div>
+            <div class="element  clearfix row-auto col4 presse">
+                <a href="images/photos/MFM_02_2014.png" data-title="Des plats carrément épatants" data-fancybox-group="presse" class="popup">
+                    <div class="images"> <img src="images/photos/MFM_02_2014.png" alt="Maison Française Magazine" class="slip" /> </div>
                 </a>
-            </div><div class="element  clearfix col2 row3 fullon3 presse">
+            </div><div class="element  clearfix col4 row-auto presse">
                 <a href="images/photos/gasto_modernite_big.jpg" data-title="Gastronomie et Modernité au menu de l'hôtel de Sers" data-fancybox-group="presse" class="popup">
                     <div class="images"> <img src="images/photos/gasto_modernite_big.jpg" alt="Apollo Magazine" class="slip" /> </div>
                 </a>
             </div>
-            <div class="element  clearfix col2 row3 fullon3 presse">
+            <div class="element  clearfix row-auto col4 presse">
                 <a href="images/photos/pressegala-big.PNG" data-title="Le + : Le buffet gastronomique et innovant du chef Jordan Delamotte" data-fancybox-group="presse" class="popup">
                     <div class="images"> <img src="images/photos/pressegala-small.jpg" alt="Gala" class="slip" /> </div>
                 </a>
             </div>
-            <div class="element  clearfix col2 row3 fullon3 presse">
+            <div class="element  clearfix  row-auto col4 presse">
                 <a href="http://www.sofoodmag.fr/jordan-delamotte.html" target="_blank">
                     <div class="images"> <img src="images/photos/pressesofoodmag-big.png" alt="SoFoodMag.com" class="slip" /> </div>
                 </a>

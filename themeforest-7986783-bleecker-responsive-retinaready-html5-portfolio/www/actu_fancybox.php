@@ -129,7 +129,7 @@ if(isset($_GET['id'])){
                 <h3><?php echo $title ?></h3>
                 <div class="borderline"></div>
                 <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par <?php echo $auteur; ?></p>
-                <?php echo $text ?>
+                <div style="text-align: justify;text-justify: inter-word;"><?php echo $text ?></div>
                 <div class="break"></div>
                 <!--<a href="#" class="icons margin like"></a>-->
                 <!--<a href="#" class="icons margin share" rel="popover" id="share-button" data-toggle="popover" ></a>-->

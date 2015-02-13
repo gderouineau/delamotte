@@ -1,102 +1,126 @@
 /**
  * Created by GD on 21/09/2014.
  */
-$(document).ready(function(){
 
-    $.get(
-        'actualite.php',
+$(window).scroll(function(){
+    var s = $(window).scrollTop(),
+        d = $(document).height(),
+        c = $(window).height();
+    var scrollPercentage = (s / (d-c)) * 100;
+    if(scrollPercentage > 80){
+        if(window.location.hash == '#filter=.actualite')
+            showMoreActu();
+    }
+});
 
-        function(data){
+function showMoreActu() {
+    var body = $('body');
+    var load_actu = parseInt(body.attr('data-actuid'));
+    var current_actu = parseInt(body.attr('data-actucurrent'));
+    body.attr('data-actucurrent', (load_actu + 1));
 
-            data = JSON.parse(data);
+    if(load_actu == current_actu)
+    $.ajax({
+        url: 'actualite.php',
+        type: 'get',
+        data: {actu_id: load_actu},
+        dataType: 'json',
+        success: function (data) {
+            console.log(typeof data);
             var actu_div = $('#news');
-            if(data.length == 0){
-                var none =
-                        '<div class="element  clearfix col1 row1 recette white">'+
-                            '<p> Aucune actualit&eacute; pour le moment. <br>Vous pouvez cependant vous inscrire &agrave; la newsletter</p>'+
-                        '</div>'+
-                        '<div class="element clearfix white col1 row1 recette" id="newsletter">'+
-                            '<h4>Abonnez-vous à la newsletter.</h4>'+
-                            '<form>'+
-                                '<p>'+
-                                    'email: <input type="text" id="newsletter_email" value ="" />'+
-                                    '<p id="newsletter_submit">Envoyer</p>'+
-                                '</p>'+
-                            '</form>'+
-                         '</div>'
-                    ;
+            /*if(data.length == 0){
+             var none =
+             '<div class="element  clearfix col1 row1 recette white">'+
+             '<p> Aucune actualit&eacute; pour le moment. <br>Vous pouvez cependant vous inscrire &agrave; la newsletter</p>'+
+             '</div>'+
+             '<div class="element clearfix white col1 row1 recette" id="newsletter">'+
+             '<h4>Abonnez-vous à la newsletter.</h4>'+
+             '<form>'+
+             '<p>'+
+             'email: <input type="text" id="newsletter_email" value ="" />'+
+             '<p id="newsletter_submit">Envoyer</p>'+
+             '</p>'+
+             '</form>'+
+             '</div>'
+             ;
 
-                recette_div.after(none);
-                $('#container').isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });
+             recette_div.after(none);
+             $('#container').isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });
+
+             }*/
+            var increment = 0;
+            for (var key in data) {
+
+                var id = data[key]['id'], place = data[key]['place'], title = data[key]['title'], text = data[key]['text'].replace(/<(?:.|\n)*?>/gm, ''), date = new Date(data[key]['date'].replace(' ', 'T')), photo = data[key]['photo'], month = date.getMonth(), day = date.getDate(), french_month = get_month(month), year = date.getFullYear(), max_resume_length_resume = Math.min(50, text.length), max_resume_length_full = Math.min(300, text.length), full = "", resume = ""
+                    ;
+                increment++;
+                var modulo = increment % 6;
+                /*
+                 resume =
+                 '<div class="element  clearfix col1 row1 actualité white teaser'+id+'">' +
+                 '<a href="#filter=.actualité%3Anot(.teaser'+id+'),+.post'+id+'" class="full"></a>'+
+                 '<h3>'+title+'</h3>'+
+                 '<div class="borderline"></div>'+
+                 '<p class="small">Feb 24, 2014</p>'+
+                 '<p>'+text.substr(0,max_resume_length)+'...</p>'+
+                 '</div>'
+                 ;
+                 *
+                 */
+
+                if ((modulo == 4) || (modulo == 1)) {
+                    full =
+                        '<div class=" fancybox element  clearfix col2 row2 actualite  no-padding" id="actu_' + id + '">' +
+                        '<a href="actu_fancybox.php?id=' + id + '" id="fancy_actu_' + id + '" class="full fancy_actu"></a>' +
+                        '<div class="images" style="overflow:hidden;width:570px;height:280px;">' +
+                        '<img src="' + photo + '" alt="' + title + '" />' +
+                        '</div>' +
+
+                        '<article class="clearfix col2-3 white white-bottom auto">' +
+                        '<h3>' + title + '</h3>' +
+                        '<div class="borderline"></div>' +
+                        '<p class="small">' + day + ' ' + french_month + ' ' + date.getFullYear() + ' ' + '&nbsp;&middot;&nbsp; par Jordan Delamotte' + '</p>' +
+                        '<p style="text-align: justify;text-justify: inter-word;">' + text.substr(0, max_resume_length_full) + '...</p>' +
+                        '<div class="break"></div>' +
+                        '<a href="#" class="icons margin like"></a> <a href="#" class="icons margin share"></a>' +
+                        '</article>' +
+                        '</div>'
+                    ;
+                    actu_div.before(full);
+                }
+
+
+                else {
+                    resume =
+                        '<div class="fancybox element  clearfix col1 row1 actualite white ">' +
+                        '<a href="actu_fancybox.php?id=' + id + '" id="fancy_actu_' + id + '" class="full fancy_actu"></a>' +
+                        '<h3>' + title + '</h3>' +
+                        '<div class="borderline"></div>' +
+                        '<p class="small">' + day + ' ' + french_month + ' ' + year + '</p>' +
+                            //'<p>' + text.substr(0, max_resume_length_resume) + '...</p>' +
+                        '</div>'
+                    ;
+                    actu_div.before(resume);
+
+                }
+                if (data.length != 0)
+                    $('#container').isotope('reloadItems').isotope({sortBy: 'original-order'});
+                    body.attr('data-actuid', (load_actu + 1));
 
             }
-            for(var key in data){
-                var   id = data[key]['id']
-                    , place = data[key]['place']
-                    , title = data[key]['title']
-                    , text = data[key]['text'].replace(/<(?:.|\n)*?>/gm, '')
-                    , date = new Date(data[key]['date'].replace(' ','T'))
-                    , photo = data[key]['photo']
-                    , month = date.getMonth()
-                    , day = date.getDate()
-                    , french_month=get_month(month)
-                    , year = date.getFullYear()
-                    , max_resume_length =  Math.min(100, text.length)
-                    , full = ""
-                    , resume = ""
-                ;
-                /*
-                resume =
-                    '<div class="element  clearfix col1 row1 actualité white teaser'+id+'">' +
-                        '<a href="#filter=.actualité%3Anot(.teaser'+id+'),+.post'+id+'" class="full"></a>'+
-                        '<h3>'+title+'</h3>'+
-                        '<div class="borderline"></div>'+
-                        '<p class="small">Feb 24, 2014</p>'+
-                        '<p>'+text.substr(0,max_resume_length)+'...</p>'+
-                    '</div>'
-                    ;
-                */
-                resume =
-                    '<div class="fancybox element  clearfix col1 row1 actualite white ">' +
-                        '<a href="actu_fancybox.php?id='+id+'" id="fancy_actu_'+id+'" class="full fancy_actu"></a>'+
-                        '<h3>'+title+'</h3>'+
-                        '<div class="borderline"></div>'+
-                        '<p class="small">'+day+' '+french_month+' '+year+'</p>'+
-                        '<p>'+text.substr(0,max_resume_length)+'...</p>'+
-                    '</div>'
-                    ;
-                /*
-                full =
-                    '<div class="element  clearfix col2-3 post post'+id+' auto center" id="actu_'+id+'">'+
-                        '<div class="clearfix col2-3 auto no-padding">'+
-                            '<div class="images">' +
-                                '<a href="#filter=.actualité">'+
-                                    '<div class="close"></div>'+
-                                '</a>' +
-                                '<img src="'+photo+'" alt="'+title+'" />'+
-                            '</div>'+
-                        '</div>'+
-                        '<article class="clearfix col2-3 white white-bottom auto">'+
-                            '<h3>'+title+'</h3>'+
-                            '<div class="borderline"></div>'+
-                            '<p class="small">'+day + ' ' + french_month + ' ' + date.getFullYear() + ' ' + '&nbsp;&middot;&nbsp; par Jordan Delamotte'+'</p>'+
-                            text+
-                            '<div class="break"></div>'+
-                            '<a href="#" class="icons margin like"></a> <a href="#" class="icons margin share"></a>'+
-                        '</article>'+
-                    '</div>'
-                ;
-                */
-                actu_div.after(full);
-                actu_div.after(resume);
-                $('#container').isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });
-            }
 
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.status);
+            console.log(thrownError);
         }
 
 
-    );
 
+    });
+}
+$(document).ready(function(){
+    showMoreActu();
 
     $('.fancy_actu').fancybox({
         type : 'iframe',
