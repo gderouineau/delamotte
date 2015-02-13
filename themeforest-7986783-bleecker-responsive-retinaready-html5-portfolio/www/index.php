@@ -203,7 +203,7 @@
                 <li><a href="#filter=.actualite">Actualités</a></li>
                 <li><a href="#filter=.photo">Photos</a></li>
                 <li><a href="#filter=.recette">Recettes</a></li>
-                <li><a href="#filter=.contact">Contact</a></li>
+                <li><a href="#filter=.presse">Presse</a></li>
 
             </ul>
             <?php } if($lang=="en"){ ?>
@@ -213,7 +213,7 @@
                 <li><a href="#filter=.actualite">News</a></li>
                 <li><a href="#filter=.photo">Photos</a></li>
                 <li><a href="#filter=.recette">Recipes</a></li>
-                <li><a href="#filter=.contact">Contact</a></li>
+                <li><a href="#filter=.presse">Press</a></li>
 
             </ul>
             <?php } ?>
@@ -291,7 +291,7 @@
             </div>
             <div class="element  clearfix col1 row1 bienvenue">
                 <a href="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" data-title="La Féra du lac Léman, caviar osciètre d'Italie, pomme de terre et sauce champagne." data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" alt="La Féra du lac Léman..." class="slip" /> </div>
+                    <div class="images"> <img src="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif-570.jpg" alt="La Féra du lac Léman..." class="slip" /> </div>
                 </a>
 
             </div>
@@ -414,7 +414,7 @@
             </div>
             <div class="element  clearfix col1 row1 photo bloc-2" style="display:none;">
                 <a href="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" data-title="La Féra du lac Léman, caviar osciètre d'Italie, pomme de terre et sauce champagne." data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img data-src="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" alt="La Féra du lac Léman..." class="slip" /> </div>
+                    <div class="images"> <img data-src="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif-570.jpg" alt="La Féra du lac Léman..." class="slip" /> </div>
                 </a>
             </div>
             <div class="element  clearfix col1 row1 photo bloc-2" style="display:none;">
@@ -663,13 +663,13 @@
         <div id="options-down" class="clearfix">
             <?php if($lang=='fr'){ ?>
             <ul class="option-set clearfix" id="option-list-down" data-option-key="filter">
-                <li><a href="#filter=.presse">Presse</a>
+                <li><a href="#filter=.contact">Contact</a>
                 <li><a href="#filter=.legals">Mentions légales</a></li>
                 <li><a href="#filter=.remerciement">Remerciements</a></li>
             </ul>
             <?php } if($lang=='en'){ ?>
             <ul class="option-set clearfix" id="option-list-down" data-option-key="filter">
-                <li><a href="#filter=.presse">Press</a>
+                <li><a href="#filter=.contact">Contact</a>
                 <li><a href="#filter=.legals">Imprint</a></li>
                 <li><a href="#filter=.remerciement">Thanks</a></li>
             </ul>
