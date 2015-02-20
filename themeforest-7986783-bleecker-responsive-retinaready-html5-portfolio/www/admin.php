@@ -46,6 +46,7 @@ else{
                         <br>
                         <h2>Recette  <input class="field" type="radio" id="recetteinput" name="bothinput" value="recette" onchange="showContent();"/></h2>
                         <br>
+                        <a href="admin_photo.php">ajouter une photo</a>
 
                         <!-- blog form
                         ----------------------------------------------------------------------------------------------->

@@ -157,7 +157,7 @@
     <?php } ?>
 
 </head>
-<body data-showphoto="1" data-showphotomax="3" data-actuid="0" data-actucurrent="0">
+<body data-showphoto="1" data-showphotomax="3" data-actuid="0" data-actucurrent="0" data-photoid="0" data-photocurrent="0">
 
 <!-- facebook share button plugin -->
 <div id="fb-root"></div>
@@ -227,48 +227,11 @@
         <div id="container" class="clearfix">
 
 
-            <!-- important lorsque tu passes sur une photo et que sur le texte qui s'affiche tu ais un titre et un sous titre tu fais
-            titre <span>sous-titre</span>
-            -->
-
-            <!-- un element photo avec ouverture vers une fancybox
-            <div class="element  clearfix col1 row1 photo">
-                <a href="images/photo1.jpg" data-title="Saint pierre, fèves, amandes & shiso rouge" data-fancybox-group="group2" class="popup">
-                  <div class="images"> <img src="images/photo1.jpg" alt="Saint pierre..." class="slip" /> </div>
-                </a>
-            </div>
-            -->
-
-            <!-- un element photo sans fancy box
-            <div class="element  clearfix col1-3 home"> <a href="/index.html#filter=.about">
-              <div class="images"> <img src="images/logo-jd-black-on-white.jpg" alt="a propos" /> </div>
-              </a>
-            </div>
-            -->
-
-            <!-- un element photo avec ouverture vers une vidéo
-            <div class="element  clearfix col1-3 home about video"> <a href="http://player.vimeo.com/video/17081554?badge=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" class="video-popup" data-title="Project Title Here">
-              <div class="images"> <img src="images/about04.jpg" alt="Professional<span>video</span>" class="slip" /> </div>
-              </a>
-            </div>
-            -->
-
-            <!-- un element texte avec ecriture en petit
-             <div class="element  clearfix col2-3 home white">
-              <h2>Hi, We're Bleecker</h2>
-              <p class="images">A <span>digital-forward</span> creative agency making brands live up to their full potential. That’s it. And this is our website. It’s that simple.</p>
-            </div>
-            -->
             <div class="element  clearfix col4 row1 legals white">
                 <p>Copyright © Jordan Delamotte <br /><br /><br />La reproduction, même partielle, de tout texte, image ou photo présents sur ce site est interdite sans accord préalable. Les logos, marques et marques déposées sont la propriété de leurs détenteurs.</p>
             </div>
 
-            <!-- un element texte avec ecriture en grand
-            <div class="element  clearfix col2-3 white">
-              <h2>Hi, We're Bleecker</h2>
-              <p class="big">A <span>digital-forward</span> creative agency making brands live up to their full potential. That’s it. And this is our website. It’s that simple.</p>
-            </div>
-            -->
+
 
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -314,25 +277,13 @@
                 </form>
             </div>
 
-            <!--
-            <div class="element clearfix col1 row2 bienvenue">
-                <a href="#filter=.portrait">
-                    <div class="images"> <img src="images/photos/JD-NSB-small.jpg" alt="Qui <br /><br />est <br /><br />Jordan <br />Delamotte <br /><br />?" class="slip"/> </div>
-                </a>
-            </div>
-            -->
+
             <div class="element  clearfix col1 row1 bienvenue">
                 <a href="/images/plats/lapin déclinaison BD (A. Couturier)/9996.jpg" data-title="Lapin en trois façons, le râble en tartare, le carré rôti et le rognon en cromesquis" data-fancybox-group="plat" class="popup">
                     <div class="images"> <img src="/images/plats/lapin déclinaison BD (A. Couturier)/9996-2x2.jpg" alt="Le lapin..." class="slip" /> </div>
                 </a>
             </div>
-            <!--
-            <div class="element  clearfix col1 row1 bienvenue">
-                <a href="images/photos/nicoise2-big.jpg" data-title="La salade niçoise de Jordan Delamotte" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="images/photos/nicoise2-small.jpg" alt="La salade niçoise..." class="slip" /> </div>
-                </a>
-            </div>
-            -->
+
             <div class="element  clearfix col1 row1 bienvenue">
                 <a href="images/photos/saintpierre2-big.jpg" data-title="Filet de Saint Pierre, fèves, amandes et shiso rouge" data-fancybox-group="plat" class="popup">
                     <div class="images"> <img src="images/photos/saintpierre2-small.jpg" alt="Le Saint Pierre..." class="slip"/> </div>
@@ -346,100 +297,11 @@
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- début du bloc photo
+            -->
 
-                <div class="element  clearfix size2-1 photo menu white">
-                <h3>Réalisations</h3>
-                <div class="borderline"></div>
-                <p>Chercher dans les photos:</p>
-                <p class="small no-underline"><a href="#filter=.entree,+.menu">Entrées <span class="arrow">→</span></a><br />
-                  <a href="#filter=.poisson,+.menu">Poissons <span class="arrow">→</span></a><br />
-                  <a href="#filter=.viande,+.menu">Viandes <span class="arrow">→</span></a><br />
-                  <a href="#filter=.dessert,+.menu">Desserts <span class="arrow">→</span></a><br />
-                  <a href="#filter=.autre,+.menu">Autres <span class="arrow">→</span></a><br />
-                  <a href="#filter=.photo,+.menu">Voir toutes <span class="arrow">→</span></a></p>
-                </div>-->
 
-            <!-- bloc 1 -->
-            <div class="element clearfix col2 row2 photo min-display-1 bloc-1">
-                <div class="images"> <img src="images/plats/tarte%20fine%20artichaut%20BD%20(A.%20Couturier)/0097%20bis.jpg" alt="Les artichauts poivrades..." class="slip" /> </div>
-            </div>
-            <div class="element  clearfix col1 row1 photo bloc-1">
-                <a class="full popup" href="images/photos/nicoise2-big.jpg" data-title="La salade niçoise de Jordan Delamotte" data-fancybox-group="plat" >
-                    <div class="images"> <img src="images/photos/nicoise2-small.jpg" alt='La salade niçoise...' class="slip" /> </div>
-                </a>
-            </div>
-            <div class="element  clearfix col1 row1 photo bloc-1">
-                <a href="images/photos/saintpierre2-big.jpg" data-title="Filet de Saint Pierre, fèves, amandes et shiso rouge" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="images/photos/saintpierre2-small.jpg" alt="Le Saint Pierre..." class="slip"/> </div>
-                </a>
-            </div>
-
-            <div class="element  clearfix col2 row2 photo bloc-1">
-                <a href="/images/plats/Ravioles aux cèpes BD (A. Couturier)/0054.jpg" data-title="Ravioles aux cèpes" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="/images/plats/Ravioles aux cèpes BD (A. Couturier)/0054-2x2.jpg" alt="Les ravioles ..." class="slip"/> </div>
-                </a>
-            </div>
-            <div class="element  clearfix col1 row1 photo bloc-1">
-                <a href="images/photos/tartareboeuf3-big.jpg" data-title="Tartare de boeuf du Limousin, déclinaison de tomates anciennes" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="images/photos/tartareboeuf3-small.jpg" alt="Le tartare de boeuf..." class="slip"/> </div>
-                </a>
-            </div>
-            <div class="element  clearfix col1 row1 photo bloc-1">
-                <a href="images/plats/Baba%20au%20rhum%20BD%20(A.%20Couturier)/_MG_0214.jpg" data-title="Le baba au rhum" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="images/plats/Baba%20au%20rhum%20BD%20(A.%20Couturier)/_MG_0214.jpg" alt="Le baba au rhum" class="slip" /> </div>
-                </a>
-            </div>
-            <!-- fin bloc 1 -->
-
-            <!-- bloc 2 -->
-            <div class="element  clearfix col2 row2 photo bloc-2" style="display:none;">
-                <a href="/images/plats/tarte foie gras BD (A. Couturier)/9983.jpg" data-title="La tarte au fois gras des Landes mi-cuit, chutney de cèpes, espuma de topinambour." data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img data-src="/images/plats/tarte foie gras BD (A. Couturier)/9983-2x2.jpg" alt="Le fois gras des Landes..." class="slip" /> </div>
-                </a>
-            </div>
-
-            <div class="element  clearfix col1 row1 photo bloc-2" style="display:none;">
-                <a href="images/photos/finger_manguevanille1-1-big.jpg" data-title="Finger de mangue épicée, crème légère à la vanille de Madagascar,biscuit à la fleur de sel de Guérande" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img data-src="images/photos/finger_manguevanille1-1-small.jpg" alt="Le finger de mangue épicé..." class="slip"/> </div>
-                </a>
-            </div>
-
-            <div class="element  clearfix col1 row1 photo bloc-2" style="display:none;">
-                <a href="images/photos/daurade1-3-big.jpg" data-title="Daurade royale sauvage, guacamol au lait de coco, cristophine et choux bok choy" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img data-src="images/photos/daurade1-3-small.jpg" alt="La daurade royale..." class="slip" /> </div>
-                </a>
-            </div>
-            <div class="element clearfix col2 row2 photo bloc-2" style="display:none;">
-                <div class="images"> <img data-src="images/photos/nicoise1-big.jpg" alt="La salade niçoise..." class="slip" /> </div>
-            </div>
-            <div class="element  clearfix col1 row1 photo bloc-2" style="display:none;">
-                <a href="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" data-title="La Féra du lac Léman, caviar osciètre d'Italie, pomme de terre et sauce champagne." data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img data-src="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif-570.jpg" alt="La Féra du lac Léman..." class="slip" /> </div>
-                </a>
-            </div>
-            <div class="element  clearfix col1 row1 photo bloc-2" style="display:none;">
-                <a href="images/plats/tarte%20fine%20artichaut%20BD%20(A.%20Couturier)/0086.jpg" data-title="Tarte fine d'artichauts poivrades et figues fraîches. " data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img data-src="images/plats/tarte%20fine%20artichaut%20BD%20(A.%20Couturier)/0086-1x1.jpg" alt="Les artichauts poivrades..." class="slip" /> </div>
-                </a>
-            </div>
-            <!-- fin bloc 2 -->
-
-            <!-- bloc 3 -->
-            <div class="element  clearfix col2 row2 photo bloc-3" style="display:none;">
-                <a href="/images/plats/lapin déclinaison BD (A. Couturier)/9996.jpg" data-title="Lapin en trois façons, le râble en tartare, le carré rôti et le rognon en cromesquis" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img data-src="/images/plats/lapin déclinaison BD (A. Couturier)/9996-2x2.jpg" alt="Le lapin..." class="slip" /> </div>
-                </a>
-            </div>
-            <div class="element clearfix col1 row1 photo bloc-3" style="display:none;">
-                <div class="images"> <img data-src="/images/plats/Cabillaud, coquillages BD (A. Couturier)/_MG_0107.jpg" alt="Cabillaud, petits légumes et coquillages..." class="slip" /> </div>
-            </div>
-            <div class="element clearfix col1 row1 photo bloc-3" style="display:none;">
-                <div class="images"> <img data-src="images/photos/portrait-1-BW-small.jpg" alt="" /> </div>
-            </div>
-
-            <!-- fin bloc 3 -->
-            <!-- bloc afficher plus de photos -->
-
+            <div id="photos"></div>
+            
             <!-- fin bloc ajout de photos -->
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
