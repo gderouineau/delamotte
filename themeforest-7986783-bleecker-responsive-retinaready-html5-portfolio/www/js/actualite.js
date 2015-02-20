@@ -6,8 +6,8 @@ $(window).scroll(function(){
     var s = $(window).scrollTop(),
         d = $(document).height(),
         c = $(window).height();
-    var scrollPercentage = (s / (d-c)) * 100;
-    if(scrollPercentage > 80){
+    var scrollPercentage = ( (d-c) - s);
+    if(scrollPercentage < 500){
         if(window.location.hash == '#filter=.actualite')
             showMoreActu();
     }
