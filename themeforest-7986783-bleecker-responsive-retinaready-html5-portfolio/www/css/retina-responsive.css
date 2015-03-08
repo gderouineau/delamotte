@@ -51,6 +51,7 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 .container {max-width:580px; }
 .col3, .col4, .fullon3, .col2 { width: 570px; height: auto;}
+.col2.force , .col3.force , .col4.force {height:570px;}
 .photo-contact {width: 280px ; height: auto;}
 
 .min-display-3 , .min-display-2 { display: none; }
@@ -61,6 +62,7 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 @media only screen and (max-width: 767px) {
 .container {max-width:290px; }
 .col4, .col3, .col2, .col1{ width:280px; height:auto;}
+.col1.force , .col2.force , .col3.force , .col4.force {height:280px;}
 .col4.white , .col3.white , .col2.white {padding:20px 35px 50px !important; }
 .min-display-1 , .min-display-2 , .min-display-3 { display: none; }
 

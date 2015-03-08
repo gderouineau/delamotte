@@ -93,7 +93,7 @@ function showMorePhotos() {
 
                     if ((modulo == 4) || (modulo == 1)) {
                         div =
-                            '<div class="element  clearfix col2 row2 photo">'+
+                            '<div class="element  clearfix col2 row2 photo force">'+
                                 '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
                                     '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
                                 '</a>'+
@@ -105,7 +105,7 @@ function showMorePhotos() {
 
                     else {
                         div =
-                            '<div class="element  clearfix col1 row1 photo">'+
+                            '<div class="element  clearfix col1 row1 photo force">'+
                                 '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
                                     '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
                                 '</a>'+
