@@ -87,6 +87,16 @@ function showMoreActu() {
                         '</div>'
                     ;
                     actu_div.before(full);
+                    resume =
+                        '<div class="fancybox element  clearfix col1 row1 actualite white " style="display:\'none;\'">' +
+                            '<a href="actu_fancybox.php?id=' + id + '" id="fancy_actu_' + id + '" class="full fancy_actu"></a>' +
+                            '<h3>' + title + '</h3>' +
+                            '<div class="borderline"></div>' +
+                            '<p class="small">' + day + ' ' + french_month + ' ' + year + '</p>' +
+                            //'<p>' + text.substr(0, max_resume_length_resume) + '...</p>' +
+                            '</div>'
+                    ;
+                    actu_div.before(resume);
                 }
 
 

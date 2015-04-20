@@ -65,6 +65,8 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 .col1.force , .col2.force , .col3.force , .col4.force {height:280px;}
 .col4.white , .col3.white , .col2.white {padding:20px 35px 50px !important; }
 .min-display-1 , .min-display-2 , .min-display-3 { display: none; }
+.actualite.col2 {display:none;}
+.actualite.col1 {display:block;}
 
 h2 {font-size:24px; font-weight:400; padding-top:22px; font-family:Georgia, "Times New Roman", Times, serif; color:#303030; text-transform:none }
 p.big {line-height:21px; font-size:15px; padding:13px 0px 0 0px; font-style:italic; letter-spacing:0; color:#555 }

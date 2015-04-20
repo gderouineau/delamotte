@@ -102,7 +102,7 @@ if(isset($_GET['id'])){
                             <img src="<?php echo $photo;?>" alt="<?php echo $title;?>" />
                         </div>
                     </div>
-                    <article class="clearfix col2-3 white white-bottom auto">
+                    <article class="clearfix col2 row-auto white white-bottom auto">
                         <h3><?php echo $title ?></h3>
                         <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par Jordan Delamotte</p>
                         <div class="borderline"></div>

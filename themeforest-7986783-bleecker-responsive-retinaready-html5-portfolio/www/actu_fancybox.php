@@ -119,7 +119,7 @@ if(isset($_GET['id'])){
         <div class="container">
             <div id="container" class="clearfix">
                 <div class="element  clearfix auto center">
-                    <div class="clearfix col-3 auto no-padding">
+                    <div class="clearfix col2 row-auto auto no-padding">
                         <div class="images">
                             <a href="javascript:parent.jQuery.fancybox.close();">
                                 <div class="close"></div>

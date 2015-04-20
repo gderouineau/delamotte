@@ -148,39 +148,44 @@ function fancy_photo(){
             }
         }
     });
-    $(function(){
-        $('img.slip').each(function(){
-            var a = $(this).parent().parent('a');
-            var href = a.attr('href'),
-                data_title = a.attr('data-title'),
-                data_fancybox_group = a.attr('data-fancybox-group')
-                ;
-            if(href != undefined){
-                var new_a =
-                        '<a ' +
-                            'class="popup full" '+
-                            'href="'+href+'" ' +
-                            'data-title="'+data_title+'" ' +
-                            'data-fancybox-group="'+data_fancybox_group+'"' +
-                            '>' +
-                            '</a>'
+    if (document.documentElement.clientWidth > 959) {
+        $(function(){
+            $('img.slip').each(function(){
+                var a = $(this).parent().parent('a');
+                var href = a.attr('href'),
+                    data_title = a.attr('data-title'),
+                    data_fancybox_group = a.attr('data-fancybox-group')
                     ;
-                $(this).attr('alt', new_a + $(this).attr('alt'));
-            }
+                if(href != undefined){
+                    var new_a =
+                            '<a ' +
+                                'class="popup full" '+
+                                'href="'+href+'" ' +
+                                'data-title="'+data_title+'" ' +
+                                'data-fancybox-group="'+data_fancybox_group+'"' +
+                                '>' +
+                                '</a>'
+                        ;
+                    $(this).attr('alt', new_a + $(this).attr('alt'));
+                }
+            });
         });
-    });
-    $(function(){
-        $('#container').sliphover({
-            target  : '.slip',
-            caption : 'alt',
-            duration: '300'
-        });
-        $('#content').sliphover({
-            target : '.slipdiv',
-            caption : 'data-text',
-            duration : '300'
-        });
-    })
+        $(function(){
+            $('#container').sliphover({
+                target  : '.slip',
+                caption : 'alt',
+                duration: '300'
+            });
+            $('#content').sliphover({
+                target : '.slipdiv',
+                caption : 'data-text',
+                duration : '300'
+            });
+        })
+    }
+    else{
+        $('img.slip').removeClass('slip');
+    }
 
 
 }
