@@ -90,50 +90,55 @@ if(isset($_GET['id'])){
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
         <!-- end of the facebook plugin -->
+    <div id="content">
+        <div class="container">
+            <div id="container" class="clearfix">
+                <div class="element  clearfix auto center">
+                    <div class="clearfix col2 row-auto auto no-padding">
+                        <div class="images">
+                            <a href="javascript:parent.jQuery.fancybox.close();">
+                                <div class="close"></div>
+                            </a>
+                            <img src="<?php echo $photo;?>" alt="<?php echo $title;?>" />
+                        </div>
+                    </div>
+                    <article class="clearfix col2-3 white white-bottom auto">
+                        <h3><?php echo $title ?></h3>
+                        <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par Jordan Delamotte</p>
+                        <div class="borderline"></div>
+                        <h4>Ingredients</h4>
+                        <p class="small">pour <?php echo $nb_personnes ; ?> personnes</p>
+                        <ul class="unordered-list column-count2">
+                        <?php
+                            foreach($ingredient as $ingredient_name){
+                                ?>
+                                <li>
+                                    <?php
+                                    echo $ingredient_name;
+                                    ?>
+                                </li>
+                                <?php
+                            }
+                        ?>
+                        </ul>
+                        <h4>Préparation</h4>
+                        <p><?php echo $text ?></p>
+                        <div class="break"></div>
+                        <!--<a href="#" class="icons margin like"></a>-->
+                        <!--<a href="#" class="icons margin share"></a>-->
+                        <div class="fb-share-button" id="fb-button" data-layout="button_count" data-href="http://jordan-delamotte.com/index.php?recette_id=<?php echo $id ;?>#filter=.recette"></div>
+                        <br><br>
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?recette_id=<?php echo $id; ?>#filter=.recette" data-text="<?php echo strip_tags($title); ?>" data-count="horizontal">Tweet</a>
+                        <br /><br />
+                        <script src="//platform.linkedin.com/in.js" type="text/javascript">
+                            lang: fr_FR
+                        </script>
+                        <script type="IN/Share" data-url="http://jordan-delamotte.com/?recette_id=<?php echo $id ;?>#filter=.recette" data-counter="right"></script>
 
-    <div class="element  clearfix auto center">
-        <div class="clearfix col2-3 auto no-padding">
-            <div class="images">
-                <a href="javascript:parent.jQuery.fancybox.close();">
-                    <div class="close"></div>
-                </a>
-                <img src="<?php echo $photo;?>" alt="<?php echo $title;?>" />
+                    </article>
+                </div>
             </div>
         </div>
-        <article class="clearfix col2-3 white white-bottom auto">
-            <h3><?php echo $title ?></h3>
-            <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par Jordan Delamotte</p>
-            <div class="borderline"></div>
-            <h4>Ingredients</h4>
-            <p class="small">pour <?php echo $nb_personnes ; ?> personnes</p>
-            <ul class="unordered-list column-count2">
-            <?php
-                foreach($ingredient as $ingredient_name){
-                    ?>
-                    <li>
-                        <?php
-                        echo $ingredient_name;
-                        ?>
-                    </li>
-                    <?php
-                }
-            ?>
-            </ul>
-            <h4>Préparation</h4>
-            <p><?php echo $text ?></p>
-            <div class="break"></div>
-            <!--<a href="#" class="icons margin like"></a>-->
-            <!--<a href="#" class="icons margin share"></a>-->
-            <div class="fb-share-button" id="fb-button" data-layout="button_count" data-href="http://jordan-delamotte.com/index.php?recette_id=<?php echo $id ;?>#filter=.recette"></div>
-            <br><br>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?recette_id=<?php echo $id; ?>#filter=.recette" data-text="<?php echo strip_tags($title); ?>" data-count="horizontal">Tweet</a>
-            <br /><br />
-            <script src="//platform.linkedin.com/in.js" type="text/javascript">
-                lang: fr_FR
-            </script>
-            <script type="IN/Share" data-url="http://jordan-delamotte.com/?recette_id=<?php echo $id ;?>#filter=.recette" data-counter="right"></script>
-
-        </article>
     </div>
  <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>

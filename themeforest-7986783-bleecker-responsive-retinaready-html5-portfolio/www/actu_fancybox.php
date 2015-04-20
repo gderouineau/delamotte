@@ -36,7 +36,7 @@ if(isset($_GET['id'])){
     if($data_size<4){
         $where= "(id!=".$id;
         foreach($data as $row){
-           $where=$where." AND id!=".$row['id'];
+            $where=$where." AND id!=".$row['id'];
         }
         $where.=')';
         $query = 'SELECT * FROM actualite WHERE '.$where.' ORDER BY id DESC LIMIT 0,'.(4-$data_size);
@@ -115,75 +115,80 @@ if(isset($_GET['id'])){
         }(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- end of the facebook plugin -->
+    <div id="content">
+        <div class="container">
+            <div id="container" class="clearfix">
+                <div class="element  clearfix auto center">
+                    <div class="clearfix col-3 auto no-padding">
+                        <div class="images">
+                            <a href="javascript:parent.jQuery.fancybox.close();">
+                                <div class="close"></div>
+                            </a>
+                            <img src="<?php echo $photo;?>" alt="<?php echo $title;?>" />
+                        </div>
+                    </div>
+                    <article class="clearfix col2 row-auto white white-bottom auto">
+                        <h3><?php echo $title ?></h3>
+                        <div class="borderline"></div>
+                        <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par <?php echo $auteur; ?></p>
+                        <div style="text-align: justify;text-justify: inter-word;"><?php echo $text ?></div>
+                        <div class="break"></div>
+                        <!--<a href="#" class="icons margin like"></a>-->
+                        <!--<a href="#" class="icons margin share" rel="popover" id="share-button" data-toggle="popover" ></a>-->
+                        <div class="fb-share-button" id="fb-button" data-layout="button_count" data-href="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite"></div>
+                        <br><br>
 
-        <div class="element  clearfix auto center">
-            <div class="clearfix col-3 auto no-padding">
-                <div class="images">
-                    <a href="javascript:parent.jQuery.fancybox.close();">
-                        <div class="close"></div>
-                    </a>
-                    <img src="<?php echo $photo;?>" alt="<?php echo $title;?>" />
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id; ?>#filter=.actualite" data-text="<?php echo $title; ?>" data-count="horizontal">Tweet</a>
+                        <br /> <br />
+                        <script src="//platform.linkedin.com/in.js" type="text/javascript">
+                            lang: fr_FR
+                        </script>
+                        <script type="IN/Share" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite" data-counter="right"></script>
+
+                        <div class="break"></div>
+                        <div class="borderline"></div>
+                        <p class="small">Autres articles</p>
+                        <div class="break"></div>
+                        <?php
+
+                        for($i= 0 ; $i< count($data); $i++){
+                            ?>
+                            <a class="actu_link " href="actu_fancybox.php?id=<?php echo $data[$i]['id'] ; ?>">
+                                <div class="fancybox element  clearfix border" style="width: 46%; margin: 1%; <?php if($i%2==0){echo 'float:left;';} else {echo 'float:right;';} ?> ">
+
+                                    <h4><?php echo $data[$i]['title']; ?></h4>
+                                    <div class="borderline"></div>
+                                    <p class="small"><?php echo date('j',strtotime($data[$i]['date'])).' '.french_month(strtotime($data[$i]['date'])).' '.date('Y' , strtotime($data[$i]['date'])).' <br /> &nbsp;&middot;&nbsp; <br />par '.$data[$i]['author_name']; ?></p>
+                                </div>
+                            </a>
+                        <?php
+                        }
+                        ?>
+                    </article>
                 </div>
             </div>
-            <article class="clearfix col2-3 white white-bottom auto">
-                <h3><?php echo $title ?></h3>
-                <div class="borderline"></div>
-                <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par <?php echo $auteur; ?></p>
-                <div style="text-align: justify;text-justify: inter-word;"><?php echo $text ?></div>
-                <div class="break"></div>
-                <!--<a href="#" class="icons margin like"></a>-->
-                <!--<a href="#" class="icons margin share" rel="popover" id="share-button" data-toggle="popover" ></a>-->
-                <div class="fb-share-button" id="fb-button" data-layout="button_count" data-href="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite"></div>
-                <br><br>
-
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id; ?>#filter=.actualite" data-text="<?php echo $title; ?>" data-count="horizontal">Tweet</a>
-                <br /> <br />
-                <script src="//platform.linkedin.com/in.js" type="text/javascript">
-                    lang: fr_FR
-                </script>
-                <script type="IN/Share" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite" data-counter="right"></script>
-
-                <div class="break"></div>
-                <div class="borderline"></div>
-                <p class="small">Autres articles</p>
-                <div class="break"></div>
-                <?php
-
-                for($i= 0 ; $i< count($data); $i++){
-                ?>
-                <a class="actu_link " href="actu_fancybox.php?id=<?php echo $data[$i]['id'] ; ?>">
-                    <div class="fancybox element  clearfix border" style="width: 46%; margin: 1%; <?php if($i%2==0){echo 'float:left;';} else {echo 'float:right;';} ?> ">
-
-                        <h4><?php echo $data[$i]['title']; ?></h4>
-                        <div class="borderline"></div>
-                        <p class="small"><?php echo date('j',strtotime($data[$i]['date'])).' '.french_month(strtotime($data[$i]['date'])).' '.date('Y' , strtotime($data[$i]['date'])).' <br /> &nbsp;&middot;&nbsp; <br />par '.$data[$i]['author_name']; ?></p>
-                    </div>
-                </a>
-                <?php
-                }
-                ?>
-            </article>
         </div>
-        <!--
-        <div class="fb-share-button" data-href="http://jordan-delamotte.com/?actu_id=47#filter=.actualite"></div>
-        -->
+    </div>
+    <!--
+    <div class="fb-share-button" data-href="http://jordan-delamotte.com/?actu_id=47#filter=.actualite"></div>
+    -->
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/jquery.fancybox.pack.js"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-   <!-- <script type="text/javascript">
-        var fb = $('#fb-button');
-        $(fb).style.display = 'block';
-        $('#share-button').popover({
-            placement: 'auto right',
-            title: 'Share',
-            content : fb,
-            html: true
-        }).click(function(e) {
-            e.preventDefault();
-        });
-    </script>
--->
+    <!-- <script type="text/javascript">
+         var fb = $('#fb-button');
+         $(fb).style.display = 'block';
+         $('#share-button').popover({
+             placement: 'auto right',
+             title: 'Share',
+             content : fb,
+             html: true
+         }).click(function(e) {
+             e.preventDefault();
+         });
+     </script>
+ -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
