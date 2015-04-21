@@ -78,7 +78,7 @@ $(document).ready(function(){
     $('.fancy_recette').fancybox({
         type : 'iframe',
         autoScale: true,
-        width: 570,
+        width: 768,
         helpers : {
             overlay : {
                 css : {
@@ -109,7 +109,7 @@ $(document).ready(function(){
                 $("#fancy_recette_"+$_GET['recette_id']).fancybox({
                     type : 'iframe',
                     autoScale: true,
-                    width: 570,
+                    width: 768,
                     helpers : {
                         overlay : {
                             css : {
