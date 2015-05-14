@@ -66,7 +66,9 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 @media only screen and (max-width: 767px) {
 .container {max-width:290px; }
 .col4, .col3, .col2, .col1{ width:280px; height:auto;}
+.row2.force {height : 570px;}
 .col1.force , .col2.force , .col3.force , .col4.force {height:280px;}
+.row2.forcerow {height : 570px;}
 .col4.white , .col3.white , .col2.white {padding:20px 35px 50px !important; }
 .min-display-1 , .min-display-2 , .min-display-3 { display: none; }
 .actualite.col2 {display:none;}

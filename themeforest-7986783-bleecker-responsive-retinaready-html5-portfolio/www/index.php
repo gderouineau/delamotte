@@ -72,9 +72,9 @@
     <title>Jordan Delamotte - Offical Website</title>
     <?php } ?>
     <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen" />
-    <meta http-equiv="expires" content="0">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="cache-control" content="no-cache, must-revalidate">
+    <!--<meta http-equiv="expires" content="0">-->
+    <!--<meta http-equiv="pragma" content="no-cache">-->
+    <meta http-equiv="cache-control" content="max-age=86400, must-revalidate">
     <link href="css/contact.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="screen">
@@ -438,28 +438,36 @@
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- bloc remerciement -->
-            <div class="element clearfix white col1 row1 remerciement" data-text="Merci" >
-                <h3>
-                    <?php if($lang=='fr'){ ?>
-                    Je remercie...
-                    <?php } if($lang=='en'){ ?>
-                    I thank...
-                    <?php } ?>
-                </h3>
-            </div>
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="images/partenaires/GuillaumeD.jpg" /></div></a>
+                <div class="to-bottom">
+                    <h5>Guillaume Derouineau</h5>
+                    <p>Developpeur</p>
 
-            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="<?php if($lang=='fr'){ ?>Pour ses textes<?php } if($lang=='en'){ ?>For her texts<?php } ?>" >
-                <h3>Charlotte Rocher</h3>
+                </div>
             </div>
-
-            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="<?php if($lang=='fr'){ ?>Pour ce site<?php } if($lang=='en'){ ?>For this website<?php } ?>" >
-                <h3>Guillaume Derouineau</h3>
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="images/partenaires/CharlotteR.jpg" /></div></a>
+                <div class="to-bottom">
+                    <h5>Charlotte Rocher</h5>
+                    <p>Éditrice</p>
+                </div>
             </div>
-            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="<?php if($lang=='fr'){ ?>Pour son Amour et soutien<?php } if($lang=='en'){ ?>For her Love and her support<?php } ?>" >
-                <h3>Sara Edward</h3>
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="images/partenaires/SaraE.jpg" /></div></a>
+                <div class="to-bottom">
+                    <h5>Sara Edward</h5>
+                    <p>Reporter</p><br />
+                    <a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;">Sara's blog</a>
+                </div>
             </div>
-            <div class="element clearfix white col1 row1 remerciement slipdiv" data-text="<?php if($lang=='fr'){ ?>Pour leurs photos<?php } if($lang=='en'){ ?>For their photos<?php } ?>" >
-                <h3>Alban Couturier <br /> et <br /> Sébastien Bessac</h3>
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="images/partenaires/AlbanC.jpg" /></div></a>
+                <div class="to-bottom">
+                    <h4>Alban Couturier</h4>
+                    <p>Photographe</p><br />
+                    <a href="http://www.albancouturier.com" target="_blank" style="text-decoration: none;">albancouturier.com</a>
+                </div>
             </div>
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- fin du bloc remerciement -->
@@ -489,26 +497,24 @@
 
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!--  bloc presse -->
+            <!--  bloc prese -->
 
-            <div class="element  clearfix row-auto col4 presse">
-                <a href="images/photos/MFM_02_2014.png" data-title="Des plats carrément épatants" data-fancybox-group="presse" class="popup">
-                    <div class="images"> <img src="images/photos/MFM_02_2014.png" alt="Maison Française Magazine" class="slip" /> </div>
+            <div class="element  clearfix col1 row1 presse white">
+                <a href="images/photos/MFM_02_2014.png" data-title="Des plats carrément épatants" data-fancybox-group="presse" class="popup full">
                 </a>
-            </div><div class="element  clearfix col4 row-auto presse">
-                <a href="images/photos/gasto_modernite_big.jpg" data-title="Gastronomie et Modernité au menu de l'hôtel de Sers" data-fancybox-group="presse" class="popup">
-                    <div class="images"> <img src="images/photos/gasto_modernite_big.jpg" alt="Apollo Magazine" class="slip" /> </div>
-                </a>
+                <br /><h3>Maison Française Magazine</h3>
+            </div><div class="element  clearfix col1 row1 white presse">
+                <a href="images/photos/gasto_modernite_big.jpg" data-title="Gastronomie et Modernité au menu de l'hôtel de Sers" data-fancybox-group="presse" class="popup full"></a>
+                    <br /><h3>Apollo Magazine</h3>
+
             </div>
-            <div class="element  clearfix row-auto col4 presse">
-                <a href="images/photos/pressegala-big.PNG" data-title="Le + : Le buffet gastronomique et innovant du chef Jordan Delamotte" data-fancybox-group="presse" class="popup">
-                    <div class="images"> <img src="images/photos/pressegala-small.jpg" alt="Gala" class="slip" /> </div>
-                </a>
+            <div class="element  clearfix row1 col1 white presse">
+                <a href="images/photos/pressegala-big.PNG" data-title="Le + : Le buffet gastronomique et innovant du chef Jordan Delamotte" data-fancybox-group="presse" class="popup full"></a>
+                    <br /><h3>Gala</h3>
             </div>
-            <div class="element  clearfix  row-auto col4 presse">
-                <a href="http://www.sofoodmag.fr/jordan-delamotte.html" target="_blank">
-                    <div class="images"> <img src="images/photos/pressesofoodmag-big.png" alt="SoFoodMag.com" class="slip" /> </div>
-                </a>
+            <div class="element  clearfix  row1 white col1 presse">
+                <a href="http://www.sofoodmag.fr/jordan-delamotte.html" target="_blank" class="full"></a>
+                    <br /><h3>SoFoodMag.com</h3>
             </div>
 
 
@@ -570,7 +576,6 @@
 <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/jquery.min.js" type="text/javascript"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 <script src="js/responsiveslides.min.js" type="text/javascript"></script>
 <script src="js/jquery-easing-1.3.js" type="text/javascript"></script>
