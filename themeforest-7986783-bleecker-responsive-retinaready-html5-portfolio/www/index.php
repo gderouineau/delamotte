@@ -249,7 +249,7 @@
 
 
             <div class="element  clearfix col2 row1 oneon3 bienvenue white">
-                <p><br/><br/><br/>
+                <p style="font-size: 20px;"><br/><br/><br/>
                     <?php if($lang=='fr'){ ?>
                     Bienvenue sur le Site Officiel de Jordan Delamotte, <br/> Chef de cuisine passionné...
                     <?php } if($lang=='en'){ ?>
@@ -260,7 +260,7 @@
                 </p>
             </div>
             <div class="element  clearfix col2 row1 bienvenue callbacks_container slider_1">
-                <ul class="rslides" id="slider4">
+                <ul class="rslides" id="slider_menu">
                     <li>
                         <a href="#filter=.actualite" ><img src="images/slider1/img-lien-actualites.jpg" alt=""></a>
                     </li>
@@ -284,38 +284,54 @@
                 </a>
 
             </div>
-            <div class="element clearfix white col1 row1 bienvenue" id="newsletter">
-                <?php if($lang=="fr"){ ?>
-                <h4>Abonnez-vous à la newsletter.</h4>
-                <?php } if($lang=="en"){ ?>
-                <h4>Suscribe to the newsletter.</h4>
-                <?php } ?>
-                <form>
-                    <p>
-                        email: <input type="text" id="newsletter_email" value ="" />
-                        <?php if($lang=="fr"){ ?>
-                        <span id="newsletter_submit">Envoyer</span>
-                        <?php } if($lang=="en"){ ?>
-                        <span id="newsletter_submit">Send</span>
-                        <?php } ?>
 
-                    </p>
-                </form>
+            <div class="element  clearfix col1 row1 bienvenue callbacks_container_social slider_social ">
+                <ul class="rslides" id="slider_social">
+                    <li>
+                        <a href="https://www.facebook.com/Chef.JordanDelamotte" target="_blank" ><img src="images/icons_social/facebook.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/ChefJordanD" target="_blank"><img src="images/icons_social/twitter.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="http://instagram.com/jordandelamotte" target="_blank"><img src="images/icons_social/instagram.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/profile/view?id=326916999" target="_blank"><img src="images/icons_social/linkedin.png" alt=""></a>
+                    </li>
+
+                </ul>
             </div>
 
-
-            <div class="element  clearfix col1 row1 bienvenue">
-                <a href="/images/plats/lapin déclinaison BD (A. Couturier)/9996.jpg" data-title="Lapin en trois façons, le râble en tartare, le carré rôti et le rognon en cromesquis" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="/images/plats/lapin déclinaison BD (A. Couturier)/9996-2x2.jpg" alt="Le lapin..." class="slip" /> </div>
-                </a>
-            </div>
-
+            <ul class="social clearfix">
+                <li class="twitter"><a href="https://twitter.com/ChefJordanD" target="_blank">Visitez mon compte Twitter</a></li>
+                <li class="facebook"><a href="https://www.facebook.com/Chef.JordanDelamotte" target="_blank">Visitez ma page Facebook</a></li>
+                <!--<li class="instagram"><a href="http://instagram.com/jordandelamotte" target="_blank">Visitez mon compte Instagram</a></li>-->
+                <li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=326916999" target="_blank">Visitez mon compte Linkedin</a></li>
+            </ul>
             <div class="element  clearfix col1 row1 bienvenue">
                 <a href="images/photos/saintpierre2-big.jpg" data-title="Filet de Saint Pierre, fèves, amandes et shiso rouge" data-fancybox-group="plat" class="popup">
                     <div class="images"> <img src="images/photos/saintpierre2-small.jpg" alt="Le Saint Pierre..." class="slip"/> </div>
                 </a>
             </div>
+            <div class="element clearfix white col1 row1 bienvenue" id="newsletter">
+                <?php if($lang=="fr"){ ?>
+                    <h4>Abonnez-vous à la newsletter.</h4>
+                <?php } if($lang=="en"){ ?>
+                    <h4>Suscribe to the newsletter.</h4>
+                <?php } ?>
+                <form>
+                    <p>
+                        email: <input type="text" id="newsletter_email" value ="" />
+                        <?php if($lang=="fr"){ ?>
+                            <span id="newsletter_submit">Envoyer</span>
+                        <?php } if($lang=="en"){ ?>
+                            <span id="newsletter_submit">Send</span>
+                        <?php } ?>
 
+                    </p>
+                </form>
+            </div>
 
             <!-- fin du bloc bienvenue -->
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -339,7 +355,7 @@
 
             <div class="element  clearfix col2 row3 fullon3 white portrait">
                 <h3 class="align-top">Jordan Delamotte</h3>
-                <p>
+                <p style="text-align: justify;text-justify: inter-word;">
                     <br />
                     <br />
                     <br />
@@ -498,23 +514,40 @@
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!--  bloc prese -->
-
             <div class="element  clearfix col1 row1 presse white">
                 <a href="images/photos/MFM_02_2014.png" data-title="Des plats carrément épatants" data-fancybox-group="presse" class="popup full">
                 </a>
                 <br /><h3>Maison Française Magazine</h3>
-            </div><div class="element  clearfix col1 row1 white presse">
+                <h3>Jean-Louis Galesne</h3>
+                <br /> <p>Janvier 2015</p>
+            </div>
+
+            <div class="element  clearfix col1 row1 presse white">
+                <a href="images/photos/GP.jpg" data-title="Des plats carrément épatants" data-fancybox-group="presse" class="popup full">
+                </a>
+                <br /><h3>Les pieds dans le plat</h3>
+                    <h3> Gilles Pudlowski</h3>
+                <br /> <p>19 Novembre 2014</p>
+            </div>
+
+
+
+            <div class="element  clearfix col1 row1 white presse">
                 <a href="images/photos/gasto_modernite_big.jpg" data-title="Gastronomie et Modernité au menu de l'hôtel de Sers" data-fancybox-group="presse" class="popup full"></a>
                     <br /><h3>Apollo Magazine</h3>
+
 
             </div>
             <div class="element  clearfix row1 col1 white presse">
                 <a href="images/photos/pressegala-big.PNG" data-title="Le + : Le buffet gastronomique et innovant du chef Jordan Delamotte" data-fancybox-group="presse" class="popup full"></a>
                     <br /><h3>Gala</h3>
+                <br /><p></p>
             </div>
             <div class="element  clearfix  row1 white col1 presse">
                 <a href="http://www.sofoodmag.fr/jordan-delamotte.html" target="_blank" class="full"></a>
                     <br /><h3>SoFoodMag.com</h3>
+                <br />
+                    <p> 11 Août 2014</p>
             </div>
 
 
@@ -545,12 +578,7 @@
 <!-- end content -->
 <footer>
     <div class="container">
-        <ul class="social clearfix">
-            <li class="twitter"><a href="https://twitter.com/ChefJordanD" target="_blank">Visitez mon compte Twitter</a></li>
-            <li class="facebook"><a href="https://www.facebook.com/Chef.JordanDelamotte" target="_blank">Visitez ma page Facebook</a></li>
-            <!--<li class="instagram"><a href="http://instagram.com/jordandelamotte" target="_blank">Visitez mon compte Instagram</a></li>-->
-            <li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=326916999" target="_blank">Visitez mon compte Linkedin</a></li>
-        </ul>
+
         <div id="nav-button-down">
 
         </div>

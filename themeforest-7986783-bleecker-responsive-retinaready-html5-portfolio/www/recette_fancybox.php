@@ -104,7 +104,7 @@ if(isset($_GET['id'])){
                     </div>
                     <article class="clearfix col2 row-auto white white-bottom auto">
                         <h3><?php echo $title ?></h3>
-                        <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par Jordan Delamotte</p>
+                        <p class="small">  par Jordan Delamotte</p>
                         <div class="borderline"></div>
                         <h4>Ingredients</h4>
                         <p class="small">pour <?php echo $nb_personnes ; ?> personnes</p>
@@ -112,7 +112,7 @@ if(isset($_GET['id'])){
                         <?php
                             foreach($ingredient as $ingredient_name){
                                 ?>
-                                <li>
+                                <li style="text-align: left;">
                                     <?php
                                     echo $ingredient_name;
                                     ?>
@@ -122,7 +122,7 @@ if(isset($_GET['id'])){
                         ?>
                         </ul>
                         <h4>Préparation</h4>
-                        <p><?php echo $text ?></p>
+                        <div style="text-align: justify;text-justify: inter-word;"><?php echo $text ?></div>
                         <div class="break"></div>
                         <!--<a href="#" class="icons margin like"></a>-->
                         <!--<a href="#" class="icons margin share"></a>-->
