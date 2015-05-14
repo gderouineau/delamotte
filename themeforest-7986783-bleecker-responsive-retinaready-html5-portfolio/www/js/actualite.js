@@ -88,7 +88,7 @@ function showMoreActu() {
                     ;
                     actu_div.before(full);
                     resume =
-                        '<div class="fancybox element  clearfix col1 row1 actualite white " style="display:none;">' +
+                        '<div class="fancybox element  clearfix col1 row1 actualite white max-display-2">' +
                             '<a href="actu_fancybox.php?id=' + id + '" id="fancy_actu_' + id + '" class="full fancy_actu"></a>' +
                             '<h3>' + title + '</h3>' +
                             '<div class="borderline"></div>' +

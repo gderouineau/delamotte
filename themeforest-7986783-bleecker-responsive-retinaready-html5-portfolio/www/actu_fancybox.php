@@ -148,22 +148,20 @@ if(isset($_GET['id'])){
                         <div class="break"></div>
                         <div class="borderline"></div>
                         <p class="small">Autres articles</p>
-                        <div class="break"></div>
-                        <?php
+                        <ul>
+                            <?php
 
-                        for($i= 0 ; $i< count($data); $i++){
+                            for($i= 0 ; $i< count($data); $i++){
+                                ?>
+                                <a class="actu_link" href="actu_fancybox.php?id=<?php echo $data[$i]['id'] ; ?>">
+
+                                        <h5><?php echo $data[$i]['title']; ?></h5>
+                                        <?php //<p class="small"><?php echo date('j',strtotime($data[$i]['date'])).' '.french_month(strtotime($data[$i]['date'])).' '.date('Y' , strtotime($data[$i]['date'])).' <br /> &nbsp;&middot;&nbsp; <br />par '.$data[$i]['author_name'];</p>  ?>
+                                </a>
+                            <?php
+                            }
                             ?>
-                            <a class="actu_link " href="actu_fancybox.php?id=<?php echo $data[$i]['id'] ; ?>">
-                                <div class="fancybox element  clearfix border" style="width: 46%; margin: 1%; <?php if($i%2==0){echo 'float:left;';} else {echo 'float:right;';} ?> ">
-
-                                    <h4><?php echo $data[$i]['title']; ?></h4>
-                                    <div class="borderline"></div>
-                                    <p class="small"><?php echo date('j',strtotime($data[$i]['date'])).' '.french_month(strtotime($data[$i]['date'])).' '.date('Y' , strtotime($data[$i]['date'])).' <br /> &nbsp;&middot;&nbsp; <br />par '.$data[$i]['author_name']; ?></p>
-                                </div>
-                            </a>
-                        <?php
-                        }
-                        ?>
+                        </ul>
                     </article>
                 </div>
             </div>

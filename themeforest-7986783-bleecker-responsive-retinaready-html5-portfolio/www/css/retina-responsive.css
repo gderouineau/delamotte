@@ -31,9 +31,12 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 .fancybox-prev span {background: url(../images/icons/bg-prev@2x.png) center no-repeat; background-size:48px 48px;}
 .fancybox-next span {background: url(../images/icons/bg-next@2x.png) center no-repeat; background-size:48px 48px;}
 
-.max-display-4 , .max-display-3 , .max-display-2{ display: none; }
+.max-display-4 , .max-display-3 , .max-display-2 { display: none; }
 }
+@media only screen and (min-width: 1229px){
+    .max-display-4 , .max-display-3 , .max-display-2 { display: none; }
 
+}
 
 @media only screen and (max-width: 1229px) {
 .container {max-width:870px; }
@@ -56,6 +59,7 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 
 .min-display-3 , .min-display-2 { display: none; }
 .max-display-2 { display: none; }
+
 }
 
 /* All Mobile Sizes (devices and browser) */

@@ -303,3 +303,14 @@ h3.slipdiv{
 .bloc-2 , .bloc-3 {
     display : none;
 }
+
+*/
+.actu_link {
+    color : #000000;
+    text-align: left;
+}
+
+h5.actu_link {
+    color: #000000;
+    text-align: left;
+}
