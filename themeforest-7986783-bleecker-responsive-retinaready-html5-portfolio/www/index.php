@@ -79,6 +79,7 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="screen">
     <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/responsiveslides.css" rel="stylesheet" type="text/css" media="screen" />
     <!--[if gt IE 8]><!--><link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" /><!--<![endif]-->
     <!--[if !IE]> <link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" /> <![endif]-->
     <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
@@ -199,22 +200,30 @@
             <?php if($lang=="fr"){?>
             <ul class="option-set clearfix" id="option-list-up" data-option-key="filter">
               <!--  <li><a href="#filter=.bienvenue" class="selected">Bienvenue</a> -->
-                <li><a href="#filter=.portrait">Portrait</a></li>
+
+                <li><a href="#filter=.bienvenue">Accueil</a></li>
                 <li><a href="#filter=.actualite">Actualités</a></li>
-                <li><a href="#filter=.photo">Photos</a></li>
+                <li><a href="#filter=.saison">C'est la saison</a></li>
                 <li><a href="#filter=.recette">Recettes</a></li>
+                <li><a href="#filter=.photo">Photos</a></li>
+                <li><a href="#filter=.portrait">Portrait</a></li>
+                <li><a href="#filter=.remerciement">Partenaires</a></li>
                 <li><a href="#filter=.presse">Presse</a></li>
+                <li><a href="#filter=.contact">Contact</a>
+
 
             </ul>
             <?php } if($lang=="en"){ ?>
             <ul class="option-set clearfix" id="option-list-up" data-option-key="filter">
-                <!-- <li><a href="#filter=.bienvenue" class="selected">Welcome</a> -->
-                <li><a href="#filter=.portrait">Portrait</a></li>
+                <li><a href="#filter=.bienvenue">Home</a></li>
                 <li><a href="#filter=.actualite">News</a></li>
-                <li><a href="#filter=.photo">Photos</a></li>
+                <li><a href="#filter=.saison">it's the moment</a></li>
                 <li><a href="#filter=.recette">Recipes</a></li>
+                <li><a href="#filter=.photo">Photos</a></li>
+                <li><a href="#filter=.portrait">Portrait</a></li>
+                <li><a href="#filter=.remerciement">Partners</a></li>
                 <li><a href="#filter=.presse">Press</a></li>
-
+                <li><a href="#filter=.contact">Contact</a></li>
             </ul>
             <?php } ?>
         </div>
@@ -238,9 +247,7 @@
             <!-- debut du bloc bienvenue -->
 
 
-            <div class="element  clearfix col2 row1 bienvenue">
-                <div class="images"> <img src="images/photos/portrait1-small.jpg" alt="" /> </div>
-            </div>
+
             <div class="element  clearfix col2 row1 oneon3 bienvenue white">
                 <p><br/><br/><br/>
                     <?php if($lang=='fr'){ ?>
@@ -251,6 +258,25 @@
                     <a href="/?lang=en#filter=.portrait" class="full" style="text-decoration: none;">
                     </a>
                 </p>
+            </div>
+            <div class="element  clearfix col2 row1 bienvenue callbacks_container slider_1">
+                <ul class="rslides" id="slider4">
+                    <li>
+                        <a href="#filter=.actualite" ><img src="images/slider1/img-lien-actualites.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.saison" ><img src="images/slider1/img-lien-produitsdesaison.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.recette" ><img src="images/slider1/img-lien-recettes.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.photo" ><img src="images/slider1/img-lien-photos.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.portrait" ><img src="images/slider1/img-lien-portrait.jpg" alt=""></a>
+                    </li>
+                </ul>
             </div>
             <div class="element  clearfix col1 row1 bienvenue">
                 <a href="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" data-title="La Féra du lac Léman, caviar osciètre d'Italie, pomme de terre et sauce champagne." data-fancybox-group="plat" class="popup">
@@ -525,15 +551,11 @@
         <div id="options-down" class="clearfix">
             <?php if($lang=='fr'){ ?>
             <ul class="option-set clearfix" id="option-list-down" data-option-key="filter">
-                <li><a href="#filter=.contact">Contact</a>
                 <li><a href="#filter=.legals">Mentions légales</a></li>
-                <li><a href="#filter=.remerciement">Remerciements</a></li>
             </ul>
             <?php } if($lang=='en'){ ?>
             <ul class="option-set clearfix" id="option-list-down" data-option-key="filter">
-                <li><a href="#filter=.contact">Contact</a>
                 <li><a href="#filter=.legals">Imprint</a></li>
-                <li><a href="#filter=.remerciement">Thanks</a></li>
             </ul>
             <?php } ?>
         </div>
@@ -547,7 +569,10 @@
 
 <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script src="js/responsiveslides.min.js" type="text/javascript"></script>
 <script src="js/jquery-easing-1.3.js" type="text/javascript"></script>
 <script src="js/modernizr.js" type="text/javascript"></script>
 <script src="js/retina.js" type="text/javascript"></script>
