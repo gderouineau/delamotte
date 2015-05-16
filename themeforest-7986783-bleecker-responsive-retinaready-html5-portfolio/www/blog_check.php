@@ -47,7 +47,7 @@ if(isset($_POST['title']) && isset($_POST['text'])){
     $query =
         'INSERT INTO actualite VALUES (
         null,
-        \''.addslashes(urldecode($place)).'\',
+        \''.addslashes(urldecode($place)).'\' ,
         \''.addslashes(urldecode($title)).'\',
         \''.addslashes(urldecode($text)).'\',
         \''.addslashes($date).'\',

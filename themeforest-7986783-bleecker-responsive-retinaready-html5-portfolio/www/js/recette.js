@@ -37,6 +37,7 @@ $(document).ready(function(){
                     , text = data[key]['text']
                     , date = new Date(data[key]['date'])
                     , photo = data[key]['photo']
+                    , photo_small = data[key]['photo_small']
                     , month = date.getMonth()
                     , day = date.getDate()
                     , french_month=get_month(month)
@@ -57,7 +58,7 @@ $(document).ready(function(){
                 resume =
                     '<div class="fancybox element  clearfix col1 row1 recette force" >' +
                         '<a href="/recette_fancybox.php?id='+id+'" id="fancy_recette_'+id+'" class="full fancy_recette">'+
-                            '<div class="images"> <img src="'+photo+'" alt="<a href=\'/recette_fancybox.php?id='+id+'\' class=\'full fancy_recette\'></a>'+title+'" class="slip" id="slip_'+id+'"/> </div>'+
+                            '<div class="images"> <img src="'+photo_small+'" alt="<a href=\'/recette_fancybox.php?id='+id+'\' class=\'full fancy_recette\'></a>'+title+'" class="slip" id="slip_'+id+'"/> </div>'+
                         '</a>'+
                     '</div>'
                 ;

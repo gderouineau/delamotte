@@ -411,7 +411,7 @@
             <!-- bloc contact  -->
 
             <div class="element clearfix photo-contact min-display-1 contact">
-                <div class="images"> <img src="images/photos/nicoise1-big.jpg" alt="La salade niçoise..." class="slip" /> </div>
+                <div class="images"> <img id="nicoise_contact" src="" alt="La salade niçoise..." class="slip" /> </div>
             </div>
 
 
@@ -467,6 +467,12 @@
                 <div class="to-bottom">
                     <h5>Charlotte Rocher</h5>
                     <p>Éditrice</p>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <p>Crédit photo : Vincent Rubin</p>
+
                 </div>
             </div>
             <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
