@@ -51,7 +51,20 @@ function showMoreActu() {
             var increment = 0;
             for (var key in data) {
 
-                var id = data[key]['id'], place = data[key]['place'], title = data[key]['title'], text = data[key]['text'].replace(/<(?:.|\n)*?>/gm, ''), date = new Date(data[key]['date'].replace(' ', 'T')), photo = data[key]['photo'], month = date.getMonth(), day = date.getDate(), french_month = get_month(month), year = date.getFullYear(), max_resume_length_resume = Math.min(50, text.length), max_resume_length_full = Math.min(300, text.length), full = "", resume = ""
+                var id = data[key]['id']
+                    , location = data[key]['location']
+                    , title = data[key]['title']
+                    , text = data[key]['text'].replace(/<(?:.|\n)*?>/gm, '')
+                    , date = new Date(data[key]['date'].replace(' ', 'T'))
+                    , photo = data[key]['photo']
+                    , month = date.getMonth()
+                    , day = date.getDate()
+                    , french_month = get_month(month)
+                    , year = date.getFullYear()
+                    , max_resume_length_resume = Math.min(50, text.length)
+                    , max_resume_length_full = Math.min(300, text.length)
+                    , full = ""
+                    , resume = ""
                     ;
                 increment++;
                 var modulo = increment % 6;
@@ -70,7 +83,7 @@ function showMoreActu() {
 
                 if ((modulo == 4) || (modulo == 1)) {
                     full =
-                        '<div class=" fancybox element  clearfix col2 row2 actualite  no-padding" id="actu_' + id + '">' +
+                        '<div class=" fancybox element  clearfix col2 row2 '+location+'  no-padding" id="actu_' + id + '">' +
                         '<a href="actu_fancybox.php?id=' + id + '" id="fancy_actu_' + id + '" class="full fancy_actu"></a>' +
                         '<div class="images" style="overflow:hidden;width:570px;height:280px;">' +
                         '<img src="' + photo + '" alt="' + title + '" />' +
@@ -88,7 +101,7 @@ function showMoreActu() {
                     ;
                     actu_div.before(full);
                     resume =
-                        '<div class="fancybox element  clearfix col1 row1 actualite white max-display-2">' +
+                        '<div class="fancybox element  clearfix col1 row1 '+location+' white max-display-2">' +
                             '<a href="actu_fancybox.php?id=' + id + '" id="fancy_actu_' + id + '" class="full fancy_actu"></a>' +
                             '<h3>' + title + '</h3>' +
                             '<div class="borderline"></div>' +
@@ -102,7 +115,7 @@ function showMoreActu() {
 
                 else {
                     resume =
-                        '<div class="fancybox element  clearfix col1 row1 actualite white ">' +
+                        '<div class="fancybox element  clearfix col1 row1 '+location+' white ">' +
                         '<a href="actu_fancybox.php?id=' + id + '" id="fancy_actu_' + id + '" class="full fancy_actu"></a>' +
                         '<h3>' + title + '</h3>' +
                         '<div class="borderline"></div>' +

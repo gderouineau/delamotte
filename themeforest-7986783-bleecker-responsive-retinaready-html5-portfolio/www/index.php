@@ -158,7 +158,7 @@
     <?php } ?>
 
 </head>
-<body data-showphoto="1" data-showphotomax="3" data-actuid="0" data-actucurrent="0" data-photoid="0" data-photocurrent="0">
+<body data-showphoto="1" data-showphotomax="3" data-actuid="0" data-actucurrent="0" data-seasonid="0" data-seasoncurrent="0" data-photoid="0" data-photocurrent="0">
 
 <!-- facebook share button plugin -->
 <div id="fb-root"></div>
@@ -556,6 +556,8 @@
 
             <div id="news" style="display: none;">
             </div>
+            <div id="season" style="display: none;">
+            </div>
             <?php if(isset($_GET['actu_id'])){?>
 
             <img style="display:none;" src="<?php echo $photo ?>">
@@ -621,6 +623,7 @@
 <script src="js/input.fields.js" type="text/javascript"></script>
 <script src="js/newsletter.js" type="text/javascript"></script>
 <script src="js/actualite.js" type="text/javascript"></script>
+<script src="js/saison.js" type="text/javascript"></script>
 <script src="js/recette.js" type="text/javascript"></script>
 <script src="js/photo.js" type="text/javascript"></script>
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
