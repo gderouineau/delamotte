@@ -458,7 +458,7 @@
                 <a class="full-width"><div class="images full"><img src="images/partenaires/GuillaumeD.jpg" /></div></a>
                 <div class="to-bottom">
                     <h5>Guillaume Derouineau</h5>
-                    <p>Developpeur</p>
+                    <p>Web Designer</p>
 
                 </div>
             </div>
@@ -479,7 +479,7 @@
                 <a class="full-width"><div class="images full"><img src="images/partenaires/SaraE.jpg" /></div></a>
                 <div class="to-bottom">
                     <h5>Sara Edward</h5>
-                    <p>Reporter</p><br />
+                    <p>R2dactrice</p><br />
                     <a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;">Sara's blog</a>
                 </div>
             </div>
