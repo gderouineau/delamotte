@@ -84,7 +84,7 @@ function showMoreSeason() {
                     if ((modulo == 4) || (modulo == 1)) {
                         full =
                             '<div class=" fancybox element  clearfix col2 row2 '+location+'  no-padding" id="actu_' + id + '">' +
-                                '<a href="season_fancybox.php?id=' + id + '" id="fancy_season_' + id + '" class="full fancy_season"></a>' +
+                                '<a href="saison_fancybox.php?id=' + id + '" id="fancy_season_' + id + '" class="full fancy_season"></a>' +
                                 '<div class="images" style="overflow:hidden;width:570px;height:280px;">' +
                                 '<img src="' + photo + '" alt="' + title + '" />' +
                                 '</div>' +
@@ -102,7 +102,7 @@ function showMoreSeason() {
                         season_div.before(full);
                         resume =
                             '<div class="fancybox element  clearfix col1 row1 '+location+' white max-display-2">' +
-                                '<a href="season_fancybox.php?id=' + id + '" id="fancy_season_' + id + '" class="full fancy_season"></a>' +
+                                '<a href="saison_fancybox.php?id=' + id + '" id="fancy_season_' + id + '" class="full fancy_season"></a>' +
                                 '<h3>' + title + '</h3>' +
                                 '<div class="borderline"></div>' +
                                 '<p class="small">' + day + ' ' + french_month + ' ' + year + '</p>' +
@@ -116,7 +116,7 @@ function showMoreSeason() {
                     else {
                         resume =
                             '<div class="fancybox element  clearfix col1 row1 '+location+' white ">' +
-                                '<a href="season_fancybox.php?id=' + id + '" id="fancy_season_' + id + '" class="full fancy_season"></a>' +
+                                '<a href="saison_fancybox.php?id=' + id + '" id="fancy_season_' + id + '" class="full fancy_season"></a>' +
                                 '<h3>' + title + '</h3>' +
                                 '<div class="borderline"></div>' +
                                 '<p class="small">' + day + ' ' + french_month + ' ' + year + '</p>' +

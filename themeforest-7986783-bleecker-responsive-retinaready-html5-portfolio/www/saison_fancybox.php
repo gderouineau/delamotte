@@ -81,7 +81,7 @@ if(isset($_GET['id'])){
         <!-- facebook open graph data -->
         <!-- Open Graph url property -->
         <!--
-        <meta property="og:url" content="http://www.jordan-delamotte.com?actu_id=<?php //echo $id; ?>#filter=.actualite" />
+        <meta property="og:url" content="http://www.jordan-delamotte.com?season_id=<?php //echo $id; ?>#filter=.saison" />
 -->
         <!-- Open Graph title property -->
         <meta property="og:title" content="Jordan Delamotte - <?php echo strip_tags($title); ?>" />
@@ -99,7 +99,7 @@ if(isset($_GET['id'])){
         <!-- Open Graph site_name property -->
         <meta property="og:site_name" content="Site officiel de Jordan Delamotte" />
 
-        <link rel="opengraph" href="http://www.jordan-delamotte.com?actu_id=<?php echo $id; ?>#filter=.actualite"/>
+        <link rel="opengraph" href="http://www.jordan-delamotte.com?season_id=<?php echo $id; ?>#filter=.saison"/>
         <!-- end og -->
 
     </head>
@@ -135,15 +135,15 @@ if(isset($_GET['id'])){
                         <div class="break"></div>
                         <!--<a href="#" class="icons margin like"></a>-->
                         <!--<a href="#" class="icons margin share" rel="popover" id="share-button" data-toggle="popover" ></a>-->
-                        <div class="fb-share-button" id="fb-button" data-layout="button_count" data-href="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite"></div>
+                        <div class="fb-share-button" id="fb-button" data-layout="button_count" data-href="http://jordan-delamotte.com/?season_id=<?php echo $id ;?>#filter=.saison"></div>
                         <br><br>
 
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id; ?>#filter=.actualite" data-text="<?php echo $title; ?>" data-count="horizontal">Tweet</a>
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?season_id=<?php echo $id; ?>#filter=.saison" data-text="<?php echo $title; ?>" data-count="horizontal">Tweet</a>
                         <br /> <br />
                         <script src="//platform.linkedin.com/in.js" type="text/javascript">
                             lang: fr_FR
                         </script>
-                        <script type="IN/Share" data-url="http://jordan-delamotte.com/?actu_id=<?php echo $id ;?>#filter=.actualite" data-counter="right"></script>
+                        <script type="IN/Share" data-url="http://jordan-delamotte.com/?season_id=<?php echo $id ;?>#filter=.saison" data-counter="right"></script>
 
                         <div class="break"></div>
                         <div class="borderline"></div>
@@ -153,10 +153,10 @@ if(isset($_GET['id'])){
 
                             for($i= 0 ; $i< count($data); $i++){
                                 ?>
-                                <a class="actu_link" href="actu_fancybox.php?id=<?php echo $data[$i]['id'] ; ?>">
+                                <a class="season_link" href="saison_fancybox.php?id=<?php echo $data[$i]['id'] ; ?>">
 
-                                        <h5><?php echo $data[$i]['title']; ?></h5>
-                                        <?php //<p class="small"><?php echo date('j',strtotime($data[$i]['date'])).' '.french_month(strtotime($data[$i]['date'])).' '.date('Y' , strtotime($data[$i]['date'])).' <br /> &nbsp;&middot;&nbsp; <br />par '.$data[$i]['author_name'];</p>  ?>
+                                    <h5><?php echo $data[$i]['title']; ?></h5>
+                                    <?php //<p class="small"><?php echo date('j',strtotime($data[$i]['date'])).' '.french_month(strtotime($data[$i]['date'])).' '.date('Y' , strtotime($data[$i]['date'])).' <br /> &nbsp;&middot;&nbsp; <br />par '.$data[$i]['author_name'];</p>  ?>
                                 </a>
                             <?php
                             }
@@ -199,7 +199,7 @@ if(isset($_GET['id'])){
     </script>
     <script>
 
-        $('.actu_link').click(function(e){
+        $('.season_link').click(function(e){
             e.preventDefault();
             parent.$.fancybox({
                 href: this.href,
