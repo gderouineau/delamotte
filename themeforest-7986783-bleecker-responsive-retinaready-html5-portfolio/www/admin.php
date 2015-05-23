@@ -104,7 +104,7 @@ else{
                             <h3 id="blogtitle"></h3>
                             <div class="borderline"></div>
                             <p class="small" id="blogpostdate"></p>
-                            <div id="blogtext">
+                            <div id="blogtext" style="text-align: justify;text-justify: inter-word;">
                             </div>
                     </div>
                     <!-- end blog previsualisation

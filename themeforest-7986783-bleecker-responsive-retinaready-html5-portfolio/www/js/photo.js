@@ -86,8 +86,10 @@ function showMorePhotos() {
                         , title_short = data[key]['title_short']
                         , title_long = data[key]['title_long']
                         , div = ""
+                        , divTitle = ""
                         ;
                     increment++;
+                    /*
                     var modulo = increment % 6;
 
 
@@ -114,6 +116,59 @@ function showMorePhotos() {
                         photo_div.before(div);
 
                     }
+                    */
+
+                    var modulo = increment % 2;
+
+
+                    if (modulo == 1) {
+                        div =
+                            '<div class="element  clearfix col2 row2 photo force">'+
+                                '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                                    '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                                '</a>'+
+                            '</div>'
+                        ;
+                        photo_div.before(div);
+                        divTitle =
+                            '<div class="element  clearfix col2 row1 photo  min-display-3" style="">'+
+                                '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 280px;height: 280px;font-size: 17px;"  class="">'+title_long+'</p>'+
+                            '</div>'
+                            ;
+                        photo_div.before(divTitle);
+                        divTitle =
+                            '<div class="element clearfix col1 row2 photo  min-display-2 max-display-4" style="">'+
+                                '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 570px;height: 570px;font-size: 17px;"  class="">'+title_long+'</p>'+
+                            '</div>'
+                            ;
+                        photo_div.before(divTitle);
+                    }
+                    else{
+                        divTitle =
+                            '<div class="element clearfix col1 row2 photo  min-display-2 max-display-4" style="">'+
+                                '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 570px;height: 570px;font-size: 17px;"  class="">'+title_long+'</p>'+
+                                '</div>'
+                        ;
+                        photo_div.before(divTitle);
+                        div =
+                            '<div class="element  clearfix col2 row2 photo force">'+
+                                '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                                '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                                '</a>'+
+                                '</div>'
+                        ;
+                        photo_div.before(div);
+
+                        divTitle =
+                            '<div class="element  clearfix col2 row1 photo  min-display-3" style="">'+
+                                '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 280px;height: 280px;font-size: 17px;"  class="">'+title_long+'</p>'+
+                                '</div>'
+                        ;
+                        photo_div.before(divTitle);
+
+                    }
+
+
                     fancy_photo();
                     if (data.length != 0)
                         $('#container').isotope('reloadItems').isotope({sortBy: 'original-order'});

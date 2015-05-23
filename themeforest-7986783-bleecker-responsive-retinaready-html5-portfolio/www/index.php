@@ -512,11 +512,12 @@
 
                 </div>
             </div>
+
             <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
                 <a class="full-width"><div class="images full"><img src="images/partenaires/SaraE.jpg" /></div></a>
                 <div class="to-bottom">
                     <h5>Sara Edward</h5>
-                    <p>R2dactrice</p><br />
+                    <p>Rédactrice</p><br />
                     <a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;">Sara's blog</a>
                 </div>
             </div>
@@ -526,6 +527,14 @@
                     <h4>Alban Couturier</h4>
                     <p>Photographe</p><br />
                     <a href="http://www.albancouturier.com" target="_blank" style="text-decoration: none;">albancouturier.com</a>
+                </div>
+            </div>
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="" /></div></a>
+                <div class="to-bottom">
+                    <h4>Nicolas Lobbestael</h4>
+                    <p>Photographe</p><br />
+                    <a href="http://www.nicolaslobbestael.com" target="_blank" style="text-decoration: none;">nicolaslobbestael.com</a>
                 </div>
             </div>
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -557,6 +566,26 @@
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!--  bloc prese -->
+            <div class="element clearfix col1 row1 presse">
+                <a href="#filter=.commpresse" class="full">
+
+                </a>
+                <br /><br /><br />
+                <h3 style="color:white; text-align: center;">Voir </h3>
+                <h3 style="color:white; text-align: center;">les communiqués</h3>
+                <h3 style="color:white; text-align: center;">de presse</h3>
+
+            </div>
+            <div class="element clearfix col1 row1 commpresse">
+                <a href="#filter=.presse" class="full">
+
+                </a>
+                <br /><br /><br />
+                <h3 style="color:white; text-align: center;">Voir </h3>
+                <h3 style="color:white; text-align: center;">les articles</h3>
+                <h3 style="color:white; text-align: center;">de presse</h3>
+
+            </div>
             <div class="element  clearfix col1 row1 presse white">
                 <a href="images/photos/MFM_02_2014.png" data-title="Des plats carrément épatants" data-fancybox-group="presse" class="popup full">
                 </a>
@@ -575,22 +604,25 @@
 
 
 
-            <div class="element  clearfix col1 row1 white presse">
-                <a href="images/photos/gasto_modernite_big.jpg" data-title="Gastronomie et Modernité au menu de l'hôtel de Sers" data-fancybox-group="presse" class="popup full"></a>
-                    <br /><h3>Apollo Magazine</h3>
-
-
-            </div>
             <div class="element  clearfix row1 col1 white presse">
                 <a href="images/photos/pressegala-big.PNG" data-title="Le + : Le buffet gastronomique et innovant du chef Jordan Delamotte" data-fancybox-group="presse" class="popup full"></a>
                     <br /><h3>Gala</h3>
-                <br /><p></p>
+                <br /><p>Septembre 2014</p>
             </div>
             <div class="element  clearfix  row1 white col1 presse">
                 <a href="http://www.sofoodmag.fr/jordan-delamotte.html" target="_blank" class="full"></a>
                     <br /><h3>SoFoodMag.com</h3>
                 <br />
-                    <p> 11 Août 2014</p>
+                    <p>11 Août 2014</p>
+            </div>
+
+            <div class="element  clearfix col1 row1 white presse">
+                <a href="images/photos/gasto_modernite_big.jpg" data-title="Gastronomie et Modernité au menu de l'hôtel de Sers" data-fancybox-group="presse" class="popup full"></a>
+                <br /><h3>Apollo Magazine</h3>
+                <br />
+                <p>Mai - Juin 2014</p>
+
+
             </div>
 
 
