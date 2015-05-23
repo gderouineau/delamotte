@@ -508,7 +508,7 @@
                     <br />
                     <br />
                     <br />
-                    <p>Crédit photo : Vincent Rubin</p>
+                    <p style="font-size: 12px;">Crédit photo : Vincent Rubin</p>
 
                 </div>
             </div>
@@ -518,7 +518,7 @@
                 <div class="to-bottom">
                     <h5>Sara Edward</h5>
                     <p>Rédactrice</p><br />
-                    <a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;">Sara's blog</a>
+                    <a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;" class="ty">Sara's blog</a>
                 </div>
             </div>
             <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
@@ -526,7 +526,7 @@
                 <div class="to-bottom">
                     <h4>Alban Couturier</h4>
                     <p>Photographe</p><br />
-                    <a href="http://www.albancouturier.com" target="_blank" style="text-decoration: none;">albancouturier.com</a>
+                    <a href="http://www.albancouturier.com" target="_blank" style="text-decoration: none;" class="ty">albancouturier.com</a>
                 </div>
             </div>
             <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
@@ -534,7 +534,7 @@
                 <div class="to-bottom">
                     <h4>Nicolas Lobbestael</h4>
                     <p>Photographe</p><br />
-                    <a href="http://www.nicolaslobbestael.com" target="_blank" style="text-decoration: none;">nicolaslobbestael.com</a>
+                    <a href="http://www.nicolaslobbestael.com" target="_blank" style="text-decoration: none;" class="ty">nicolaslobbestael.com</a>
                 </div>
             </div>
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -625,6 +625,16 @@
 
             </div>
 
+            <!-- communiqué de presse -->
+
+            <div class="element  clearfix col1 row1 white commpresse">
+                <a href="images/pdf/CP4MAINSHDSHV.pdf" class="full" target="_blank"></a>
+                <br /><h3>Dîner à 4 mains by Bessé Signature : 2ème édition</h3>
+                <br />
+                <p>18 Mai 2015</p>
+
+
+            </div>
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- fin du bloc presse -->

@@ -29,7 +29,7 @@ if(isset($_GET['id'])){
     $data = $result->fetch();
     $auteur= $data['name'];
 
-    $query = 'SELECT * FROM actualite WHERE (author_id='.$auteur_id.' AND id!='.$id.') ORDER BY id DESC LIMIT 0,4';
+    $query = 'SELECT * FROM actualite WHERE (author_id='.$auteur_id.' AND id!='.$id.' AND location="actualite") ORDER BY id DESC LIMIT 0,4';
     $result = $db->query($query);
     $data = $result->fetchAll();
     $data_size = count($data);
