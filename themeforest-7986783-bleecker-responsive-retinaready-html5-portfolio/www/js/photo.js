@@ -248,17 +248,17 @@ function fancy_photo(){
 $(document).ready(function(){
     var width = document.documentElement.clientWidth;
     var $photoContact = $('#nicoise_contact');
-    var src = 'images/photos/nicoise1-big';
+    var src = 'images/photos/contact/img_contact';
     var ext = '.jpg';
     if(width <= 767){
-        $photoContact.attr('src',src+'1-1'+ext);
-    }/*
+        $photoContact.attr('src',src+'1x1'+ext);
+    }
     else if(width <= 959){
-        $photoContact.attr('src',src+'2-2'+ext);
+        $photoContact.attr('src',src+'2x2'+ext);
 
-    }*/
+    }
     else{
-        $photoContact.attr('src',src+'2-2'+ext);
+        $photoContact.attr('src',src+'3x3'+ext);
 
     }
 });

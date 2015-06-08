@@ -530,7 +530,7 @@
                 </div>
             </div>
             <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
-                <a class="full-width"><div class="images full"><img src="" /></div></a>
+                <a class="full-width"><div class="images full"><img src="images/partenaires/NicolasL.jpg" /></div></a>
                 <div class="to-bottom">
                     <h4>Nicolas Lobbestael</h4>
                     <p>Photographe</p><br />
@@ -542,7 +542,7 @@
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- bloc newsletter -->
-            <div class="element clearfix white col1 row1 contact" id="newsletter">
+            <div class="element clearfix white col1 row1 " id="newsletter">
                 <?php if($lang=="fr"){ ?>
                 <h4>Abonnez-vous à la newsletter.</h4>
                 <?php } if($lang=="en"){ ?>
