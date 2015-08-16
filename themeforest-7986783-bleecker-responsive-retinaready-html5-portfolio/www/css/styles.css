@@ -84,12 +84,14 @@ span.arrow {font:13px 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-seri
 /* =4. Headings
 --------------------------------------------------------------------------------------------------------*/
 h1#logo { position:relative; text-align:center; width:280px; padding:5px 0 15px 0; margin:0 auto; z-index:1; }
-h1#logo a { display:inline-block; background:url(../images/photos/JD-BSN-small.jpg) no-repeat; background-size:137px 195px; width:137px; height:195px; text-indent:-9999px; }
+h1#logo a { display:inline-block; background:url(../images/accueil/JD-BSN-petit.jpg) no-repeat; background-size: 100%; width:137px; height:195px; text-indent:-9999px; }
 .hentry h1, h2, h3, h4, h5 { line-height:1.2; font-family: Georgia, "Times New Roman", Times, serif; font-size:36px; color:#303030; padding-top:26px; display:block; position:relative }
 h2 {font-size:16px; text-transform:uppercase; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight:600; color:#555; }
 h3 {font-size:24px; font-weight:400; padding-top:18px; }
 h4 {font-size:18px; padding-top:24px; line-height:24px; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; text-transform:uppercase; letter-spacing:2px; font-weight:600; color:#333; padding-bottom:4px;}
 h5 {font-size:16px; padding-top:22px; line-height:24px; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; text-transform:uppercase; letter-spacing:2px; font-weight:600; color:#333; padding-bottom:4px; }
+h6 {font-size:27px; padding-top:42px;  line-height:24px; font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; text-transform:uppercase; letter-spacing:2px; font-weight:600; color:#ffffff; padding-bottom:22px; }
+h6 {margin-left: auto; text-align: center;}
 .align-top {padding-top:0 !important }
 /* End Headings
 --------------------------------------------------------------------------------------------------------*/
@@ -119,8 +121,9 @@ h5 {font-size:16px; padding-top:22px; line-height:24px; font-family: 'Open Sans'
 
 /* =6. Main Content
 --------------------------------------------------------------------------------------------------------*/
-header { position:relative; z-index:55; width:100%}
-#content {width:100%; position:relative; z-index:56; height:auto}
+header { position:fixed;top: 0; z-index:555; width:100%; background: black;}
+/*#content {width:100%; position:relative; z-index:56; height:auto ;}*/
+#content.index {width:100%; position:relative; z-index:56; height:auto ; padding-top: 280px;}
 .container { padding:0px; width:1160px; position:relative; margin:0 auto; padding-top:30px; }
 /* =End Main Content
 --------------------------------------------------------------------------------------------------------*/
@@ -319,4 +322,5 @@ h5.actu_link {
     text-align: left;
 }
 a.ty { color:#555; text-decoration:none; border-bottom:1px solid #555; }
+
 

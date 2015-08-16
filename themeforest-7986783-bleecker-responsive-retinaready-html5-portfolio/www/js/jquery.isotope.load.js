@@ -71,6 +71,8 @@ jQuery(window).load(function($){
             isOptionLinkClicked = false;
             hashChanged = true;
         }).trigger('hashchange');
+
+
         var hash =window.location.hash;
         $optionSets.find('a[href="'+hash+'"]').addClass('selected');
         if(hash.length == 0){

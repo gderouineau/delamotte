@@ -128,7 +128,9 @@ if(isset($_GET['id'])){
                         <!--<a href="#" class="icons margin share"></a>-->
                         <div class="fb-share-button" id="fb-button" data-layout="button_count" data-href="http://jordan-delamotte.com/index.php?recette_id=<?php echo $id ;?>#filter=.recette"></div>
                         <br><br>
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?recette_id=<?php echo $id; ?>#filter=.recette" data-text="<?php echo strip_tags($title); ?>" data-count="horizontal">Tweet</a>
+                        <?php $tags = array('<br>','<br />','<br/>') ; ?>
+
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?recette_id=<?php echo $id; ?>#filter=.recette" data-text="<?php echo strip_tags(str_replace($tags,'',$title),'<br><br/><br />'); ?>" data-count="horizontal">Tweet</a>
                         <br /><br />
                         <script src="//platform.linkedin.com/in.js" type="text/javascript">
                             lang: fr_FR

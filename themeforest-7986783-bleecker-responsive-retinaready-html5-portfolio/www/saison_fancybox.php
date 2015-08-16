@@ -137,8 +137,8 @@ if(isset($_GET['id'])){
                         <!--<a href="#" class="icons margin share" rel="popover" id="share-button" data-toggle="popover" ></a>-->
                         <div class="fb-share-button" id="fb-button" data-layout="button_count" data-href="http://jordan-delamotte.com/?season_id=<?php echo $id ;?>#filter=.saison"></div>
                         <br><br>
-
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?season_id=<?php echo $id; ?>#filter=.saison" data-text="<?php echo $title; ?>" data-count="horizontal">Tweet</a>
+                        <?php $tags = array('<br>','<br />','<br/>') ; ?>
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jordan-delamotte.com/?season_id=<?php echo $id; ?>#filter=.saison" data-text="<?php echo strip_tags(str_replace($tags,'',$title),'<br><br /><br/>'); ?>" data-count="horizontal">Tweet</a>
                         <br /> <br />
                         <script src="//platform.linkedin.com/in.js" type="text/javascript">
                             lang: fr_FR

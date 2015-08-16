@@ -45,6 +45,7 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 .min-display-3 { display:none; }
 .max-display-2 , .max-display-3 { display:none; }
 .oneon3 {width: 280px; height: 280px;}
+    .not-on-3 {display: none;}
 }
 @media only screen and (min-width: 768px) {
 #options {display:block !important }
@@ -59,6 +60,7 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 
 .min-display-3 , .min-display-2 { display: none; }
 .max-display-2 { display: none; }
+
 
 }
 

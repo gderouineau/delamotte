@@ -9,11 +9,11 @@ $(window).scroll(function(){
     var scrollPercentage = ( (d-c) - s);
     if(scrollPercentage < 500){
         if(window.location.hash == '#filter=.actualite')
-            showMoreActu();
+            showMoreActu(false);
     }
 });
 
-function showMoreActu() {
+function showMoreActu(first) {
     var body = $('body');
     var load_actu = parseInt(body.attr('data-actuid'));
     var current_actu = parseInt(body.attr('data-actucurrent'));
@@ -28,6 +28,7 @@ function showMoreActu() {
         success: function (data) {
             console.log(typeof data);
             var actu_div = $('#news');
+            var actu_bienvenue = $("#actu-bienvenue");
             /*if(data.length == 0){
              var none =
              '<div class="element  clearfix col1 row1 recette white">'+
@@ -80,6 +81,27 @@ function showMoreActu() {
                  ;
                  *
                  */
+
+                /* BLOC ACTU DANS ACCUEIL */
+                if(first){
+                    if(increment <= 3){
+                        var noton3="";
+
+                        resume =
+                            '<div class="fancybox element  clearfix col1 row1 bienvenue white '+noton3+' ">' +
+                                '<a href="actu_fancybox.php?id=' + id + '" id="fancy_actu_' + id + '" class="full fancy_actu"></a>' +
+                                '<h3>' + title + '</h3>' +
+                                '<div class="borderline"></div>' +
+                                '<p class="small">' + day + ' ' + french_month + ' ' + year + '</p>' +
+                                //'<p>' + text.substr(0, max_resume_length_resume) + '...</p>' +
+                                '</div>'
+                        ;
+                        actu_bienvenue.before(resume);
+                    }
+                }
+
+                /* FIN BLOC ACTU DAND ACCUEIL */
+
 
                 if ((modulo == 4) || (modulo == 1)) {
                     full =
@@ -143,7 +165,7 @@ function showMoreActu() {
     });
 }
 $(document).ready(function(){
-    showMoreActu();
+    showMoreActu(true);
 
     $('.fancy_actu').fancybox({
         type : 'iframe',

@@ -218,7 +218,7 @@
         </div>
     </div>
 </div>
-<header>
+<header id="index-header">
     <div class="container clearfix">
         <h1 id="logo"><a href="/">Jordan Delamotte</a></h1>
         <?php if($lang=='fr'){ ?>
@@ -239,9 +239,9 @@
               <!--  <li><a href="#filter=.bienvenue" class="selected">Bienvenue</a> -->
 
                 <li><a href="#filter=.bienvenue">Accueil</a></li>
-                <li><a href="#filter=.actualite">Actualités</a></li>
                 <li><a href="#filter=.saison">C'est la saison</a></li>
                 <li><a href="#filter=.recette">Recettes</a></li>
+                <li><a href="#filter=.actualite">Actualités</a></li><br/>
                 <li><a href="#filter=.photo">Photos</a></li>
                 <li><a href="#filter=.portrait">Portrait</a></li>
                 <li><a href="#filter=.remerciement">Partenaires</a></li>
@@ -253,9 +253,9 @@
             <?php } if($lang=="en"){ ?>
             <ul class="option-set clearfix" id="option-list-up" data-option-key="filter">
                 <li><a href="#filter=.bienvenue">Home</a></li>
-                <li><a href="#filter=.actualite">News</a></li>
                 <li><a href="#filter=.saison">it's the moment</a></li>
                 <li><a href="#filter=.recette">Recipes</a></li>
+                <li><a href="#filter=.actualite">News</a></li>
                 <li><a href="#filter=.photo">Photos</a></li>
                 <li><a href="#filter=.portrait">Portrait</a></li>
                 <li><a href="#filter=.remerciement">Partners</a></li>
@@ -268,7 +268,7 @@
     </div>
 </header>
 <!-- end header -->
-<div id="content">
+<div id="content" class="index">
     <div class="container">
         <div id="container" class="clearfix">
 
@@ -340,14 +340,14 @@
 
                 </ul>
             </div>
-
+<!--
             <ul class="social clearfix">
                 <li class="twitter"><a href="https://twitter.com/ChefJordanD" target="_blank">Visitez mon compte Twitter</a></li>
                 <li class="facebook"><a href="https://www.facebook.com/Chef.JordanDelamotte" target="_blank">Visitez ma page Facebook</a></li>
-                <!--<li class="instagram"><a href="http://instagram.com/jordandelamotte" target="_blank">Visitez mon compte Instagram</a></li>-->
+                <!--<li class="instagram"><a href="http://instagram.com/jordandelamotte" target="_blank">Visitez mon compte Instagram</a></li>
                 <li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=326916999" target="_blank">Visitez mon compte Linkedin</a></li>
             </ul>
-
+-->
             <div class="element  clearfix col1 row1 bienvenue">
                 <div class="images"> <img src="images/accueil/accueil2.jpg" alt="Site Officiel - Jordan Delamotte - Ris de Veau" /> </div>
             </div>
@@ -370,6 +370,12 @@
                 </form>
             </div>
 
+<!--
+            <div class="element  clearfix col4 row-auto bienvenue">
+                <h6>Profitez-en, c'est la saison</h6>
+            </div>
+            <div id="actu-bienvenue"></div>
+-->
             <!-- fin du bloc bienvenue -->
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -632,8 +638,24 @@
                 <br /><h3>Dîner à 4 mains by Bessé Signature : 2ème édition</h3>
                 <br />
                 <p>18 Mai 2015</p>
-
-
+            </div>
+            <div class="element  clearfix col1 row1 white commpresse">
+                <a href="images/pdf/CP4MAINSHDSE7_2.pdf" class="full" target="_blank"></a>
+                <br /><h3>Menu à 4 mains : les chefs dévoilent leurs créations</h3>
+                <br />
+                <p>12 Mars 2015</p>
+            </div>
+            <div class="element  clearfix col1 row1 white commpresse">
+                <a href="images/pdf/CP4MAINSHDSE7_1.pdf" class="full" target="_blank"></a>
+                <br /><h3>2 Chefs, 4 mains, 1 menu</h3>
+                <br />
+                <p>20 Février 2015</p>
+            </div>
+            <div class="element  clearfix col1 row1 white commpresse">
+                <a href="images/pdf/CP20112014.pdf" class="full" target="_blank"></a>
+                <br /><h3>Nouvelle carte au de Sers</h3>
+                <br />
+                <p>20 Novembre 2014</p>
             </div>
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -715,6 +737,7 @@
 <script src="js/saison.js" type="text/javascript"></script>
 <script src="js/recette.js" type="text/javascript"></script>
 <script src="js/photo.js" type="text/javascript"></script>
+<script src="js/scroll-menu.js" type="text/javascript"></script>
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
