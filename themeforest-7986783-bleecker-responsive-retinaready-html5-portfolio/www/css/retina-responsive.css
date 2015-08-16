@@ -69,7 +69,8 @@ blockquote { background:url(../images/icons/bg-quote@2x.png) center 25px no-repe
 .row2.force {height : 570px;}
 .col1.force , .col2.force , .col3.force , .col4.force {height:280px;}
 .row2.forcerow {height : 570px;}
-.col4.white , .col3.white , .col2.white {padding:20px 35px 50px !important; }
+.col4.white , .col3.white , .col2.white {padding-top:20px !important; padding-bottom:  50px !important; }
+.no-side-padding { padding-right: 0; padding-left: 0;}
 .min-display-1 , .min-display-2 , .min-display-3 { display: none; }
 .actualite.col2 , .saison.col2 {display:none;}
 .actualite.col1 , .saison.col1{display:block;}

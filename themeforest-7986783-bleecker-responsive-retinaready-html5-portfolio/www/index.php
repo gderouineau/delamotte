@@ -284,7 +284,7 @@
             <!-- debut du bloc bienvenue -->
 
 
-
+            <!--
             <div class="element  clearfix col2 row1 oneon3 bienvenue white">
                 <p style="font-size: 20px;"><br/><br/><br/>
                     <?php if($lang=='fr'){ ?>
@@ -295,6 +295,10 @@
                     <a href="/?lang=en#filter=.portrait" class="full" style="text-decoration: none;">
                     </a>
                 </p>
+            </div>
+            -->
+            <div class="element  clearfix col1 row1 bienvenue">
+                <div class="images"> <img src="/images/accueil/accueil.jpg" alt="Site Officiel - Jordan Delamotte - Féra du lac Léman & Caviar"  /> </div>
             </div>
             <div class="element  clearfix col2 row1 bienvenue callbacks_container slider_1">
                 <ul class="rslides" id="slider_menu">
@@ -316,10 +320,7 @@
                 </ul>
             </div>
             <div class="element  clearfix col1 row1 bienvenue">
-                <a href="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif.jpg" data-title="La Féra du lac Léman, caviar osciètre d'Italie, pomme de terre et sauce champagne." data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="images/plats/Féra,%20caviar,sauce%20champage%20HD%20(A.%20Couturier)/féra%20modif-570.jpg" alt="La Féra du lac Léman..." class="slip" /> </div>
-                </a>
-
+                    <div class="images"> <img src="images/accueil/accueil1.jpg" alt="Site Officiel - Jordan Delamotte - Salade Niçoise" /> </div>
             </div>
 
             <div class="element  clearfix col1 row1 bienvenue callbacks_container_social slider_social ">
@@ -346,10 +347,9 @@
                 <!--<li class="instagram"><a href="http://instagram.com/jordandelamotte" target="_blank">Visitez mon compte Instagram</a></li>-->
                 <li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=326916999" target="_blank">Visitez mon compte Linkedin</a></li>
             </ul>
+
             <div class="element  clearfix col1 row1 bienvenue">
-                <a href="images/photos/saintpierre2-big.jpg" data-title="Filet de Saint Pierre, fèves, amandes et shiso rouge" data-fancybox-group="plat" class="popup">
-                    <div class="images"> <img src="images/photos/saintpierre2-small.jpg" alt="Le Saint Pierre..." class="slip"/> </div>
-                </a>
+                <div class="images"> <img src="images/accueil/accueil2.jpg" alt="Site Officiel - Jordan Delamotte - Ris de Veau" /> </div>
             </div>
             <div class="element clearfix white col1 row1 bienvenue" id="newsletter">
                 <?php if($lang=="fr"){ ?>

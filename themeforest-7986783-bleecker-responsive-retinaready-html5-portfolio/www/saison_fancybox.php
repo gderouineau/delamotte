@@ -127,7 +127,7 @@ if(isset($_GET['id'])){
                             <img src="<?php echo $photo;?>" alt="<?php echo $title;?>" />
                         </div>
                     </div>
-                    <article class="clearfix col2 row-auto white white-bottom auto">
+                    <article class="clearfix col2 row-auto white white-bottom auto no-side-padding">
                         <h3><?php echo $title ?></h3>
                         <div class="borderline"></div>
                         <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par <?php echo $auteur; ?></p>
