@@ -297,7 +297,7 @@
                 </p>
             </div>
             -->
-            <div class="element  clearfix col1 row1 bienvenue">
+            <div class="element  clearfix col2 row1 bienvenue">
                 <div class="images"> <img src="/images/accueil/accueil.jpg" alt="Site Officiel - Jordan Delamotte - Féra du lac Léman & Caviar"  /> </div>
             </div>
             <div class="element  clearfix col2 row1 bienvenue callbacks_container slider_1">
