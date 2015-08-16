@@ -148,7 +148,7 @@ $(document).ready(function(){
     $('.fancy_actu').fancybox({
         type : 'iframe',
         autoScale: true,
-        width: 768,
+        width: 788,
         helpers : {
             overlay : {
                 css : {
@@ -179,7 +179,7 @@ $(document).ready(function(){
                 $("#fancy_actu_"+$_GET['actu_id']).fancybox({
                     type : 'iframe',
                     autoScale: true,
-                    width: 768,
+                    width: 788,
                     helpers : {
                         overlay : {
                             css : {

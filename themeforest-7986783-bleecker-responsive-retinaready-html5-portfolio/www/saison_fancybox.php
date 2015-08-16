@@ -66,11 +66,11 @@ if(isset($_GET['id'])){
         <title>Jordan Delamotte - Site Officiel</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="css/actualite.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="screen">
-        <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <!--<link href="css/actualite.css" rel="stylesheet" type="text/css" media="screen" />-->
+        <!--<link href="css/flexslider.css" rel="stylesheet" type="text/css" media="screen">-->
+        <!--<link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />-->
+        <!--<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />-->
+        <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="screen" />-->
         <!--[if gt IE 8]><!--><link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" /><!--<![endif]-->
         <!--[if !IE]> <link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" /> <![endif]-->
         <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
