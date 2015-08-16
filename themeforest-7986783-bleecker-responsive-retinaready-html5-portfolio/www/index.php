@@ -331,7 +331,7 @@
                         <a href="https://twitter.com/ChefJordanD" target="_blank"><img src="images/icons_social/twitter.png" alt=""></a>
                     </li>
                     <li>
-                        <a href="http://instagram.com/jordandelamotte" target="_blank"><img src="images/icons_social/instagram.png" alt=""></a>
+                        <a href="http://instagram.com/jordan.delamotte" target="_blank"><img src="images/icons_social/instagram.png" alt=""></a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/profile/view?id=326916999" target="_blank"><img src="images/icons_social/linkedin.png" alt=""></a>
@@ -448,7 +448,7 @@
             <!-- bloc contact  -->
 
             <div class="element clearfix photo-contact min-display-1 contact">
-                <div class="images"> <img id="nicoise_contact" src="" alt="La salade niçoise..." class="slip" /> </div>
+                <div class="images"> <img id="nicoise_contact" src="" alt="" class="" /> </div>
             </div>
 
 

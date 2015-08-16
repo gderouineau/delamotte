@@ -100,7 +100,7 @@ h5 {font-size:16px; padding-top:22px; line-height:24px; font-family: 'Open Sans'
 #options { width:auto; /*height:100px;*/ z-index:300; text-align:center; white-space: nowrap;}
 #options ul { position:relative; padding:0; border:0; font-size: 0; display:inline-block }
 #options ul li {display:inline-block; height:100%; width:auto; }
-#options ul li a { color:#888; font-family: "Open Sans", Arial, Helvetica, sans-serif; display:inline-block; padding:5px 15px; text-decoration:none; text-transform:uppercase; height:100%; font-size:12px; line-height:19px; letter-spacing:2px; font-weight:400; margin:0 }
+#options ul li a { color:#888; font-family: "Open Sans", Arial, Helvetica, sans-serif; display:inline-block; padding:5px 15px; text-decoration:none; text-transform:uppercase; height:100%; font-size:20px; line-height:19px; letter-spacing:2px; font-weight:400; margin:0 }
 #options li a:hover, #options li a.current, #options li a.selected { color:#fff;}
 .dead-link {cursor:default !important }
 /* End Main Nav
@@ -318,3 +318,4 @@ h5.actu_link {
     text-align: left;
 }
 a.ty { color:#555; text-decoration:none; border-bottom:1px solid #555; }
+

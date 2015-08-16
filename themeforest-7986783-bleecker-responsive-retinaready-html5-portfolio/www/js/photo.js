@@ -248,8 +248,8 @@ function fancy_photo(){
 $(document).ready(function(){
     var width = document.documentElement.clientWidth;
     var $photoContact = $('#nicoise_contact');
-    var src = 'images/photos/contact/img_contact';
-    var ext = '.jpg';
+    var src = 'images/contact/img_contact';
+    var ext = '.jpeg';
     if(width <= 767){
         $photoContact.attr('src',src+'1x1'+ext);
     }
