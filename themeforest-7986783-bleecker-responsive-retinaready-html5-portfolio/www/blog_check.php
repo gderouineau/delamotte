@@ -13,7 +13,7 @@ if(isset($_GET['files']))
     $error = false;
     $files = array();
 
-    $uploaddir = 'images/photos/';
+    $uploaddir = 'images/tofsactualite/';
     foreach($_FILES as $file)
     {
         if(move_uploaded_file($file['tmp_name'], $uploaddir .'blog_'.basename($file['name'])))
@@ -42,7 +42,7 @@ if(isset($_POST['title']) && isset($_POST['text'])){
     $text = $_POST['text'];
     $author = $_POST['author'];
     $author_id = $_POST['authorid'];
-    $photo = 'images/photos/'.'blog_'.$_POST['photoname'];
+    $photo = 'images/tofsactualite/'.'blog_'.$_POST['photoname'];
     $db = new PDO('mysql:host=mysql51-136.perso;dbname=jordandefmbdd', 'jordandefmbdd', 'hgz5pTRuktht');
     $query =
         'INSERT INTO actualite VALUES (
