@@ -64,12 +64,20 @@
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if IE 9]> <html class="no-js ie9 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"  dir="ltr" lang="en"> <!--<![endif]-->
-<?php } if($lang=="fr"){ ?>
+<?php } ?>
+<?php if($lang=="fr"){ ?>
 <!--[if gt IE 6]> <html class="no-js ie oldie" lang="fr"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="fr"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="fr"> <![endif]-->
 <!--[if IE 9]> <html class="no-js ie9 oldie" lang="fr"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"  dir="ltr" lang="fr"> <!--<![endif]-->
+<?php }?>
+<?php if($lang=="fr"){ ?>
+<!--[if gt IE 6]> <html class="no-js ie oldie" lang="ru"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="ru"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="ru"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9 oldie" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"  dir="ltr" lang="ru"> <!--<![endif]-->
 <?php }?>
 <head>
     <meta charset="utf-8">
@@ -81,12 +89,22 @@
         <meta name="Description" content="le Site de lifestyle culinaire. Recettes, actu, produits de saison, reportages, photos, vivez la cuisine à travers les yeux de Jordan Delamotte. " />
         <meta name="keywords" content="chef, chef paris, jordan delamotte, chef jordan delamotte, restaurant, hôtel de Sers, cuisine, martinique, caraïbes, antilles, créole, cap est, Cap Est Lagoon Resort & Spa, Delamotte, dom, dom tom"/>
         <meta name="msvalidate.01" content="08410D872342AF06D88C7F32A1D1E595" />
+        <meta name="language" content="fr-FR" />
         <title>Jordan Delamotte - Site Officiel</title>
 
-    <?php } if($lang=="en"){?>
+    <?php } ?>
+    <?php if($lang=="en"){?>
         <meta name="Description" content="Culinary Lifestyle Website. Recipes, actuality, seasonnal product, documantary, pics, live cooking through the eyes of Jordan Delamotte. " />
         <meta name="keywords" content="chef, chef paris, jordan delamotte, chef jordan delamotte, restaurant, hotel de Sers, food, cap est, cooking, french, gastronomy, France, caribean"/>
         <meta name="msvalidate.01" content="08410D872342AF06D88C7F32A1D1E595" />
+        <meta name="language" content="en-EN" />
+        <title>Jordan Delamotte - Offical Website</title>
+    <?php } ?>
+    <?php if($lang=="ru"){?>
+        <meta name="Description" content="Culinary Lifestyle Website. Recipes, actuality, seasonnal product, documantary, pics, live cooking through the eyes of Jordan Delamotte. " />
+        <meta name="keywords" content="chef, chef paris, jordan delamotte, chef jordan delamotte, restaurant, hotel de Sers, food, cap est, cooking, french, gastronomy, France, caribean"/>
+        <meta name="msvalidate.01" content="08410D872342AF06D88C7F32A1D1E595" />
+        <meta name="language" content="ru-RU" />
         <title>Jordan Delamotte - Offical Website</title>
     <?php } ?>
     <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen" />
@@ -224,12 +242,22 @@
 </div>
 <header id="index-header">
     <div class="container clearfix">
-        <h1 id="logo"><a href="/">Jordan Delamotte</a></h1>
-        <?php if($lang=='fr'){ ?>
-            <a href="/?lang=en" id="lang">English</a>
-        <?php } if($lang=='en'){  ?>
-            <a href="/?lang=fr" id="lang">Français</a>
-        <?php } ?>
+        <h1 id="logo"><a href="/">Jordan Delamotte</a></h1 >
+        <div class="lang">
+            <?php if($lang=='fr'){ ?>
+                <a href="/?lang=fr" id="lang" class="langActive">FR</a>
+                <a href="/?lang=en" id="lang">EN</a>
+                <a href="/?lang=ru" id="lang">RU</a>
+            <?php } if($lang=='en'){  ?>
+                <a href="/?lang=fr" id="lang">FR</a>
+                <a href="/?lang=en" id="lang" class="langActive">EN</a>
+                <a href="/?lang=ru" id="lang">RU</a>
+            <?php } if($lang=='ru'){  ?>
+                <a href="/?lang=fr" id="lang">FR</a>
+                <a href="/?lang=en" id="lang">EN</a>
+                <a href="/?lang=ru" id="lang" class="langActive">RU</a>
+            <?php } ?>
+            </div>
         <!-- start main nav -->
         <div id="nav-button"> <span class="nav-bar"></span> <span class="nav-bar"></span> <span class="nav-bar"></span> </div>
         <div id="options" class="clearfix">
@@ -251,15 +279,15 @@
                 <li><a href="#filter=.remerciement">Partenaires</a></li>
                 <li><a href="#filter=.presse">Presse</a></li>
                 <li><a href="#filter=.contact">Contact</a>
-
-
             </ul>
-            <?php } if($lang=="en"){ ?>
+            <?php } ?>
+
+            <?php if($lang=="en"){ ?>
             <ul class="option-set clearfix" id="option-list-up" data-option-key="filter">
                 <li><a href="#filter=.bienvenue">Home</a></li>
-                <li><a href="#filter=.saison">it's the moment</a></li>
+                <li><a href="#filter=.saison">Seasonal Product</a></li>
                 <li><a href="#filter=.recette">Recipes</a></li>
-                <li><a href="#filter=.actualite">News</a></li>
+                <li><a href="#filter=.actualite">News</a></li><br/>
                 <li><a href="#filter=.photo">Photos</a></li>
                 <li><a href="#filter=.portrait">Portrait</a></li>
                 <li><a href="#filter=.remerciement">Partners</a></li>
@@ -267,6 +295,21 @@
                 <li><a href="#filter=.contact">Contact</a></li>
             </ul>
             <?php } ?>
+
+            <?php if($lang=="ru"){ ?>
+            <ul class="option-set clearfix" id="option-list-up" data-option-key="filter">
+                <li><a href="#filter=.bienvenue">Home</a></li>
+                <li><a href="#filter=.saison">Seasonal Product</a></li>
+                <li><a href="#filter=.recette">Recipes</a></li>
+                <li><a href="#filter=.actualite">News</a></li><br/>
+                <li><a href="#filter=.photo">Photos</a></li>
+                <li><a href="#filter=.portrait">Portrait</a></li>
+                <li><a href="#filter=.remerciement">Partners</a></li>
+                <li><a href="#filter=.presse">Press</a></li>
+                <li><a href="#filter=.contact">Contact</a></li>
+            </ul>
+            <?php } ?>
+
         </div>
         <!-- end main nav -->
     </div>
@@ -304,6 +347,8 @@
             <div class="element  clearfix col2 row1 bienvenue">
                 <div class="images"> <img src="/images/accueil/accueil.jpg" alt="Site Officiel - Jordan Delamotte - Féra du lac Léman & Caviar"  /> </div>
             </div>
+
+            <?php if($lang=="fr"){?>
             <div class="element  clearfix col2 row1 bienvenue callbacks_container slider_1">
                 <ul class="rslides" id="slider_menu">
                     <li>
@@ -323,6 +368,53 @@
                     </li>
                 </ul>
             </div>
+            <?php } ?>
+
+            <?php if($lang=="en"){?>
+            <div class="element  clearfix col2 row1 bienvenue callbacks_container slider_1">
+                <ul class="rslides" id="slider_menu">
+                    <li>
+                        <a href="#filter=.actualite" ><img src="images/slider1/img-lien-actualites.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.saison" ><img src="images/slider1/img-lien-produitsdesaison.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.recette" ><img src="images/slider1/img-lien-recettes.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.photo" ><img src="images/slider1/img-lien-photos.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.portrait" ><img src="images/slider1/img-lien-portrait.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+
+            <?php } ?>
+            <?php if($lang=="ru"){?>
+            <div class="element  clearfix col2 row1 bienvenue callbacks_container slider_1">
+                <ul class="rslides" id="slider_menu">
+                    <li>
+                        <a href="#filter=.actualite" ><img src="images/slider1/img-lien-actualites.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.saison" ><img src="images/slider1/img-lien-produitsdesaison.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.recette" ><img src="images/slider1/img-lien-recettes.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.photo" ><img src="images/slider1/img-lien-photos.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#filter=.portrait" ><img src="images/slider1/img-lien-portrait.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <?php } ?>
+
+
             <div class="element  clearfix col1 row1 bienvenue">
                     <div class="images"> <img src="images/accueil/accueil1.jpg" alt="Site Officiel - Jordan Delamotte - Salade Niçoise" /> </div>
             </div>
@@ -704,7 +796,13 @@
             <ul class="option-set clearfix" id="option-list-down" data-option-key="filter">
                 <li><a href="#filter=.legals">Mentions légales</a></li>
             </ul>
-            <?php } if($lang=='en'){ ?>
+            <?php } ?>
+            <?php if($lang=='en'){ ?>
+            <ul class="option-set clearfix" id="option-list-down" data-option-key="filter">
+                <li><a href="#filter=.legals">Imprint</a></li>
+            </ul>
+            <?php } ?>
+            <?php if($lang=='ru'){ ?>
             <ul class="option-set clearfix" id="option-list-down" data-option-key="filter">
                 <li><a href="#filter=.legals">Imprint</a></li>
             </ul>

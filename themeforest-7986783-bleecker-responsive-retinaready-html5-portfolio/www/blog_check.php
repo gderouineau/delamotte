@@ -6,14 +6,18 @@ $photo = "";
 $title = "";
 $text  = "";
 $date  = date("Y-m-d H:i:s");
-$place = 0;
 $rand = rand(1,99999);
+
+$direction='actualite';
+if(isset($_POST['AS'])){
+    $direction=$_POST['AS'];
+}
 if(isset($_GET['files']))
 {
     $error = false;
     $files = array();
 
-    $uploaddir = 'images/tofsactualite/';
+    $uploaddir = 'images/tofs'.$direction.'/';
     foreach($_FILES as $file)
     {
         if(move_uploaded_file($file['tmp_name'], $uploaddir .'blog_'.basename($file['name'])))
@@ -40,6 +44,7 @@ else
 if(isset($_POST['title']) && isset($_POST['text'])){
     $title = $_POST['title'];
     $text = $_POST['text'];
+    $lang = $_POST['language'];
     $author = $_POST['author'];
     $author_id = $_POST['authorid'];
     $photo = 'images/tofsactualite/'.'blog_'.$_POST['photoname'];
@@ -47,8 +52,8 @@ if(isset($_POST['title']) && isset($_POST['text'])){
     $query =
         'INSERT INTO actualite VALUES (
         null,
-        \''.addslashes(urldecode($place)).'\' ,
-        \''.$language.'\',
+        \''.addslashes(urldecode($direction)).'\' ,
+        \''.addslashes(urldecode($lang)).'\' ,
         \''.addslashes(urldecode($title)).'\',
         \''.addslashes(urldecode($text)).'\',
         \''.addslashes($date).'\',

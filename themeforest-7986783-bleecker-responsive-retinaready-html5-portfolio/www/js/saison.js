@@ -19,16 +19,19 @@ function showMoreSeason() {
     var current_season = parseInt(body.attr('data-seasoncurrent'));
     body.attr('data-seasoncurrent', (load_season + 1));
 
+    var lang = body.attr('data-lang');
+
+
     if(load_season == current_season)
         $.ajax({
             url: 'saison.php',
             type: 'get',
-            data: {season_id: load_season},
+            data: {season_id: load_season , lang: lang},
             dataType: 'json',
             success: function (data) {
                 console.log(typeof data);
                 var season_div = $('#season');
-                /*if(data.length == 0){
+                if(data.length == 0){
                  var none =
                  '<div class="element  clearfix col1 row1 recette white">'+
                  '<p> Aucune actualit&eacute; pour le moment. <br>Vous pouvez cependant vous inscrire &agrave; la newsletter</p>'+
@@ -47,7 +50,7 @@ function showMoreSeason() {
                  recette_div.after(none);
                  $('#container').isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });
 
-                 }*/
+                 }
                 var increment = 0;
                 for (var key in data) {
 

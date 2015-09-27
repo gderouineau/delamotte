@@ -130,7 +130,7 @@ if(isset($_GET['id'])){
                     <article class="clearfix col2 row-auto white white-bottom auto no-side-padding">
                         <h3><?php echo $title ?></h3>
                         <div class="borderline"></div>
-                        <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; par <?php echo $auteur; ?></p>
+                        <p class="small"><?php echo $day.' '.$french_month.' '.$year;?> &nbsp;&middot;&nbsp; <?php echo $auteur; ?></p>
                         <div style="text-align: justify;text-justify: inter-word;"><?php echo $text ?></div>
                         <div class="break"></div>
                         <!--<a href="#" class="icons margin like"></a>-->

@@ -52,6 +52,21 @@ else{
                         ----------------------------------------------------------------------------------------------->
                         <h3 class="bloginput input">Photo</h3>
                         <input class='bloginput input' type="file" id="blogphotoinput" name="blogphotoinput" >
+
+                        <h3 class="bloginput input">Langue</h3>
+                        <label class='bloginput input' for="bloglanguageFRinput">Francais</label>
+                        <input class='bloginput input' type="radio" id="bloglanguageFRinput" name="bloglanguageinput" value="fr">
+                        <label class='bloginput input' for="bloglanguageENinput">Anglais</label>
+                        <input class='bloginput input' type="radio" id="bloglanguageENinput" name="bloglanguageinput" value="en">
+                        <label class='bloginput input' for="bloglanguageRUinput">Russe</label>
+                        <input class='bloginput input' type="radio" id="bloglanguageRUinput" name="bloglanguageinput" value="ru">
+
+                        <h3 class="bloginput input">Actu ou Saison</h3>
+                        <label class='bloginput input' for="blogSAinput">Actualite</label>
+                        <input class='bloginput input' type="radio" id="blogSAinput" name="blogActuOrSeasoninput" value="actualite">
+                        <label class='bloginput input'  for="blogSSinput">Produit de saison</label>
+                        <input class='bloginput input' type="radio" id="blogSSinput" name="blogActuOrSeasoninput" value="saison">
+
                         <h3 class="bloginput input">Titre</h3>
                         <textarea class="bloginput input" id="blogtitleinput" name="blogtitleinput" onkeyup="blogChange();"></textarea>
                         <h3 class="bloginput input">Texte</h3>
@@ -64,6 +79,13 @@ else{
                         ----------------------------------------------------------------------------------------------->
                         <h3 class="recetteinput input">Photo</h3>
                         <input class='recetteinput input' type="file" id="recettephotoinput" name="recettephotoinput" >
+                        <h3 class="recetteinput input">Langue</h3>
+                        <label class='recetteinput input' for="recettelanguageFRinput">Francais</label>
+                        <input class='recetteinput input' type="radio" id="recettelanguageFRinput" name="recettelanguageinput" value="fr">
+                        <label class='recetteinput input' for="recettelanguageENinput">Anglais</label>
+                        <input class='recetteinput input' type="radio" id="recettelanguageENinput" name="recettelanguageinput" value="en">
+                        <label class='recetteinput input' for="recettelanguageRUinput">Russe</label>
+                        <input class='recetteinput input' type="radio" id="recettelanguageRUinput" name="recettelanguageinput" value="ru">
                         <h3 class="recetteinput input">Nombre de personnes</h3>
                         <input class='recetteinput input' type="number" id="recettenbpersinput" name="recettenbpersinput" >
                         <h3 class="recetteinput input">Ingr&eacute;dients</h3>

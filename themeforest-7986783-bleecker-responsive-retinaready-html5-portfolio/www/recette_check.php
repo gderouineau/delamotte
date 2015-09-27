@@ -71,6 +71,7 @@ else
 
 if(isset($_POST['title']) && isset($_POST['text'])){
     $title = $_POST['title'];
+    $language = $_POST['language'];
     $text = $_POST['text'];
     $nbPers = $_POST['nbpers'];
     $Ingredients = $_POST['ingredients'];
@@ -80,7 +81,7 @@ if(isset($_POST['title']) && isset($_POST['text'])){
     $query =
         'INSERT INTO recette VALUES (
         null,
-        \''.$language.'\',
+        \''.addslashes(urldecode($language)).'\',
         \''.addslashes(urldecode($title)).'\',
         \''.addslashes(urldecode($text)).'\',
         \''.addslashes($Ingredients).'\',

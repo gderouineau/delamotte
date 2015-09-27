@@ -78,6 +78,8 @@ $(function()
         var body = $('body');
         formData='title='+encodeURIComponent($('#blogtitleinput').val())+'&'+formData;
         formData='text='+encodeURIComponent($('#blogtextinput').val())+'&'+formData;
+        formData='language='+encodeURIComponent($('input[name="bloglanguageinput"]:checked').val())+'&'+formData;
+        formData='AS='+encodeURIComponent($('input[name="blogActuOrSeasoninput"]:checked').val())+'&'+formData;
         formData='author='+encodeURIComponent(body.data('username'))+'&'+formData;
         formData='authorid='+encodeURIComponent(body.data('userid'))+'&'+formData;
         var rand = Math.floor((Math.random() * 10) + 1);

@@ -104,7 +104,7 @@ if(isset($_GET['id'])){
                     </div>
                     <article class="clearfix col2 row-auto white white-bottom auto no-side-padding">
                         <h3><?php echo $title ?></h3>
-                        <p class="small">  par Jordan Delamotte</p>
+                        <p class="small">  Jordan-Delamotte.com</p>
                         <div class="borderline"></div>
                         <h4>Ingredients</h4>
                         <p class="small">pour <?php echo $nb_personnes ; ?> personnes</p>

@@ -5,15 +5,14 @@ $(document).ready(function(){
 
     var body = $('body');
     var lang = body.attr('data-lang');
-
-    $.get({
+    console.log(lang);
+    $.ajax({
         url :'recette.php',
         type : 'get',
         data : {lang : lang},
         dataType : 'json',
         success: function (data) {
 
-            data = JSON.parse(data);
             var recette_div = $('#recettes');
             if (data.length == 0) {
                 var none =

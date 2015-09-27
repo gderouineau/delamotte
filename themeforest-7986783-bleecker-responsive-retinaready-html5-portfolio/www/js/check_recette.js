@@ -87,6 +87,7 @@ $(function()
         }
         var ingredients = JSON.stringify(array_of_ingredients);
         formData='title='+encodeURIComponent($('#recettetitleinput').val())+'&'+formData;
+        formData='language='+encodeURIComponent($('input[name="recettelanguageinput"]:checked').val())+'&'+formData;
         formData='text='+encodeURIComponent($('#recettetextinput').val())+'&'+formData;
         formData='nbpers='+$('#recettenbpersinput').val()+'&'+formData;
         formData='ingredients='+ingredients+'&'+formData;

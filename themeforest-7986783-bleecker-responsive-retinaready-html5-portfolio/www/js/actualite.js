@@ -31,7 +31,7 @@ function showMoreActu(first) {
             console.log(typeof data);
             var actu_div = $('#news');
             var actu_bienvenue = $("#actu-bienvenue");
-            /*if(data.length == 0){
+            if(data.length == 0){
              var none =
              '<div class="element  clearfix col1 row1 recette white">'+
              '<p> Aucune actualit&eacute; pour le moment. <br>Vous pouvez cependant vous inscrire &agrave; la newsletter</p>'+
@@ -50,7 +50,7 @@ function showMoreActu(first) {
              recette_div.after(none);
              $('#container').isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });
 
-             }*/
+             }
             var increment = 0;
             for (var key in data) {
 
@@ -116,7 +116,7 @@ function showMoreActu(first) {
                         '<article class="clearfix col2-3 white white-bottom auto">' +
                         '<h3>' + title + '</h3>' +
                         '<div class="borderline"></div>' +
-                        '<p class="small">' + day + ' ' + french_month + ' ' + date.getFullYear() + ' ' + '&nbsp;&middot;&nbsp; par Jordan Delamotte' + '</p>' +
+                        '<p class="small">' + day + ' ' + french_month + ' ' + date.getFullYear() + ' ' + '&nbsp;&middot;&nbsp; Jordan-Delamotte.com' + '</p>' +
                         '<p style="text-align: justify;text-justify: inter-word;">' + text.substr(0, max_resume_length_full) + '...</p>' +
                         '<div class="break"></div>' +
                         '<a href="#" class="icons margin like"></a> <a href="#" class="icons margin share"></a>' +
