@@ -3,46 +3,40 @@
  */
 $(document).ready(function(){
 
-    $.get(
-        'recette.php',
+    var body = $('body');
+    var lang = body.attr('data-lang');
 
-        function(data){
+    $.get({
+        url :'recette.php',
+        type : 'get',
+        data : {lang : lang},
+        dataType : 'json',
+        success: function (data) {
 
             data = JSON.parse(data);
             var recette_div = $('#recettes');
-            if(data.length == 0){
+            if (data.length == 0) {
                 var none =
-                    '<div class="element  clearfix col1 row1 recette white">'+
-                        '<p> Aucune recette pour le moment. <br>Vous pouvez cependant vous inscrire &agrave; la newsletter</p>'+
-                    '</div>'+
-                    '<div class="element clearfix white col1 row1 recette" id="newsletter">'+
-                        '<h4>Abonnez-vous à la newsletter.</h4>'+
-                        '<form>'+
-                            '<p>'+
-                                'email: <input type="text" id="newsletter_email" value ="" />'+
-                                '<p id="newsletter_submit">Envoyer</p>'+
-                            '</p>'+
-                        '</form>'+
-                    '</div>'
+                        '<div class="element  clearfix col1 row1 recette white">' +
+                        '<p> Aucune recette pour le moment. <br>Vous pouvez cependant vous inscrire &agrave; la newsletter</p>' +
+                        '</div>' +
+                        '<div class="element clearfix white col1 row1 recette" id="newsletter">' +
+                        '<h4>Abonnez-vous à la newsletter.</h4>' +
+                        '<form>' +
+                        '<p>' +
+                        'email: <input type="text" id="newsletter_email" value ="" />' +
+                        '<p id="newsletter_submit">Envoyer</p>' +
+                        '</p>' +
+                        '</form>' +
+                        '</div>'
                     ;
 
                 recette_div.after(none);
-                $('#container').isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });
+                $('#container').isotope('reloadItems').isotope({sortBy: 'original-order'});
 
             }
-            for(var key in data){
-                var   id = data[key]['id']
-                    , place = data[key]['place']
-                    , title = data[key]['title']
-                    , text = data[key]['text']
-                    , date = new Date(data[key]['date'])
-                    , photo = data[key]['photo']
-                    , photo_small = data[key]['photo_small']
-                    , month = date.getMonth()
-                    , day = date.getDate()
-                    , french_month=get_month(month)
-                    , full = ""
-                    , resume = ""
+            for (var key in data) {
+                var id = data[key]['id'], place = data[key]['place'], title = data[key]['title'], text = data[key]['text'], date = new Date(data[key]['date']), photo = data[key]['photo'], photo_small = data[key]['photo_small'], month = date.getMonth(), day = date.getDate(), french_month = get_month(month), full = "", resume = ""
                     ;
                 /*
                  resume =
@@ -57,23 +51,26 @@ $(document).ready(function(){
                  */
                 resume =
                     '<div class="fancybox element  clearfix col1 row1 recette force" >' +
-                        '<a href="/recette_fancybox.php?id='+id+'" id="fancy_recette_'+id+'" class="full fancy_recette">'+
-                            '<div class="images"> <img src="'+photo_small+'" alt="<a href=\'/recette_fancybox.php?id='+id+'\' class=\'full fancy_recette\'></a>'+title+'" class="slip" id="slip_'+id+'"/> </div>'+
-                        '</a>'+
+                    '<a href="/recette_fancybox.php?id=' + id + '" id="fancy_recette_' + id + '" class="full fancy_recette">' +
+                    '<div class="images"> <img src="' + photo_small + '" alt="<a href=\'/recette_fancybox.php?id=' + id + '\' class=\'full fancy_recette\'></a>' + title + '" class="slip" id="slip_' + id + '"/> </div>' +
+                    '</a>' +
                     '</div>'
                 ;
 
                 recette_div.after(resume);
                 //$('#container').sliphover();
                 //$('#slip_'+id).sliphover();
-                $('#container').isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });
+                $('#container').isotope('reloadItems').isotope({sortBy: 'original-order'});
 
             }
 
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.status);
+            console.log(thrownError);
+
         }
-
-
-    );
+    });
 
 
     $('.fancy_recette').fancybox({

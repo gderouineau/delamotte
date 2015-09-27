@@ -1,7 +1,7 @@
 <?php
 
 $data = array();
-
+$language = 'fr';
 $photo = "";
 $title = "";
 $text  = "";
@@ -48,6 +48,7 @@ if(isset($_POST['title']) && isset($_POST['text'])){
         'INSERT INTO actualite VALUES (
         null,
         \''.addslashes(urldecode($place)).'\' ,
+        \''.$language.'\',
         \''.addslashes(urldecode($title)).'\',
         \''.addslashes(urldecode($text)).'\',
         \''.addslashes($date).'\',

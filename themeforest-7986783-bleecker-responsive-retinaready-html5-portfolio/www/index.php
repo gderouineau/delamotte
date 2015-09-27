@@ -77,13 +77,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="guillaume derouineau">
     <!-- description du site ce qui apparaitra dans google -->
-    <meta name="Description" content="Bienvenue sur le Site Officel de Jordan Delamotte, Chef de cuisine passionné..." />
-    <meta name="keywords" content="chef, chef paris, jordan delamotte, chef jordan delamotte, restaurant de Sers, hotel de Sers, cuisine"/>
-    <meta name="msvalidate.01" content="08410D872342AF06D88C7F32A1D1E595" />
-    <?php if($lang=="fr"){ ?>
-    <title>Jordan Delamotte - Site Officiel</title>
+    <?php if($lang =='fr'){ ?>
+        <meta name="Description" content="le Site de lifestyle culinaire. Recettes, actu, produits de saison, reportages, photos, vivez la cuisine à travers les yeux de Jordan Delamotte. " />
+        <meta name="keywords" content="chef, chef paris, jordan delamotte, chef jordan delamotte, restaurant, hôtel de Sers, cuisine, martinique, caraïbes, antilles, créole, cap est, Cap Est Lagoon Resort & Spa, Delamotte, dom, dom tom"/>
+        <meta name="msvalidate.01" content="08410D872342AF06D88C7F32A1D1E595" />
+        <title>Jordan Delamotte - Site Officiel</title>
+
     <?php } if($lang=="en"){?>
-    <title>Jordan Delamotte - Offical Website</title>
+        <meta name="Description" content="Culinary Lifestyle Website. Recipes, actuality, seasonnal product, documantary, pics, live cooking through the eyes of Jordan Delamotte. " />
+        <meta name="keywords" content="chef, chef paris, jordan delamotte, chef jordan delamotte, restaurant, hotel de Sers, food, cap est, cooking, french, gastronomy, France, caribean"/>
+        <meta name="msvalidate.01" content="08410D872342AF06D88C7F32A1D1E595" />
+        <title>Jordan Delamotte - Offical Website</title>
     <?php } ?>
     <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen" />
     <!--<meta http-equiv="expires" content="0">-->
@@ -195,7 +199,7 @@
     <?php } ?>
 
 </head>
-<body data-showphoto="1" data-showphotomax="3" data-actuid="0" data-actucurrent="0" data-seasonid="0" data-seasoncurrent="0" data-photoid="0" data-photocurrent="0">
+<body data-showphoto="1" data-showphotomax="3" data-actuid="0" data-actucurrent="0" data-seasonid="0" data-seasoncurrent="0" data-photoid="0" data-photocurrent="0" data-lang="<?php echo $lang; ?>">
 
 <!-- facebook share button plugin -->
 <div id="fb-root"></div>

@@ -19,11 +19,13 @@ function showMoreActu(first) {
     var current_actu = parseInt(body.attr('data-actucurrent'));
     body.attr('data-actucurrent', (load_actu + 1));
 
+    var lang = body.attr('data-lang');
+
     if(load_actu == current_actu)
     $.ajax({
         url: 'actualite.php',
         type: 'get',
-        data: {actu_id: load_actu},
+        data: {actu_id: load_actu, lang : lang},
         dataType: 'json',
         success: function (data) {
             console.log(typeof data);

@@ -6,7 +6,7 @@ $photo = "";
 $title = "";
 $text  = "";
 $date  = date("Y-m-d H:i:s");
-$place = 0;
+$language = 'fr';
 $rand = rand(1,99999);
 if(isset($_GET['files']))
 {
@@ -80,7 +80,7 @@ if(isset($_POST['title']) && isset($_POST['text'])){
     $query =
         'INSERT INTO recette VALUES (
         null,
-        '.$place.',
+        \''.$language.'\',
         \''.addslashes(urldecode($title)).'\',
         \''.addslashes(urldecode($text)).'\',
         \''.addslashes($Ingredients).'\',
