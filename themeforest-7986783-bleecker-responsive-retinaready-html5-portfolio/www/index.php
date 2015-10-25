@@ -1,3 +1,5 @@
+
+
 <?php
 
     $title='';
@@ -91,7 +93,6 @@
         <meta name="msvalidate.01" content="08410D872342AF06D88C7F32A1D1E595" />
         <meta name="language" content="fr-FR" />
         <title>Jordan Delamotte - Site Officiel</title>
-
     <?php } ?>
     <?php if($lang=="en"){?>
         <meta name="Description" content="Culinary Lifestyle Website. Recipes, actuality, seasonnal product, documantary, pics, live cooking through the eyes of Jordan Delamotte. " />
@@ -118,7 +119,7 @@
     <link href="css/responsiveslides.css" rel="stylesheet" type="text/css" media="screen" />
     <!--[if gt IE 8]><!--><link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" /><!--<![endif]-->
     <!--[if !IE]> <link href="css/retina-responsive.css" rel="stylesheet" type="text/css" media="screen" /> <![endif]-->
-    <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
+    <!--<link href="css/print.css" rel="stylesheet" type="text/css" media="print" />-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic,700,600,800' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Lora:400italic,400,700italic' rel='stylesheet' type='text/css' />
     <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon"/>
@@ -258,7 +259,10 @@
                 <a href="/?lang=ru" id="lang" class="langActive">RU</a>
             <?php } ?>
             </div>
-        <!-- start main nav -->
+
+
+        <!-- DUBUT DU BLOC MENU -->
+        <!-------------------------------------------------------------------------------------------------------------------------------------------->
         <div id="nav-button"> <span class="nav-bar"></span> <span class="nav-bar"></span> <span class="nav-bar"></span> </div>
         <div id="options" class="clearfix">
             <!-- menu dans le cas ou tu voudrais ajouter ou supprimer des options
@@ -311,7 +315,8 @@
             <?php } ?>
 
         </div>
-        <!-- end main nav -->
+        <!-- FIN DU BLOC MENU -->
+        <!------------------------------------------------------------------------------------------------------------------------------------------->
     </div>
 </header>
 <!-- end header -->
@@ -328,26 +333,14 @@
 
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- debut du bloc bienvenue -->
+            <!-- DEBUT DU BLOC ACCUEIL -->
 
-
-            <!--
-            <div class="element  clearfix col2 row1 oneon3 bienvenue white">
-                <p style="font-size: 20px;"><br/><br/><br/>
-                    <?php if($lang=='fr'){ ?>
-                    Bienvenue sur le Site Officiel de Jordan Delamotte, <br/> Chef de cuisine passionné...
-                    <?php } if($lang=='en'){ ?>
-                    Welcome on Jordan Delamotte official website, <br/> passionate Chef...
-                    <?php } ?>
-                    <a href="/?lang=en#filter=.portrait" class="full" style="text-decoration: none;">
-                    </a>
-                </p>
-            </div>
-            -->
             <div class="element  clearfix col2 row1 bienvenue">
                 <div class="images"> <img src="/images/accueil/accueil.jpg" alt="Site Officiel - Jordan Delamotte - Féra du lac Léman & Caviar"  /> </div>
             </div>
 
+            <!-- DEBUT DU BLOC SLIDER -- >
+            <!-------------------------------------------------------------------------------------------------------------------------------------------->
             <?php if($lang=="fr"){?>
             <div class="element  clearfix col2 row1 bienvenue callbacks_container slider_1">
                 <ul class="rslides" id="slider_menu">
@@ -413,12 +406,16 @@
                 </ul>
             </div>
             <?php } ?>
+            <!-------------------------------------------------------------------------------------------------------------------------------------------->
+            <!-- FIN DU BLOC SLIDER -->
 
 
             <div class="element  clearfix col1 row1 bienvenue">
-                    <div class="images"> <img src="images/accueil/accueil1.jpg" alt="Site Officiel - Jordan Delamotte - Salade Niçoise" /> </div>
+            <div class="images"> <img src="images/accueil/accueil1.jpg" alt="Site Officiel - Jordan Delamotte - Salade Niçoise" /> </div>
             </div>
 
+            <!-- DEBUT DU BLOC RESEAUX SOCIAUX
+            <!-------------------------------------------------------------------------------------------------------------------------------------------->
             <div class="element  clearfix col1 row1 bienvenue callbacks_container_social slider_social ">
                 <ul class="rslides" id="slider_social">
                     <li>
@@ -436,17 +433,15 @@
 
                 </ul>
             </div>
-<!--
-            <ul class="social clearfix">
-                <li class="twitter"><a href="https://twitter.com/ChefJordanD" target="_blank">Visitez mon compte Twitter</a></li>
-                <li class="facebook"><a href="https://www.facebook.com/Chef.JordanDelamotte" target="_blank">Visitez ma page Facebook</a></li>
-                <!--<li class="instagram"><a href="http://instagram.com/jordandelamotte" target="_blank">Visitez mon compte Instagram</a></li>
-                <li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=326916999" target="_blank">Visitez mon compte Linkedin</a></li>
-            </ul>
--->
+            <!-- FIN DU BLOC RESEAUX SOCIAUX
+            <!-------------------------------------------------------------------------------------------------------------------------------------------->
+
             <div class="element  clearfix col1 row1 bienvenue">
                 <div class="images"> <img src="images/accueil/accueil2.jpg" alt="Site Officiel - Jordan Delamotte - Ris de Veau" /> </div>
             </div>
+
+            <!-- DEBUT DU BLOC NEWSLETTER
+            <!-------------------------------------------------------------------------------------------------------------------------------------------->
             <div class="element clearfix white col1 row1 bienvenue" id="newsletter">
                 <?php if($lang=="fr"){ ?>
                     <h4>Abonnez-vous à la newsletter.</h4>
@@ -465,32 +460,24 @@
                     </p>
                 </form>
             </div>
+            <!-- DEBUT DU BLOC NEWSLETTER
+            <!-------------------------------------------------------------------------------------------------------------------------------------------->
 
-<!--
-            <div class="element  clearfix col4 row-auto bienvenue">
-                <h6>Profitez-en, c'est la saison</h6>
-            </div>
-            <div id="actu-bienvenue"></div>
--->
-            <!-- fin du bloc bienvenue -->
+            <!-- FIN DU BLOC ACCUEIL -->
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- début du bloc photo
-            -->
-
+            <!-- DEBUT DU BLOC PHOTO-->
 
             <div id="photos"></div>
-            
-            <!-- fin bloc ajout de photos -->
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!--fin du bloc photo -->
+            <!-- FIN DU BLOC PHOTO -->
 
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- debut bloc portrait -->
+            <!-- DEBUT BLOC PORTRAIT -->
 
             <div class="element  clearfix col2 row3 fullon3 white portrait">
                 <h3 class="align-top">Jordan Delamotte</h3>
@@ -536,18 +523,18 @@
             </div>
 
             <div class="element clearfix col2 row2 fullon3 portrait">
-                <div class="images"> <img src="images/photos/portrait-1-BW-small.jpg" alt="portrait" /> </div>
+                <div class="images"> <img src="images/portrait/JDportrait.jpg" alt="portrait" /> </div>
             </div>
             <div class="element clearfix col2 row1 fullon3 portrait">
-                <div class="images"> <img src="images/photos/nicoise3-small.jpg" alt="portrait" /> </div>
+                <div class="images"> <img src="images/portrait/nicoise_3.jpg" alt="portrait" /> </div>
             </div>
 
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- fin du bloc portrait -->
+            <!-- FIN DU BLOC PORTRAIT -->
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- bloc contact  -->
+            <!-- DEBUT DU BLOC CONTACT  -->
 
             <div class="element clearfix photo-contact min-display-1 contact">
                 <div class="images"> <img id="nicoise_contact" src="" alt="" class="" /> </div>
@@ -578,34 +565,43 @@
             </div>
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- fin du bloc contact -->
+            <!-- FIN DU BLOC CONTACT -->
 
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- bloc réalisation -->
-            <!--
-            <div class="element clearfix white col4 row1 ">
-                <p> En cours de réalisation</p>
-            </div>
-            -->
-            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- fin du bloc réalisation -->
+            <!-- DEBUT DU BLOC PARTENAIRE -->
 
-            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- bloc remerciement -->
             <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
                 <a class="full-width"><div class="images full"><img src="images/partenaires/GuillaumeD.jpg" /></div></a>
                 <div class="to-bottom">
                     <h5>Guillaume Derouineau</h5>
-                    <p>Web Designer</p>
+                    <p class="ty">Web Designer</p>
 
                 </div>
             </div>
+
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="images/partenaires/AlbanC.jpg" /></div></a>
+                <div class="to-bottom">
+                    <h4>Alban Couturier</h4>
+                    <p class="ty">Photographe</p><br />
+                    <a href="http://www.albancouturier.com" target="_blank" style="text-decoration: none;" class="ty">albancouturier.com</a>
+                </div>
+            </div>
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="images/partenaires/NicolasL.jpg" /></div></a>
+                <div class="to-bottom">
+                    <h4>Nicolas Lobbestael</h4>
+                    <p class="ty">Photographe</p><br />
+                    <a href="http://www.nicolaslobbestael.com" target="_blank" style="text-decoration: none;" class="ty">nicolaslobbestael.com</a>
+                </div>
+            </div>
+
             <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
                 <a class="full-width"><div class="images full"><img src="images/partenaires/CharlotteR.jpg" /></div></a>
                 <div class="to-bottom">
                     <h5>Charlotte Rocher</h5>
-                    <p>Éditrice</p>
+                    <p class="ty">Rédactrice en chef</p>
                     <br />
                     <br />
                     <br />
@@ -619,31 +615,16 @@
                 <a class="full-width"><div class="images full"><img src="images/partenaires/SaraE.jpg" /></div></a>
                 <div class="to-bottom">
                     <h5>Sara Edward</h5>
-                    <p>Rédactrice</p><br />
-                    <a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;" class="ty">Sara's blog</a>
+                    <p class="ty">Consultante et Associée</p><br />
+                    <!--<a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;" class="ty">Sara's blog</a>-->
                 </div>
             </div>
-            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
-                <a class="full-width"><div class="images full"><img src="images/partenaires/AlbanC.jpg" /></div></a>
-                <div class="to-bottom">
-                    <h4>Alban Couturier</h4>
-                    <p>Photographe</p><br />
-                    <a href="http://www.albancouturier.com" target="_blank" style="text-decoration: none;" class="ty">albancouturier.com</a>
-                </div>
-            </div>
-            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
-                <a class="full-width"><div class="images full"><img src="images/partenaires/NicolasL.jpg" /></div></a>
-                <div class="to-bottom">
-                    <h4>Nicolas Lobbestael</h4>
-                    <p>Photographe</p><br />
-                    <a href="http://www.nicolaslobbestael.com" target="_blank" style="text-decoration: none;" class="ty">nicolaslobbestael.com</a>
-                </div>
-            </div>
-            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- fin du bloc remerciement -->
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- bloc newsletter -->
+            <!-- FIN DU BLOC PARTENAIRE -->
+
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            <!-- DEBUT SECOND BLOC NEWSLETTER -->
             <div class="element clearfix white col1 row1 " id="newsletter">
                 <?php if($lang=="fr"){ ?>
                 <h4>Abonnez-vous à la newsletter.</h4>
@@ -663,11 +644,12 @@
                 </form>
             </div>
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- fin du bloc newsletter -->
+            <!-- FIN SECOND BLOC NEWLETTER -->
 
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!--  bloc prese -->
+            <!--  DEBUT DE BLOC PRESSE  -->
+
             <div class="element clearfix col1 row1 presse">
                 <a href="#filter=.commpresse" class="full">
 
@@ -688,6 +670,9 @@
                 <h3 style="color:white; text-align: center;">de presse</h3>
 
             </div>
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            <!--  DEBUT DE BLOC ARTICLE DE PRESSE  -->
+
             <div class="element  clearfix col1 row1 presse white">
                 <a href="images/photos/MFM_02_2014.png" data-title="Des plats carrément épatants" data-fancybox-group="presse" class="popup full">
                 </a>
@@ -703,7 +688,6 @@
                     <h3> Gilles Pudlowski</h3>
                 <br /> <p>19 Novembre 2014</p>
             </div>
-
 
 
             <div class="element  clearfix row1 col1 white presse">
@@ -726,8 +710,19 @@
 
 
             </div>
+            <!--  FIN DE BLOC ARTICLE DE PRESSE  -->
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            <-!--  DEBUT DE BLOC COMMUNIQUE DE PRESSE  -->
 
-            <!-- communiqué de presse -->
+
+            <div class="element  clearfix col1 row1 white commpresse">
+                <a href="images/pdf/CP26102015.pdf" class="full" target="_blank"></a>
+                <br /><h3>Nouveau Chef au Cap Est Lagoon Resort & Spa *****</h3>
+                <br />
+                <p>26 Octobre 2015</p>
+            </div>
+
 
             <div class="element  clearfix col1 row1 white commpresse">
                 <a href="images/pdf/CP4MAINSHDSHV.pdf" class="full" target="_blank"></a>
@@ -735,28 +730,34 @@
                 <br />
                 <p>18 Mai 2015</p>
             </div>
+
             <div class="element  clearfix col1 row1 white commpresse">
                 <a href="images/pdf/CP4MAINSHDSE7_2.pdf" class="full" target="_blank"></a>
                 <br /><h3>Menu à 4 mains : les chefs dévoilent leurs créations</h3>
                 <br />
                 <p>12 Mars 2015</p>
             </div>
+
             <div class="element  clearfix col1 row1 white commpresse">
                 <a href="images/pdf/CP4MAINSHDSE7_1.pdf" class="full" target="_blank"></a>
                 <br /><h3>2 Chefs, 4 mains, 1 menu</h3>
                 <br />
                 <p>20 Février 2015</p>
             </div>
+
             <div class="element  clearfix col1 row1 white commpresse">
                 <a href="images/pdf/CP20112014.pdf" class="full" target="_blank"></a>
                 <br /><h3>Nouvelle carte au de Sers</h3>
                 <br />
                 <p>20 Novembre 2014</p>
             </div>
-
+            <!--  FIN DE BLOC COMMUNIQUE DE PRESSE  -->
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            <!-- fin du bloc presse -->
+            <!--  FIN DE BLOC PRESSE  -->
+            <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
+            <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ >
+            <!-- DEBUT DU BLOC ON TOUCHE PAS -->
             <div id="news" style="display: none;">
             </div>
             <div id="season" style="display: none;">
@@ -779,6 +780,8 @@
 
             <img style="display:none;" src="images/photos/www.JD.com-ConvertImage%20copie.jpg">
             <?php } ?>
+            <!-- FIN D U BLOC ON TOUCHE PAS ->
+            <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
         </div>
     </div>
@@ -821,25 +824,34 @@
 <script src="js/jquery.min.js" type="text/javascript"></script>
 
 <script src="js/responsiveslides.min.js" type="text/javascript"></script>
-<script src="js/jquery-easing-1.3.js" type="text/javascript"></script>
-<script src="js/modernizr.js" type="text/javascript"></script>
+
+<!--<script src="js/jquery-easing-1.3.js" type="text/javascript"></script>-->
+
+<!--<script src="js/modernizr.js" type="text/javascript"></script>-->
+
 <script src="js/retina.js" type="text/javascript"></script>
+
 <script src="js/jquery.isotope2.min.js" type="text/javascript"></script>
-<script src="js/jquery.ba-bbq.min.js" type="text/javascript"></script>
 <script src="js/jquery.isotope.load.js" type="text/javascript"></script>
+
+<script src="js/jquery.ba-bbq.min.js" type="text/javascript"></script>
+
 <script src="js/jquery.sliphover.min.js"></script>
 <script src="js/responsive-nav.js" type="text/javascript"></script>
 <script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
+
 <script src="js/preloader.js" type="text/javascript"></script>
-<script src="js/SmoothScroll.js" type="text/javascript"></script>
-<script src="js/jquery.form.js" type="text/javascript"></script>
-<script src="js/input.fields.js" type="text/javascript"></script>
 <script src="js/newsletter.js" type="text/javascript"></script>
 <script src="js/actualite.js" type="text/javascript"></script>
 <script src="js/saison.js" type="text/javascript"></script>
 <script src="js/recette.js" type="text/javascript"></script>
 <script src="js/photo.js" type="text/javascript"></script>
+
+<script src="js/jquery.form.js" type="text/javascript"></script>
+<script src="js/SmoothScroll.js" type="text/javascript"></script>
+<script src="js/input.fields.js" type="text/javascript"></script>
 <script src="js/scroll-menu.js" type="text/javascript"></script>
+
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

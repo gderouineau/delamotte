@@ -47,7 +47,7 @@ function showMoreActu(first) {
              '</div>'
              ;
 
-             recette_div.after(none);
+             actu_div.after(none);
              $('#container').isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });
 
              }
@@ -85,6 +85,8 @@ function showMoreActu(first) {
                  */
 
                 /* BLOC ACTU DANS ACCUEIL */
+
+
                 if(first){
                     if(increment <= 3){
                         var noton3="";

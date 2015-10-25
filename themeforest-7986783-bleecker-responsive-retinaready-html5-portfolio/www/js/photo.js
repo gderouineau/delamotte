@@ -68,7 +68,7 @@ function showMorePhotos() {
     var current_photo = parseInt(body.attr('data-photocurrent'));
     body.attr('data-photocurrent', (load_photo + 1));
 
-    if(load_photo == current_photo)
+    if(load_photo == current_photo) {
         $.ajax({
             url: 'photo.php',
             type: 'get',
@@ -80,98 +80,155 @@ function showMorePhotos() {
                 var increment = 0;
                 for (var key in data) {
 
-                    var id = data[key]['id']
-                        , url_small = data[key]['url_small']
-                        , url_big = data[key]['url_big']
-                        , title_short = data[key]['title_short']
-                        , title_long = data[key]['title_long']
-                        , div = ""
-                        , divTitle = ""
+                    var id = data[key]['id'], url_small = data[key]['url_small'], url_big = data[key]['url_big'], title_short = data[key]['title_short'], title_long = data[key]['title_long'], div = "", divTitle = ""
                         ;
                     increment++;
+
+
                     /*
-                    var modulo = increment % 6;
+                     var modulo = increment % 2;
 
 
-                    if ((modulo == 4) || (modulo == 1)) {
+                     if (modulo == 1) {
+                     div =
+                     '<div class="element  clearfix col2 row2 photo force">'+
+                     '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                     '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                     '</a>'+
+                     '</div>'
+                     ;
+                     photo_div.before(div);
+                     divTitle =
+                     '<div class="element  clearfix col2 row1 photo  min-display-3" style="">'+
+                     '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 280px;height: 280px;font-size: 17px;"  class="">'+title_long+'</p>'+
+                     '</div>'
+                     ;
+                     photo_div.before(divTitle);
+                     divTitle =
+                     '<div class="element clearfix col1 row2 photo  min-display-2 max-display-4" style="">'+
+                     '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 570px;height: 570px;font-size: 17px;"  class="">'+title_long+'</p>'+
+                     '</div>'
+                     ;
+                     photo_div.before(divTitle);
+                     }
+                     else{
+                     divTitle =
+                     '<div class="element clearfix col1 row2 photo  min-display-2 max-display-4" style="">'+
+                     '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 570px;height: 570px;font-size: 17px;"  class="">'+title_long+'</p>'+
+                     '</div>'
+                     ;
+                     photo_div.before(divTitle);
+                     div =
+                     '<div class="element  clearfix col2 row2 photo force">'+
+                     '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                     '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                     '</a>'+
+                     '</div>'
+                     ;
+                     photo_div.before(div);
+
+                     divTitle =
+                     '<div class="element  clearfix col2 row1 photo  min-display-3" style="">'+
+                     '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 280px;height: 280px;font-size: 17px;"  class="">'+title_long+'</p>'+
+                     '</div>'
+                     ;
+                     photo_div.before(divTitle);
+
+                     }
+                     */
+
+                    var modulo = increment % 9;
+                    if (modulo == 1)
+                    {
                         div =
                             '<div class="element  clearfix col2 row2 photo force">'+
-                                '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
-                                    '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
-                                '</a>'+
+                            '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                            '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                            '</a>'+
                             '</div>'
                         ;
-                        photo_div.before(div);
                     }
-
-
-                    else {
+                    else if(modulo == 2){
+                        div =
+                            '<div class="element  clearfix col2 row1 photo force">'+
+                            '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                            '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                            '</a>'+
+                            '</div>'
+                        ;
+                    }
+                    else if(modulo == 3){
                         div =
                             '<div class="element  clearfix col1 row1 photo force">'+
-                                '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
-                                    '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
-                                '</a>'+
+                            '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                            '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                            '</a>'+
                             '</div>'
                         ;
-                        photo_div.before(div);
-
                     }
-                    */
-
-                    var modulo = increment % 2;
-
-
-                    if (modulo == 1) {
+                    else if(modulo == 4){
+                        div =
+                            '<div class="element  clearfix col1 row3 photo force">'+
+                            '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                            '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                            '</a>'+
+                            '</div>'
+                        ;
+                    }
+                    else if(modulo == 5){
+                        div =
+                            '<div class="element  clearfix col1 row1 photo force">'+
+                            '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                            '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                            '</a>'+
+                            '</div>'
+                        ;
+                    }
+                    else if(modulo == 6){
                         div =
                             '<div class="element  clearfix col2 row2 photo force">'+
-                                '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
-                                    '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
-                                '</a>'+
+                            '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                            '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                            '</a>'+
                             '</div>'
                         ;
-                        photo_div.before(div);
-                        divTitle =
-                            '<div class="element  clearfix col2 row1 photo  min-display-3" style="">'+
-                                '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 280px;height: 280px;font-size: 17px;"  class="">'+title_long+'</p>'+
-                            '</div>'
-                            ;
-                        photo_div.before(divTitle);
-                        divTitle =
-                            '<div class="element clearfix col1 row2 photo  min-display-2 max-display-4" style="">'+
-                                '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 570px;height: 570px;font-size: 17px;"  class="">'+title_long+'</p>'+
-                            '</div>'
-                            ;
-                        photo_div.before(divTitle);
                     }
-                    else{
-                        divTitle =
-                            '<div class="element clearfix col1 row2 photo  min-display-2 max-display-4" style="">'+
-                                '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 570px;height: 570px;font-size: 17px;"  class="">'+title_long+'</p>'+
-                                '</div>'
-                        ;
-                        photo_div.before(divTitle);
+                    else if(modulo == 7){
                         div =
-                            '<div class="element  clearfix col2 row2 photo force">'+
-                                '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
-                                '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
-                                '</a>'+
-                                '</div>'
+                            '<div class="element  clearfix col1 row2 photo force">'+
+                            '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                            '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                            '</a>'+
+                            '</div>'
                         ;
-                        photo_div.before(div);
-
-                        divTitle =
-                            '<div class="element  clearfix col2 row1 photo  min-display-3" style="">'+
-                                '<p style="color: white ; text-align: center; vertical-align: middle;line-height: 280px;height: 280px;font-size: 17px;"  class="">'+title_long+'</p>'+
-                                '</div>'
-                        ;
-                        photo_div.before(divTitle);
-
                     }
+                    else if(modulo == 8){
+                        div =
+                            '<div class="element  clearfix col3 row1 photo force">'+
+                            '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                            '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                            '</a>'+
+                            '</div>'
+                        ;
+                    }
+                    else if(modulo == 0){
+                        div =
+                            '<div class="element  clearfix col4 row2 photo force">'+
+                            '<a class="full popup" href="'+url_big+'" data-title="'+title_long+'" data-fancybox-group="plat" >'+
+                            '<div class="images"> <img src="'+url_small+'" alt="'+title_short+'" class="slip" /> </div>'+
+                            '</a>'+
+                            '</div>'
+                        ;
+                    }
+                    photo_div.before(div);
 
 
                     fancy_photo();
                     if (data.length != 0)
-                        $('#container').isotope('reloadItems').isotope({sortBy: 'original-order'});
+                        $('#container').
+
+
+                            isotope('reloadItems').isotope({sortBy: 'original-order'});
                     body.attr('data-photoid', (load_photo + 1));
 
                 }
@@ -183,8 +240,8 @@ function showMorePhotos() {
             }
 
 
-
         });
+    }
 }
 $(document).ready(function(){
     showMorePhotos();

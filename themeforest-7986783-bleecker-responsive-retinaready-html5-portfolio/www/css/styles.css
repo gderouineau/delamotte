@@ -327,6 +327,8 @@ h5.actu_link {
     color: #000000;
     text-align: left;
 }
-a.ty { color:#555; text-decoration:none; border-bottom:1px solid #555; }
+a.ty { color:#555; text-decoration:none; border-bottom:1px solid #555; font-size:20px;}
+
+P.ty {font-size: 20px;}
 
 
