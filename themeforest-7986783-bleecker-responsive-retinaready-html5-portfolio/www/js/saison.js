@@ -150,8 +150,10 @@ $(document).ready(function(){
 
     $('.fancy_season').fancybox({
         type : 'iframe',
+        padding : 0,
+        margin : 0,
         autoScale: true,
-        width: 788,
+        width: "100%",
         helpers : {
             overlay : {
                 css : {
