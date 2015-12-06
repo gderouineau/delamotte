@@ -208,7 +208,7 @@ p .break {height:13px; }
 .stationery { background:url(../image/icons/bg-stationery.png) center no-repeat; background-size:30px 30px; }
 .camera {background:url(../image/icons/bg-camera.png) center no-repeat; background-size:30px 30px; }
 .instagram {background:url(../image/icons/bg-instagram.png) center no-repeat; background-size:30px 30px; }
-.close { background:url(../image/icons/bg-close-black.png) center no-repeat; background-size:48px 48px; position:fixed; right:35px; top:35px; z-index:28; width:48px; height:48px; display:block }
+.close { background:url(../images/icons/croix.png) center no-repeat; background-size:48px 48px; position:fixed; top:35px; z-index:5008; width:48px; height:48px; margin : auto ;display:block }
 /* Social Icons */
 .linkedin {background:url(../image/icons/bg-linkedin.png) center no-repeat; background-size:50px 50px; }
 .dribbble {background:url(../image/icons/bg-dribbble.png) center no-repeat; background-size:50px 51px; }

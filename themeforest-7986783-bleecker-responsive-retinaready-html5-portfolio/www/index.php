@@ -489,24 +489,27 @@
                     <?php if($lang=='fr'){ ?>
                         Passionné, Jordan Delamotte l’est en cuisine comme en toute chose.
                         Ambitieux et dévoué, Jordan a su gravir les échelons rapidement et imposer sa personnalité dans des établissements de renom.
-                        Passé en moins de dix ans d’apprenti à chef de cuisine à l’Hôtel de Sers, Jordan carbure aux défis sans jamais renoncer à satisfaire une clientèle dont il tient personnellement à prendre le plus grand soin.
+                        Passé en moins de dix ans d’apprenti à chef de cuisine, Jordan carbure aux défis sans jamais renoncer à satisfaire une clientèle dont il tient personnellement à prendre le plus grand soin.
                     <?php } if($lang=='en'){ ?>
                         Passionate, Jordan Delamotte is in the kitchen as in all things.
                         Ambitious and dedicated, Jordan was able to climb the ladder quickly and impose his personality in renowned establishments.
-                        Happened in less than ten years of apprentice chef at the Hotel de Sers, Jordan carbide challenges without ever renouncing satisfy customers he personally would like to take the greatest care.
+                        Happened in less than ten years of apprentice to chef, Jordan carbide challenges without ever renouncing satisfy customers he personally would like to take the greatest care.
                     <?php } ?>
                     <br />
                     <br />
                     <br />
                     <?php if($lang=='fr'){ ?>
-                        C’est en 2011 qu’il s’établit à Paris où il arrive au réputé restaurant de Neuilly : La Truffe Noire, un lieu qui lui permettra de faire ses preuves. En janvier 2013, il entre à l’Hôtel de Sers où il devient rapidement chef de cuisine pour le plus grand plaisir de la clientèle fidèle et raffinée de l’avenue Pierre 1er de Serbie.
+                        Plusieurs voyages forment sa jeunesse et ses ambitions. Ayant travaillé tour à tour en Irlande, en Suisse ou encore en Martinique, il aime cultiver son inspiration qui lui provient à la fois de son expérience et de ses voyages.
+                        EN 2011, il s'établit à Paris où il arrive au réputé restaurant de Neuilly : <i>La Truffe Noire</i>, un lieu qui lui permettra de faires ses preuves dans le monde de la gastronomie parisienne.
+                        En Janvier 2013, il entre à l'Hôtel de Sers où il devient rapidement chef de cuisine pour le plus grand plaisir de la clientèle fidèle et raffinée de l'avenue Pierre 1er de Serbie.
+                        Puis le chef lèvera l'ancre en novembre 2015 pour retourner en Martinique relever un beau défi : offrir à la clientèle du relais et château Cap Est Lagoon Resort & Spa une cuisine de grande qualité dans un cadre somptueux.
                     <?php } if($lang=='en'){ ?>
                         It is in 2011 he moved to Paris, where he arrived at the renowned restaurant in Neuilly: La Truffe Noire, a place that will allow him to prove himself. In January 2013, he entered the Hotel de Sers where he quickly became chef to the delight of the faithful and refined clientele Avenue Pierre 1er de Serbie.                    <?php } ?>
                     <br />
                     <br />
                     <br />
                     <?php if($lang=='fr'){ ?>
-                        Né à Roubaix, diplômé à Nantes, d’origine belge et polonaise, sa cuisine est le reflet de sa personnalité : curieuse, innovante, variée et généreuse. S’il met un point d’honneur à incarner la gastronomie à la française, il croit que pour ce faire, le mélange des cultures et des influences est un atout. Ayant travaillé tour à tour en Irlande, en Suisse ou encore en Martinique, il aime cultiver son inspiration qui lui provient à la fois de son expérience et de ses voyages. Toujours conscient des exigences de la clientèle, il considère essentiel de choisir les meilleurs ingrédients produits en France et biologiques. Chef pointilleux et rigoureux, il dirige les équipes avec un professionnalisme très prometteur pour un jeune chef de 29 ans.
+                        Né à Roubaix, diplômé à Nantes, d’origine belge et polonaise, sa cuisine est le reflet de sa personnalité : curieuse, innovante, variée et généreuse. S’il met un point d’honneur à incarner la gastronomie à la française, il croit que pour ce faire, le mélange des cultures et des influences est un atout. Toujours conscient des exigences de la clientèle, il considère essentiel de choisir les meilleurs produits issus de producteurs locaux et biologiques. Chef pointilleux et rigoureux, il dirige les équipes avec un professionnalisme très prometteur pour un jeune chef d'à peine 30 ans.
                     <?php } if($lang=='en'){ ?>
                         Born in Roubaix, graduated from Nantes, Belgian and Polish origin, its cuisine is a reflection of his personality: curious, innovative, varied and generous. If he makes it a point of honor to embody the French gastronomy, he believes that to do so, the mix of cultures and influences is an asset. Having worked in turn in Ireland, Switzerland or in Martinique, he likes to cultivate his inspiration from him both his experience and his travels. Always aware of customer requirements, he considers essential to choose the best ingredients and organic products in France. Chief picky and strict, he led the team with a promising young chef professionalism for 29 years.                    <?php } ?>
                     <br />
@@ -514,9 +517,9 @@
                     <br />
                     <br />
                     <?php if($lang=='fr'){ ?>
-                        Charlotte Rocher, août 2014
+                        Charlotte Rocher, décembre 2015
                     <?php } if($lang=='en'){ ?>
-                        Charlotte Rocher, august 2014
+                        Charlotte Rocher, december 2015
                     <?php } ?>
 
                 </p>

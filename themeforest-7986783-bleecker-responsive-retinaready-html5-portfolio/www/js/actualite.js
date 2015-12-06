@@ -176,6 +176,7 @@ $(document).ready(function(){
         padding : 0,
         margin : 0,
         autoScale: true,
+        showCloseButton : true,
         width: "100%",
         helpers : {
             overlay : {
