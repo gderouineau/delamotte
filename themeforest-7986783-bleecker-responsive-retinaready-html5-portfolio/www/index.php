@@ -500,7 +500,7 @@
                     <br />
                     <?php if($lang=='fr'){ ?>
                         Plusieurs voyages forment sa jeunesse et ses ambitions. Ayant travaillé tour à tour en Irlande, en Suisse ou encore en Martinique, il aime cultiver son inspiration qui lui provient à la fois de son expérience et de ses voyages.
-                        EN 2011, il s'établit à Paris où il arrive au réputé restaurant de Neuilly : <i>La Truffe Noire</i>, un lieu qui lui permettra de faires ses preuves dans le monde de la gastronomie parisienne.
+                        En 2011, il s'établit à Paris où il arrive au réputé restaurant de Neuilly : <i>La Truffe Noire</i>, un lieu qui lui permettra de faires ses preuves dans le monde de la gastronomie parisienne.
                         En Janvier 2013, il entre à l'Hôtel de Sers où il devient rapidement chef de cuisine pour le plus grand plaisir de la clientèle fidèle et raffinée de l'avenue Pierre 1er de Serbie.
                         Puis le chef lèvera l'ancre en novembre 2015 pour retourner en Martinique relever un beau défi : offrir à la clientèle du relais et château Cap Est Lagoon Resort & Spa une cuisine de grande qualité dans un cadre somptueux.
                     <?php } if($lang=='en'){ ?>
