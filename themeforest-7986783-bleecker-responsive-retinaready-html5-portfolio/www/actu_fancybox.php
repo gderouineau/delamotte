@@ -122,7 +122,7 @@ if(isset($_GET['id'])){
                     <div class="clearfix col2 row-auto auto no-padding">
                         <div class="images">
                             <a href="javascript:parent.jQuery.fancybox.close();">
-                                <div class="close"></div>
+                                <div class="close" id="close"></div>
                             </a>
                             <img src="<?php echo $photo;?>" alt="<?php echo $title;?>" />
                         </div>
@@ -217,6 +217,25 @@ if(isset($_GET['id'])){
             }); // fancybox
         });
         //parent.jQuery.fancybox.close();
+
+        (function(){
+            var lastScrollTop = 0;
+            $(window).scroll(function(){
+                var st = $(this).scrollTop();
+                if(st > lastScrollTop){
+                    //downScroll code
+                    alert('down');
+                    $('#close').hide();
+                }
+                else {
+                    alert('up');
+                    $('#close').show();
+                    //upscroll code
+                }
+                lastScrollTop = st ;
+            });
+        }());
+
     </script>
     </body>
 
@@ -270,6 +289,6 @@ function french_month($time){
     }
 
 }
-
+ ?>
 
 
