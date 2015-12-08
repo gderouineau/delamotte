@@ -587,7 +587,7 @@
                 <a class="full-width"><div class="images full"><img src="images/partenaires/CharlotteR.jpg" /></div></a>
                 <div class="to-bottom">
                     <h5>Charlotte Rocher</h5>
-                    <p class="ty">Rédactrice en chef/Journaliste</p>
+                    <p class="ty">Rédactrice en chef/ Journaliste</p>
                     <br />
                     <br />
                     <br />
