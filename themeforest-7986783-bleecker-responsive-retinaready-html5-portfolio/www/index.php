@@ -601,7 +601,7 @@
                 <a class="full-width"><div class="images full"><img src="images/partenaires/CharlotteR.jpg" /></div></a>
                 <div class="to-bottom">
                     <h5>Charlotte Rocher</h5>
-                    <p class="ty">Rédactrice en chef</p>
+                    <p class="ty">Rédactrice en chef/Journaliste</p>
                     <br />
                     <br />
                     <br />
@@ -615,11 +615,37 @@
                 <a class="full-width"><div class="images full"><img src="images/partenaires/SaraE.jpg" /></div></a>
                 <div class="to-bottom">
                     <h5>Sara Edward</h5>
-                    <p class="ty">Consultante et Associée</p><br />
+                    <p class="ty">Consultante/ Associée/ traductrice anglais</p><br />
                     <!--<a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;" class="ty">Sara's blog</a>-->
                 </div>
             </div>
 
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="images/partenaires/HeleneO.jpg" /></div></a>
+                <div class="to-bottom">
+                    <h5>Hélène Orhon</h5>
+                    <p class="ty">Rédactrice vins & spiritueux</p><br />
+                    <!--<a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;" class="ty">Sara's blog</a>-->
+                </div>
+            </div>
+
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="images/partenaires/.jpg" /></div></a>
+                <div class="to-bottom">
+                    <h5>Margarita Orlynskaia</h5>
+                    <p class="ty">Traductrice russe</p><br />
+                    <!--<a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;" class="ty">Sara's blog</a>-->
+                </div>
+            </div>
+
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="images/partenaires/JordanD.jpg" /></div></a>
+                <div class="to-bottom">
+                    <h5>Jordan Delamotte</h5>
+                    <p class="ty">Directeur de création/ Rédacteur culinaire/ Photographe/ Journaliste</p><br />
+                    <!--<a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;" class="ty">Sara's blog</a>-->
+                </div>
+            </div>
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <!-- FIN DU BLOC PARTENAIRE -->
 
