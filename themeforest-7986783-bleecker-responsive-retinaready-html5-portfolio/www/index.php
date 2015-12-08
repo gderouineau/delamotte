@@ -584,23 +584,6 @@
             </div>
 
             <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
-                <a class="full-width"><div class="images full"><img src="images/partenaires/AlbanC.jpg" /></div></a>
-                <div class="to-bottom">
-                    <h4>Alban Couturier</h4>
-                    <p class="ty">Photographe</p><br />
-                    <a href="http://www.albancouturier.com" target="_blank" style="text-decoration: none;" class="ty">albancouturier.com</a>
-                </div>
-            </div>
-            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
-                <a class="full-width"><div class="images full"><img src="images/partenaires/NicolasL.jpg" /></div></a>
-                <div class="to-bottom">
-                    <h4>Nicolas Lobbestael</h4>
-                    <p class="ty">Photographe</p><br />
-                    <a href="http://www.nicolaslobbestael.com" target="_blank" style="text-decoration: none;" class="ty">nicolaslobbestael.com</a>
-                </div>
-            </div>
-
-            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
                 <a class="full-width"><div class="images full"><img src="images/partenaires/CharlotteR.jpg" /></div></a>
                 <div class="to-bottom">
                     <h5>Charlotte Rocher</h5>
@@ -615,6 +598,15 @@
             </div>
 
             <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="images/partenaires/AlbanC.jpg" /></div></a>
+                <div class="to-bottom">
+                    <h4>Alban Couturier</h4>
+                    <p class="ty">Photographe</p><br />
+                    <a href="http://www.albancouturier.com" target="_blank" style="text-decoration: none;" class="ty">albancouturier.com</a>
+                </div>
+            </div>
+
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
                 <a class="full-width"><div class="images full"><img src="images/partenaires/SaraE.jpg" /></div></a>
                 <div class="to-bottom">
                     <h5>Sara Edward</h5>
@@ -622,6 +614,16 @@
                     <!--<a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;" class="ty">Sara's blog</a>-->
                 </div>
             </div>
+
+            <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
+                <a class="full-width"><div class="images full"><img src="images/partenaires/NicolasL.jpg" /></div></a>
+                <div class="to-bottom">
+                    <h4>Nicolas Lobbestael</h4>
+                    <p class="ty">Photographe</p><br />
+                    <a href="http://www.nicolaslobbestael.com" target="_blank" style="text-decoration: none;" class="ty">nicolaslobbestael.com</a>
+                </div>
+            </div>
+
 
             <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
                 <a class="full-width"><div class="images full"><img src="images/partenaires/HeleneO.jpg" /></div></a>
