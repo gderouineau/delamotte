@@ -635,9 +635,9 @@
             </div>
 
             <div class="element clearfix white col1 row2 remerciement no-padding forcerow" data-text="Merci" >
-                <a class="full-width"><div class="images full"><img src="images/partenaires/.jpg" /></div></a>
+                <a class="full-width"><div class="images full"><img src="images/partenaires/MargaritaO.jpg" /></div></a>
                 <div class="to-bottom">
-                    <h5>Margarita Orlynskaia</h5>
+                    <h5>Margarita Orlinskaia</h5>
                     <p class="ty">Traductrice russe</p><br />
                     <!--<a href="http://saraedward-hospitality.blogspot.fr" target="_blank" style="text-decoration: none;" class="ty">Sara's blog</a>-->
                 </div>
