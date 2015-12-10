@@ -302,15 +302,15 @@
 
             <?php if($lang=="ru"){ ?>
             <ul class="option-set clearfix" id="option-list-up" data-option-key="filter">
-                <li><a href="#filter=.bienvenue">Home</a></li>
-                <li><a href="#filter=.saison">Seasonal Product</a></li>
-                <li><a href="#filter=.recette">Recipes</a></li>
-                <li><a href="#filter=.actualite">News</a></li><br/>
-                <li><a href="#filter=.photo">Photos</a></li>
-                <li><a href="#filter=.portrait">Portrait</a></li>
-                <li><a href="#filter=.remerciement">Partners</a></li>
-                <li><a href="#filter=.presse">Press</a></li>
-                <li><a href="#filter=.contact">Contact</a></li>
+                <li><a href="#filter=.bienvenue">ГЛАВНАЯ</a></li>
+                <li><a href="#filter=.saison">СЕЙЧАС САМОЕ ВРЕМЯ</a></li>
+                <li><a href="#filter=.recette">РЕЦЕПТЫ</a></li>
+                <li><a href="#filter=.actualite">НОВОСТИ</a></li><br/>
+                <li><a href="#filter=.photo">ФОТОГАЛЕРЕЯ</a></li>
+                <li><a href="#filter=.portrait">О ШЕФ-ПОВАРЕ</a></li>
+                <li><a href="#filter=.remerciement">НАШИ ПАРТНЁРЫ</a></li>
+                <li><a href="#filter=.presse">ПРЕССА</a></li>
+                <li><a href="#filter=.contact">ОБРАТНАЯ СВЯЗЬ</a></li>
             </ul>
             <?php } ?>
 
@@ -447,6 +447,8 @@
                     <h4>Abonnez-vous à la newsletter.</h4>
                 <?php } if($lang=="en"){ ?>
                     <h4>Suscribe to the newsletter.</h4>
+                <?php } if($lang=="ru"){ ?>
+                    <h4>ПОДПИШИТЕСЬ НА НАШУ РАССЫЛКУ.</h4>
                 <?php } ?>
                 <form>
                     <p>
@@ -455,6 +457,8 @@
                             <span id="newsletter_submit">Envoyer</span>
                         <?php } if($lang=="en"){ ?>
                             <span id="newsletter_submit">Send</span>
+                        <?php } if($lang=="ru"){ ?>
+                            <span id="newsletter_submit">ОТПРАВИТЬ</span>
                         <?php } ?>
 
                     </p>
