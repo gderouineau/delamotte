@@ -388,20 +388,21 @@
             <?php if($lang=="ru"){?>
             <div class="element  clearfix col2 row1 bienvenue callbacks_container slider_1">
                 <ul class="rslides" id="slider_menu">
+
                     <li>
-                        <a href="#filter=.actualite" ><img src="images/slider1/img-lien-actualites.jpg" alt=""></a>
+                        <a href="#filter=.actualite" ><img src="images/slider1/img-lien-actualites-ru.jpg" alt=""></a>
                     </li>
                     <li>
-                        <a href="#filter=.saison" ><img src="images/slider1/img-lien-produitsdesaison.jpg" alt=""></a>
+                        <a href="#filter=.saison" ><img src="images/slider1/img-lien-produitsdesaison-ru.jpg" alt=""></a>
                     </li>
                     <li>
-                        <a href="#filter=.recette" ><img src="images/slider1/img-lien-recettes.jpg" alt=""></a>
+                        <a href="#filter=.recette" ><img src="images/slider1/img-lien-recettes-ru.jpg" alt=""></a>
                     </li>
                     <li>
-                        <a href="#filter=.photo" ><img src="images/slider1/img-lien-photos.jpg" alt=""></a>
+                        <a href="#filter=.photo" ><img src="images/slider1/img-lien-photos-ru.jpg" alt=""></a>
                     </li>
                     <li>
-                        <a href="#filter=.portrait" ><img src="images/slider1/img-lien-portrait.jpg" alt=""></a>
+                        <a href="#filter=.portrait" ><img src="images/slider1/img-lien-portrait-ru.jpg" alt=""></a>
                     </li>
                 </ul>
             </div>
@@ -498,6 +499,10 @@
                         Passionate, Jordan Delamotte is in the kitchen as in all things.
                         Ambitious and dedicated, Jordan was able to climb the ladder quickly and impose his personality in renowned establishments.
                         Happened in less than ten years of apprentice to chef, Jordan carbide challenges without ever renouncing satisfy customers he personally would like to take the greatest care.
+                    <?php } if($lang=='ru'){ ?>
+                        Одним из главных увлечений Жордана Деламот является приготовление блюд и творческий подход к искусству кулинарии.
+                        Амбициозный и самоотверженный, Жордан смог стремительно набрать опыт в своей профессии и внести яркую индивидуальность в широко известные заведения по кулинарии.
+                        Пройдя путь от ученика до шеф-повара меньше чем за десять лет, Жордан двигается вперёд, принимая вызовы и не забывая удовлетворять клиентуру, о которой стремится заботиться лично.
                     <?php } ?>
                     <br />
                     <br />
@@ -508,7 +513,9 @@
                         En Janvier 2013, il entre à l'Hôtel de Sers où il devient rapidement chef de cuisine pour le plus grand plaisir de la clientèle fidèle et raffinée de l'avenue Pierre 1er de Serbie.
                         Puis le chef lèvera l'ancre en novembre 2015 pour retourner en Martinique relever un beau défi : offrir à la clientèle du relais et château Cap Est Lagoon Resort & Spa une cuisine de grande qualité dans un cadre somptueux.
                     <?php } if($lang=='en'){ ?>
-                        It is in 2011 he moved to Paris, where he arrived at the renowned restaurant in Neuilly: La Truffe Noire, a place that will allow him to prove himself. In January 2013, he entered the Hotel de Sers where he quickly became chef to the delight of the faithful and refined clientele Avenue Pierre 1er de Serbie.                    <?php } ?>
+                        It is in 2011 he moved to Paris, where he arrived at the renowned restaurant in Neuilly: La Truffe Noire, a place that will allow him to prove himself. In January 2013, he entered the Hotel de Sers where he quickly became chef to the delight of the faithful and refined clientele Avenue Pierre 1er de Serbie.
+                    <?php } if($lang=='ru'){ ?>
+                    <?php } ?>
                     <br />
                     <br />
                     <br />
